@@ -1,0 +1,16 @@
+title: "PBL3 Group D Project"
+description: "Smart Healthcare System – PBL3 Group D"
+url: "https://daitera1.github.io"
+baseurl: "/PBL3-Group-D"
+
+theme: jekyll-theme-cayman
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

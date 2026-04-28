@@ -12,7 +12,7 @@ a {
 /* Nav Bar */
 
 nav {
-    padding: 10px 10px;  /* top/bottom = 15px, left/right = 20px */
+    padding: 10px 10px;
 }
 
 .logo a {
@@ -78,6 +78,3 @@ nav a:active {
 }
 
 /* Project Proposal */
-
-
-
