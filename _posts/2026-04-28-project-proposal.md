@@ -2,6 +2,7 @@
 layout: default
 title: "Project Proposal"
 date: 2026-04-28
+permalink: /posts/project-proposal/
 ---
 
 # Smart Healthcare System
