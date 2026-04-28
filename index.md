@@ -22,8 +22,8 @@ Welcome to the **PBL3 Group D** project site. This is a Smart Healthcare System 
 
 | Document | Description |
 |---|---|
-| [Project Proposal]({{ '/posts/project-proposal' | relative_url }}) | Overview, goals, and scope of the project |
-| [Documentation]({{ '/posts/documentation' | relative_url }}) | Weekly progress and technical documentation |
+| [Project Proposal]({{ '/posts/project-proposal/index.html' | relative_url }}) | Overview, goals, and scope of the project |
+| [Documentation]({{ '/posts/documentation/index.html' | relative_url }}) | Weekly progress and technical documentation |
 
 ---
 
