@@ -11,6 +11,8 @@ permalink: /posts/project-proposal/
 
 Our project focuses on developing a smart hospital finder application designed to help users locate hospitals more efficiently. The app provides real-time and predicted wait times, along with key information such as hospital specialties, supported languages, and accepted insurance. It is aimed at patients who need quick and reliable access to healthcare, especially in unfamiliar areas or urgent situations. By combining live data, historical trends, and user input, the app helps users choose the best hospital based on their needs. This improves overall efficiency in healthcare access and reduces unnecessary waiting times.
 
+---
+
 ## Problem Statement
 
 In many cities, hospitals are often overcrowded and patients have to deal with long waiting times. Even though there are multiple hospitals available, people usually don’t have access to real-time information about how busy each hospital is. Because of this, most patients just go to the closest hospital without knowing how long they will have to wait.
@@ -18,6 +20,7 @@ This leads to some hospitals becoming overloaded while others are not fully used
 Current solutions, like hospital websites or map apps, don’t really solve this problem because they don’t show live conditions or accurate wait times. As a result, patients cannot make informed decisions about where to go.
 Due to this, there is a need for a smarter system that can provide real-time and predicted information to help patients choose the best hospital. This could reduce waiting times, balance patient flow, and make healthcare access easier and more efficient.
 
+---
 
 ## Vision & Goals
 
@@ -31,6 +34,7 @@ Since the source data is directly from NHS England, NHS Digital, and official tr
 This project also aims to deliver a clean, jargon-free interface that works equally well for a first-time user and a frequent visitor, prioritising clarity over complexity.
 Lastly, using design for inclusivity from the ground up, meeting WCAG 2.1 AA (the international standard for web accessibility, requiring digital content to be perceivable, operable, understandable, and robust for users) accessibility standards, supporting screen readers, multiple languages, and varying levels of digital literacy.
 
+---
 
 ## Objectives – App Features and What It Does
 
@@ -58,13 +62,49 @@ The application uses real-time, historical, and crowdsourced data to provide wai
 * Provide **anonymous feedback summaries**
 * Maintain a **privacy-focused design** with minimal data collection
 
+---
+
 ## Data Acquisition – Finding Datasets
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, cumque dolorem voluptatem, veritatis nihil assumenda sunt minus delectus optio labore quis voluptate alias voluptatibus natus error illo. Enim, recusandae totam.
+API to access the Waiting List Minimum Data Set (WLMDS) - The national electronic databases of NHS patient waiting list details such as date of birth, a patient’s care pathway and the date they began waiting.
+We can access:
+* Search for patients
+* Get patient details
+* View when a patient began waiting for a procedure
+* View the care pathway a patient is on
+* View the trust / organisation their care pathway is with
+We can view:
+* Patient waiting date
+* Patient pathway identifier
+* Treatment function code
+* Organisation providing the care pathway
+* Census date
+However, this API is for internal use only (NHS App), so currently we are asking NHS England to use the API [1]
+
+---
 
 ## Data Science – Predicting Wait Times
 
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore suscipit, atque aliquam nesciunt autem id repudiandae totam! Possimus hic excepturi quidem repellendus assumenda voluptate ipsa sit consequuntur! Est, qui officiis.
+### Preprocessing
+
+The collected hospital waiting-time data from the API will undergo preprocessing to ensure consistency, reliability, and suitability for predictive modeling. Raw waiting-time data gathered from public hospital queue platforms will first be cleaned by handling missing values, removing duplicate entries, and standardizing inconsistent hospital naming conventions. Time-based features will then be extracted from timestamps, including hour of day, day of week, weekend/weekday and holiday indicators, as these temporal factors are strongly associated with hospital congestion patterns. Lag-based historical features will also be generated, such as previous recorded waiting time, rolling average wait over recent intervals, and congestion trends over time . Finally, categorical variables such as hospital type or department will be encoded into machine-readable form for use in predictive models.
+
+### Data Techniques 
+
+In order to estimate future hospital waiting times, the system will implement a supervised regression-based prediction model (preferably using LightGBM / XGBoost). The predictive model will leverage both temporal features and historical queue-state information, including:
+* Current waiting time
+* Previous waiting times
+* Rolling average queue duration
+* Time of day / Day of week
+* Hospital congestion level
+* Hospital-specific patterns
+A baseline historical-average model will first be established to benchmark the performance of the model. After which the gradient boosting model will be trained and evaluated against it. Model performance will then be assessed using regression metrics such as MAE (Mean Absolute Error) and RMSE (Root Mean Squared Error) to measure prediction accuracy.
+
+### Data Visualization
+
+The processed and predicted waiting-time data will be visualized through a real-time hospital map with live/predicted waiting times and color-coded congestion indicators.
+
+---
 
 ## Existing Research - Applications/Prototypes
 
@@ -76,9 +116,11 @@ Platforms such as Zocdoc and Google Maps are useful for finding hospitals and bo
 
 ### Government Data
 
-* The Hong Kong Hospital Authority provides **real-time waiting time data**, updated frequently, showing the value of live data systems [1]
-* NHS England reports highlight ongoing issues with **long waiting times**, especially in emergency care[2]
-* Data from the Ministry of Health, Labour and Welfare shows concerns about the **efficiency of accessing healthcare services** [3]
+* The Hong Kong Hospital Authority provides **real-time waiting time data**, updated frequently, showing the value of live data systems [2]
+* NHS England reports highlight ongoing issues with **long waiting times**, especially in emergency care [3]
+* Data from the Ministry of Health, Labour and Welfare shows concerns about the **efficiency of accessing healthcare services** [4]
+
+---
 
 ## Risks and Privacy
 
@@ -105,6 +147,8 @@ The application may track users’ locations and hospital visits. If this data i
 **Lack of User Control**
 Users may not fully understand what data is being collected or how it is used. Providing transparency and allowing users to control their data is important.
 
+---
+
 ## Sustainability
 
 **Data Sustainability**
@@ -112,3 +156,17 @@ The web application must continuously maintain servers, APIs, and real-time data
 
 **Hospital Integration**
 The system depends on cooperation from hospitals. However, not all hospitals are willing or able to share data, and their systems may not be compatible.
+
+---
+
+## References
+
+[1] Hong Kong Hospital Authority. (2026). Accident and emergency waiting time data. Retrieved from https://www.ha.org.hk
+[2] NHS England. (2026). A&E waiting time statistics. Retrieved from https://www.england.nhs.uk
+[3] Ministry of Health, Labour and Welfare. (2026). Healthcare system survey. Retrieved from https://www.mhlw.go.jp
+[4] Limiri, D. (2025). The impact of long wait times on patient health outcomes: The growing NHS crisis. Premier Journal of Public Health. https://doi.org/10.70389/PJPH.100020
+[5] Yaduvanshi, D., Sharma, A., & More, P. V. (2019). Application of queuing theory to optimize waiting time in hospital operations. Operations and Supply Chain Management, 12(3), 165–174. https://doi.org/10.31387/oscm0380240
+[6] Moore, M. D. (2022). Waiting for the doctor: Managing time and emotion in the British National Health Service, 1948–80. Twentieth Century British History, 33(2), 203–229. https://doi.org/10.1093/tcbh/hwab040
+[7] Dong, J., Yom-Tov, E., & Yom-Tov, G. B. (2018). The impact of delay announcements on hospital network coordination and waiting times. Management Science. https://doi.org/10.1287/mnsc.2018.3048
+[8] Perdana, R. H. Y., et al. (2019). Hospital queue control system using QR code as verification of patient’s arrival. International Journal of Advanced Computer Science and Applications, 10(8). https://doi.org/10.14569/ijacsa.2019.0100847
+[9] Li, X., et al. (2022). Using artificial intelligence to reduce queuing time and improve satisfaction in pediatric outpatient service: A randomized clinical trial. Frontiers in Pediatrics, 10. https://doi.org/10.3389/fped.2022.929834
