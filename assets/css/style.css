@@ -63,10 +63,17 @@ nav a:active {
     margin-left: 50px;
 }
 
-.article-content p {
+.article-content p, 
+.article-content li {
     margin: 20px 0;
     font-size: 18px;
     line-height: 1.6;
+}
+
+.article-content ul, 
+.article-content ol {
+    margin: 20px 0;
+    padding-left: 30px;
 }
 
 .article-content-proposal {
