@@ -98,14 +98,17 @@ nav a:active {
     font-size: 0.8em;
     vertical-align: super;
     line-height: 0;
-    color: #007bff;
+    color: black;
     font-weight: bold;
     margin-left: 2px;
 }
 
-.citation:hover {
-    text-decoration: underline;
+.citation:visited,
+.citation:hover,
+.citation:active {
+    color: black;
 }
+
 
 /* Highlight the targeted reference */
 :target {
