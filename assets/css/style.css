@@ -63,9 +63,14 @@ nav a:active {
     margin-left: 50px;
 }
 
-.article-content p, 
-.article-content li {
+.article-content p {
     margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.article-content li {
+    margin: 10px 0;
     font-size: 18px;
     line-height: 1.6;
 }
