@@ -162,11 +162,19 @@ The system depends on cooperation from hospitals. However, not all hospitals are
 ## References
 
 [1] Hong Kong Hospital Authority. (2026). Accident and emergency waiting time data. Retrieved from https://www.ha.org.hk
+
 [2] NHS England. (2026). A&E waiting time statistics. Retrieved from https://www.england.nhs.uk
+
 [3] Ministry of Health, Labour and Welfare. (2026). Healthcare system survey. Retrieved from https://www.mhlw.go.jp
+
 [4] Limiri, D. (2025). The impact of long wait times on patient health outcomes: The growing NHS crisis. Premier Journal of Public Health. https://doi.org/10.70389/PJPH.100020
+
 [5] Yaduvanshi, D., Sharma, A., & More, P. V. (2019). Application of queuing theory to optimize waiting time in hospital operations. Operations and Supply Chain Management, 12(3), 165–174. https://doi.org/10.31387/oscm0380240
+
 [6] Moore, M. D. (2022). Waiting for the doctor: Managing time and emotion in the British National Health Service, 1948–80. Twentieth Century British History, 33(2), 203–229. https://doi.org/10.1093/tcbh/hwab040
+
 [7] Dong, J., Yom-Tov, E., & Yom-Tov, G. B. (2018). The impact of delay announcements on hospital network coordination and waiting times. Management Science. https://doi.org/10.1287/mnsc.2018.3048
+
 [8] Perdana, R. H. Y., et al. (2019). Hospital queue control system using QR code as verification of patient’s arrival. International Journal of Advanced Computer Science and Applications, 10(8). https://doi.org/10.14569/ijacsa.2019.0100847
+
 [9] Li, X., et al. (2022). Using artificial intelligence to reduce queuing time and improve satisfaction in pediatric outpatient service: A randomized clinical trial. Frontiers in Pediatrics, 10. https://doi.org/10.3389/fped.2022.929834
