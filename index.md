@@ -8,10 +8,10 @@ Welcome to the **PBL3 Group D** project site. This is a Smart Healthcare System 
 
 ## Project Members
 
+- **Jacob Smith - Project Manager**
 - **Bien Alolod**
 - **Sadia Islam**
 - **Hanz Ranen**
-- **Jacob Smith**
 - **Daisuke Terauchi**
 - **Mahiro Ueda**
 - **Ibuki Yasuda**
