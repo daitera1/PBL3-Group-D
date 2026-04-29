@@ -45,22 +45,22 @@ The application uses real-time, historical, and crowdsourced data to provide wai
 
 ### Core Objectives
 
-* Provide **real-time and predicted waiting times** using live, historical, and crowdsourced data
-* Show the **closest healthcare facilities** based on user location
-* Display **hospital specialties and language support**
-* Provide a **recommendation system** based on wait time, distance, and user preferences
-* Include a **crowdsourcing feature** for wait times and simple user feedback
-* Offer **general guidance notifications** without giving medical diagnoses
-* Help **reduce overcrowding** by guiding users to less busy facilities
+* Provide real-time and predicted waiting times using live, historical, and crowdsourced data
+* Show the closest healthcare facilities based on user location
+* Display hospital specialties and language support
+* Provide a recommendation system based on wait time, distance, and user preferences
+* Include a crowdsourcing feature for wait times and simple user feedback
+* Offer general guidance notifications without giving medical diagnoses
+* Help reduce overcrowding by guiding users to less busy facilities
 
 ### Addition System Features
 
-* Show **why a hospital is recommended** (e.g., shorter wait time or closer distance)
-* Allow users to set **preferences** (faster service vs. closer distance)
-* Display **predicted busy hours**
-* Include a **visit intent feature** to improve prediction accuracy
-* Provide **anonymous feedback summaries**
-* Maintain a **privacy-focused design** with minimal data collection
+* Show why a hospital is recommended (e.g., shorter wait time or closer distance)
+* Allow users to set preferences (faster service vs. closer distance)
+* Display predicted busy hours
+* Include a visit intent feature to improve prediction accuracy
+* Provide anonymous feedback summaries
+* Maintain a privacy-focused design with minimal data collection
 
 ---
 
@@ -116,9 +116,9 @@ Platforms such as Zocdoc and Google Maps are useful for finding hospitals and bo
 
 ### Government Data
 
-* The Hong Kong Hospital Authority provides **real-time waiting time data**, updated frequently, showing the value of live data systems [2]
-* NHS England reports highlight ongoing issues with **long waiting times**, especially in emergency care [3]
-* Data from the Ministry of Health, Labour and Welfare shows concerns about the **efficiency of accessing healthcare services** [4]
+* The Hong Kong Hospital Authority provides real-time waiting time data, updated frequently, showing the value of live data systems [2]
+* NHS England reports highlight ongoing issues with long waiting times, especially in emergency care [3]
+* Data from the Ministry of Health, Labour and Welfare shows concerns about the efficiency of accessing healthcare services [4]
 
 ---
 
