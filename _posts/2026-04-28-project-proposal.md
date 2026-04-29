@@ -7,6 +7,8 @@ permalink: /posts/project-proposal/
 
 # Smart Healthcare Application - Real-Time Queue Estimator and Hospital Finder
 
+---
+
 ## Project Proposal Summary
 
 This project aims to develop a Smart Hospital Finder Application (SmartCare Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system is designed for mild healthcare needs and clinic-level visits, and does not provide medical diagnoses or handle emergency cases.
@@ -30,14 +32,23 @@ Due to this, there is a need for a smarter system that can provide real-time and
 
 ## Vision & Goals
 
+### Vision
+
 The first and foremost vision for the project is to create an intuitive, accessible digital platform that empowers patients, carers, and healthcare professionals across the United Kingdom to view, track, and understand hospital waiting times — reducing uncertainty, improving patient experience, and supporting informed decision-making across the healthcare journey.
+
 Millions of patients across the UK are currently waiting for hospital treatment, diagnostic tests, or specialist consultations. Existing mechanisms for checking waiting times are fragmented, inconsistent across trusts, and often inaccessible to the general public. Since this creates anxiety for patients, inefficiencies for administrators, and a lack of transparency in the healthcare system, our project can help them in ways that ease their struggles.
+
 We are aiming for a future where every patient can access organized, real-time waiting time information, assisting them plan it out , prepare and be informed throughout their healthcare journey.
 
+### Goals
 Firstly, our goal is to be transparent with the patients to provide clear, honest and updated waiting time data across UK trust hospitals, special hospitals and regions as well. By filtering the data that is currently difficult to read, it will be more accessible to concerning patients.
+
 Secondly, this project assists with patient empowerment since this will provide patients agency over their healthcare experience by enabling them to compare waiting times across trusts, set up notifications, and understand their position on waiting lists.
+
 Since the source data is directly from NHS England, NHS Digital, and official trust-level reporting, this ensures accuracy and maintains public confidence in the platform.
+
 This project also aims to deliver a clean, jargon-free interface that works equally well for a first-time user and a frequent visitor, prioritising clarity over complexity.
+
 Lastly, using design for inclusivity from the ground up, meeting WCAG 2.1 AA (the international standard for web accessibility, requiring digital content to be perceivable, operable, understandable, and robust for users) accessibility standards, supporting screen readers, multiple languages, and varying levels of digital literacy.
 
 ---
@@ -73,12 +84,14 @@ The application uses real-time, historical, and crowdsourced data to provide wai
 ## Data Acquisition – Finding Datasets
 
 API to access the Waiting List Minimum Data Set (WLMDS) - The national electronic databases of NHS patient waiting list details such as date of birth, a patient’s care pathway and the date they began waiting.
+
 We can access:
 * Search for patients
 * Get patient details
 * View when a patient began waiting for a procedure
 * View the care pathway a patient is on
 * View the trust / organisation their care pathway is with
+
 We can view:
 * Patient waiting date
 * Patient pathway identifier
@@ -118,7 +131,7 @@ To support the development of our hospital finder application, we reviewed exist
 
 ### Existing Applications
 
-Platforms such as Zocdoc and Google Maps are useful for finding hospitals and booking appointments. However, they do not provide **real-time information on hospital busyness**, making it difficult for users to choose the fastest option in urgent situations. In addition, many apps are **too complex**, which can be challenging for users under stress.
+Platforms such as Zocdoc and Google Maps are useful for finding hospitals and booking appointments. However, they do not provide real-time information on hospital busyness, making it difficult for users to choose the fastest option in urgent situations. In addition, many apps are too complex, which can be challenging for users under stress.
 
 ### Government Data
 
