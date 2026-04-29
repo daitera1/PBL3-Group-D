@@ -64,8 +64,9 @@ nav a:active {
 }
 
 .article-content p {
-    margin: 10px 0;
+    margin: 20px 0;
     font-size: 18px;
+    line-height: 1.6;
 }
 
 .article-content-proposal {
