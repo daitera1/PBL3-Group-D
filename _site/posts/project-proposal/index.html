@@ -2,242 +2,342 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Proposal – PBL3 Group D Project</title>
-    <link rel="stylesheet" href="/PBL3-Group-D/assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Proposal – PBL3 Group D Project</title>
+  <link rel="stylesheet" href="/PBL3-Group-D/assets/css/style.css">
 </head>
 
 <body>
-    <nav>
+  <nav>
     <div class="logo">
-        <a href="/PBL3-Group-D/">PBL3 Group D</a>
+      <a href="/PBL3-Group-D/">PBL3 Group D</a>
     </div>
     <div class="navbar">
-        <div class="nav-links">
-            <a href="/PBL3-Group-D/posts/project-proposal/">Project Proposal</a>
-            <a href="/PBL3-Group-D/posts/requirements-specification/">Requirements Specification</a>
-            <a href="/PBL3-Group-D/posts/system-design/">System Design Document</a>
-            <a href="/PBL3-Group-D/posts/system-architecture/">System Architecture</a>
-            <a href="/PBL3-Group-D/posts/documentation/">Documentation</a>
-        </div>
-        <div class="underline"></div>
+      <div class="nav-links">
+        <a href="/PBL3-Group-D/posts/project-proposal/">Project Proposal</a>
+        <a href="/PBL3-Group-D/posts/requirements-specification/">Requirements Specification</a>
+        <a href="/PBL3-Group-D/posts/system-design/">System Design Document</a>
+        <a href="/PBL3-Group-D/posts/system-architecture/">System Architecture</a>
+        <a href="/PBL3-Group-D/posts/documentation/">Documentation</a>
+      </div>
+      <div class="underline"></div>
     </div>
-</nav>
-
-    <main class="main">
-        <article class="article-info">
-            <header class="intro">
-                <h1>Project Proposal</h1>
-            </header>
-            <div class="article-content">
-                <h1 id="smart-healthcare-application---real-time-queue-estimator-and-hospital-finder">Smart Healthcare Application - Real-Time Queue Estimator and Hospital Finder</h1>
-
-<hr />
-
-<h2 id="project-proposal-summary">Project Proposal Summary</h2>
-
-<p>This project aims to develop a Smart Hospital Finder Application (SmartCare Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system is designed for mild healthcare needs and clinic-level visits, and does not provide medical diagnoses or handle emergency cases.</p>
-
-<p>In many cities, hospitals are often overcrowded, and patients lack access to real-time information about waiting times. As a result, most people go to the nearest hospital without knowing how long they will have to wait. This leads to inefficient patient distribution, longer waiting times, and increased stress, especially in urgent situations. Existing solutions such as map apps or hospital websites do not provide accurate or real-time information, making it difficult for users to make informed decisions.</p>
-
-<p>To address this, our application combines live data, historical trends, and crowdsourced input to provide real-time and predicted waiting times. It also displays key information such as hospital specialties, language support, and distance. A recommendation system suggests suitable hospitals based on user preferences, helping guide patients toward less crowded facilities and reducing overall congestion.</p>
-
-<p>The system also focuses on simplicity, accessibility, and privacy. It provides clear and easy-to-understand information, supports international users, and minimizes data collection. By centralizing hospital information into one platform, the application aims to improve decision-making, reduce waiting times, and create a more efficient healthcare experience.</p>
-
-<hr />
-
-<h2 id="problem-statement">Problem Statement</h2>
-
-<p>In many cities, hospitals are often overcrowded and patients have to deal with long waiting times. Even though there are multiple hospitals available, people usually don’t have access to real-time information about how busy each hospital is. Because of this, most patients just go to the closest hospital without knowing how long they will have to wait.
-This leads to some hospitals becoming overloaded while others are not fully used. It makes the system inefficient and increases stress for patients, especially for people who need urgent care. On top of that, it is also hard to find important information like hospital specialties, language support, or what insurance is accepted, since there is no single platform that shows everything clearly.
-Current solutions, like hospital websites or map apps, don’t really solve this problem because they don’t show live conditions or accurate wait times. As a result, patients cannot make informed decisions about where to go.
-Due to this, there is a need for a smarter system that can provide real-time and predicted information to help patients choose the best hospital. This could reduce waiting times, balance patient flow, and make healthcare access easier and more efficient.</p>
-
-<hr />
-
-<h2 id="vision--goals">Vision &amp; Goals</h2>
-
-<h3 id="vision">Vision</h3>
-
-<p>The first and foremost vision for the project is to create an intuitive, accessible digital platform that empowers patients, carers, and healthcare professionals across the United Kingdom to view, track, and understand hospital waiting times — reducing uncertainty, improving patient experience, and supporting informed decision-making across the healthcare journey.</p>
-
-<p>Millions of patients across the UK are currently waiting for hospital treatment, diagnostic tests, or specialist consultations. Existing mechanisms for checking waiting times are fragmented, inconsistent across trusts, and often inaccessible to the general public. Since this creates anxiety for patients, inefficiencies for administrators, and a lack of transparency in the healthcare system, our project can help them in ways that ease their struggles.</p>
-
-<p>We are aiming for a future where every patient can access organized, real-time waiting time information, assisting them plan it out , prepare and be informed throughout their healthcare journey.</p>
-
-<h3 id="goals">Goals</h3>
-<p>Firstly, our goal is to be transparent with the patients to provide clear, honest and updated waiting time data across UK trust hospitals, special hospitals and regions as well. By filtering the data that is currently difficult to read, it will be more accessible to concerning patients.</p>
-
-<p>Secondly, this project assists with patient empowerment since this will provide patients agency over their healthcare experience by enabling them to compare waiting times across trusts, set up notifications, and understand their position on waiting lists.</p>
-
-<p>Since the source data is directly from NHS England, NHS Digital, and official trust-level reporting, this ensures accuracy and maintains public confidence in the platform.</p>
-
-<p>This project also aims to deliver a clean, jargon-free interface that works equally well for a first-time user and a frequent visitor, prioritising clarity over complexity.</p>
-
-<p>Lastly, using design for inclusivity from the ground up, meeting WCAG 2.1 AA (the international standard for web accessibility, requiring digital content to be perceivable, operable, understandable, and robust for users) accessibility standards, supporting screen readers, multiple languages, and varying levels of digital literacy.</p>
-
-<hr />
-
-<h2 id="objectives--app-features-and-what-it-does">Objectives – App Features and What It Does</h2>
-
-<h3 id="purpose-of-the-application">Purpose of the Application</h3>
-
-<p>The objective of this project is to develop a Smart Hospital Finder Application (SmartCare Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system focuses on mild healthcare needs and clinic-level visits, without providing medical diagnoses or handling emergency cases.
-The application uses real-time, historical, and crowdsourced data to provide waiting time estimates and simple recommendations. It aims to reduce waiting times, improve patient distribution, and make hospital information easier to access in one platform, while maintaining user privacy.</p>
-
-<h3 id="core-objectives">Core Objectives</h3>
-
-<ul>
-  <li>Provide real-time and predicted waiting times using live, historical, and crowdsourced data</li>
-  <li>Show the closest healthcare facilities based on user location</li>
-  <li>Display hospital specialties and language support</li>
-  <li>Provide a recommendation system based on wait time, distance, and user preferences</li>
-  <li>Include a crowdsourcing feature for wait times and simple user feedback</li>
-  <li>Offer general guidance notifications without giving medical diagnoses</li>
-  <li>Help reduce overcrowding by guiding users to less busy facilities</li>
-</ul>
-
-<h3 id="addition-system-features">Addition System Features</h3>
-
-<ul>
-  <li>Show why a hospital is recommended (e.g., shorter wait time or closer distance)</li>
-  <li>Allow users to set preferences (faster service vs. closer distance)</li>
-  <li>Display predicted busy hours</li>
-  <li>Include a visit intent feature to improve prediction accuracy</li>
-  <li>Provide anonymous feedback summaries</li>
-  <li>Maintain a privacy-focused design with minimal data collection</li>
-</ul>
-
-<hr />
-
-<h2 id="data-acquisition--finding-datasets">Data Acquisition – Finding Datasets</h2>
-
-<p>API to access the Waiting List Minimum Data Set (WLMDS) - The national electronic databases of NHS patient waiting list details such as date of birth, a patient’s care pathway and the date they began waiting.</p>
-
-<p>We can access:</p>
-<ul>
-  <li>Search for patients</li>
-  <li>Get patient details</li>
-  <li>View when a patient began waiting for a procedure</li>
-  <li>View the care pathway a patient is on</li>
-  <li>View the trust / organisation their care pathway is with</li>
-</ul>
-
-<p>We can view:</p>
-<ul>
-  <li>Patient waiting date</li>
-  <li>Patient pathway identifier</li>
-  <li>Treatment function code</li>
-  <li>Organisation providing the care pathway</li>
-  <li>Census date
-However, this API is for internal use only (NHS App), so currently we are asking NHS England to use the API <a href="#ref-1" class="citation">[1]</a></li>
-</ul>
-
-<hr />
-
-<h2 id="data-science--predicting-wait-times">Data Science – Predicting Wait Times</h2>
-
-<h3 id="preprocessing">Preprocessing</h3>
-
-<p>The collected hospital waiting-time data from the API will undergo preprocessing to ensure consistency, reliability, and suitability for predictive modeling. Raw waiting-time data gathered from public hospital queue platforms will first be cleaned by handling missing values, removing duplicate entries, and standardizing inconsistent hospital naming conventions. Time-based features will then be extracted from timestamps, including hour of day, day of week, weekend/weekday and holiday indicators, as these temporal factors are strongly associated with hospital congestion patterns. Lag-based historical features will also be generated, such as previous recorded waiting time, rolling average wait over recent intervals, and congestion trends over time . Finally, categorical variables such as hospital type or department will be encoded into machine-readable form for use in predictive models.</p>
-
-<h3 id="data-techniques">Data Techniques</h3>
-
-<p>In order to estimate future hospital waiting times, the system will implement a supervised regression-based prediction model (preferably using LightGBM / XGBoost). The predictive model will leverage both temporal features and historical queue-state information, including:</p>
-<ul>
-  <li>Current waiting time</li>
-  <li>Previous waiting times</li>
-  <li>Rolling average queue duration</li>
-  <li>Time of day / Day of week</li>
-  <li>Hospital congestion level</li>
-  <li>Hospital-specific patterns
-A baseline historical-average model will first be established to benchmark the performance of the model. After which the gradient boosting model will be trained and evaluated against it. Model performance will then be assessed using regression metrics such as MAE (Mean Absolute Error) and RMSE (Root Mean Squared Error) to measure prediction accuracy.</li>
-</ul>
-
-<h3 id="data-visualization">Data Visualization</h3>
-
-<p>The processed and predicted waiting-time data will be visualized through a real-time hospital map with live/predicted waiting times and color-coded congestion indicators.</p>
-
-<hr />
-
-<h2 id="existing-research---applicationsprototypes">Existing Research - Applications/Prototypes</h2>
-
-<p>To support the development of our hospital finder application, we reviewed existing apps and government data from 2025 to 2026 to understand current solutions and identify gaps.</p>
-
-<h3 id="existing-applications">Existing Applications</h3>
-
-<p>Platforms such as Zocdoc and Google Maps are useful for finding hospitals and booking appointments. However, they do not provide real-time information on hospital busyness, making it difficult for users to choose the fastest option in urgent situations. In addition, many apps are too complex, which can be challenging for users under stress.</p>
-
-<h3 id="government-data">Government Data</h3>
-
-<ul>
-  <li>The Hong Kong Hospital Authority provides real-time waiting time data, updated frequently, showing the value of live data systems <a href="#ref-2" class="citation">[2]</a></li>
-  <li>NHS England reports highlight ongoing issues with long waiting times, especially in emergency care <a href="#ref-3" class="citation">[3]</a></li>
-  <li>Data from the Ministry of Health, Labour and Welfare shows concerns about the efficiency of accessing healthcare services <a href="#ref-4" class="citation">[4]</a></li>
-</ul>
-
-<hr />
-
-<h2 id="risks-and-privacy">Risks and Privacy</h2>
-
-<h3 id="risks">Risks</h3>
-<p><strong>Incorrect Data</strong>
-Waiting time predictions may be inaccurate or outdated, especially during peak hours or emergencies. This can mislead patients and cause them to make poor decisions about where to go.</p>
-
-<p><strong>Overcrowding Effect</strong>
-If many users identify the same hospital as having the shortest wait time,
-they may all go there at once, leading to unexpected overcrowding. As a result, the system may unintentionally create longer waiting times.</p>
-
-<p><strong>Inequality of Access</strong>
-Hospitals with better technology or digital infrastructure may attract more patients, while smaller or less-equipped hospitals may be overlooked. In addition, elderly patients or those who are not familiar with digital devices may be excluded from the benefits of the system.</p>
-
-<h3 id="privacy">Privacy</h3>
-
-<p><strong>Personal Health Data Leakage</strong>
-Sensitive information such as patients’ names, age, gender, ID, and medical conditions may be exposed if the system is not properly secured. This could lead to serious ethical and legal issues.</p>
-
-<p><strong>Location Tracking</strong>
-The application may track users’ locations and hospital visits. If this data is misused or leaked, it could reveal personal behavior patterns or even health conditions.</p>
-
-<p><strong>Lack of User Control</strong>
-Users may not fully understand what data is being collected or how it is used. Providing transparency and allowing users to control their data is important.</p>
-
-<hr />
-
-<h2 id="sustainability">Sustainability</h2>
-
-<p><strong>Data Sustainability</strong>
-The web application must continuously maintain servers, APIs, and real-time data updates. This requires stable infrastructure and long-term technical support.</p>
-
-<p><strong>Hospital Integration</strong>
-The system depends on cooperation from hospitals. However, not all hospitals are willing or able to share data, and their systems may not be compatible.</p>
-
-<hr />
-
-<h2 id="references">References</h2>
-
-<p><span id="ref-1">[1]</span> Hong Kong Hospital Authority. (2026). Accident and emergency waiting time data. Retrieved from https://www.ha.org.hk</p>
-
-<p><span id="ref-2">[2]</span> NHS England. (2026). A&amp;E waiting time statistics. Retrieved from https://www.england.nhs.uk</p>
-
-<p><span id="ref-3">[3]</span> Ministry of Health, Labour and Welfare. (2026). Healthcare system survey. Retrieved from https://www.mhlw.go.jp</p>
-
-<p><span id="ref-4">[4]</span> Limiri, D. (2025). The impact of long wait times on patient health outcomes: The growing NHS crisis. Premier Journal of Public Health. https://doi.org/10.70389/PJPH.100020</p>
-
-<p><span id="ref-5">[5]</span> Yaduvanshi, D., Sharma, A., &amp; More, P. V. (2019). Application of queuing theory to optimize waiting time in hospital operations. Operations and Supply Chain Management, 12(3), 165–174. https://doi.org/10.31387/oscm0380240</p>
-
-<p><span id="ref-6">[6]</span> Moore, M. D. (2022). Waiting for the doctor: Managing time and emotion in the British National Health Service, 1948–80. Twentieth Century British History, 33(2), 203–229. https://doi.org/10.1093/tcbh/hwab040</p>
-
-<p><span id="ref-7">[7]</span> Dong, J., Yom-Tov, E., &amp; Yom-Tov, G. B. (2018). The impact of delay announcements on hospital network coordination and waiting times. Management Science. https://doi.org/10.1287/mnsc.2018.3048</p>
-
-<p><span id="ref-8">[8]</span> Perdana, R. H. Y., et al. (2019). Hospital queue control system using QR code as verification of patient’s arrival. International Journal of Advanced Computer Science and Applications, 10(8). https://doi.org/10.14569/ijacsa.2019.0100847</p>
-
-<p><span id="ref-9">[9]</span> Li, X., et al. (2022). Using artificial intelligence to reduce queuing time and improve satisfaction in pediatric outpatient service: A randomized clinical trial. Frontiers in Pediatrics, 10. https://doi.org/10.3389/fped.2022.929834</p>
-
-            </div>
-        </article>
-    </main>
+  </nav>
+
+  <main class="main">
+    <article class="article-info">
+      <header class="intro">
+        <h1>Project Proposal</h1>
+      </header>
+      <div class="article-content">
+        <h1 id="smart-healthcare-application---real-time-queue-estimator-and-hospital-finder">Smart Healthcare
+          Application - Real-Time Queue Estimator and Hospital Finder</h1>
+
+        <hr />
+
+        <h2 id="project-proposal-summary">Project Proposal Summary</h2>
+
+        <p>This project aims to develop a Smart Hospital Finder Application (SmartCare Navigator) that helps users
+          choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system is
+          designed for mild healthcare needs and clinic-level visits, and does not provide medical diagnoses or handle
+          emergency cases.</p>
+
+        <p>In many cities, hospitals are often overcrowded, and patients lack access to real-time information about
+          waiting times. As a result, most people go to the nearest hospital without knowing how long they will have to
+          wait. This leads to inefficient patient distribution, longer waiting times, and increased stress, especially
+          in urgent situations. Existing solutions such as map apps or hospital websites do not provide accurate or
+          real-time information, making it difficult for users to make informed decisions.</p>
+
+        <p>To address this, our application combines live data, historical trends, and crowdsourced input to provide
+          real-time and predicted waiting times. It also displays key information such as hospital specialties, language
+          support, and distance. A recommendation system suggests suitable hospitals based on user preferences, helping
+          guide patients toward less crowded facilities and reducing overall congestion.</p>
+
+        <p>The system also focuses on simplicity, accessibility, and privacy. It provides clear and easy-to-understand
+          information, supports international users, and minimizes data collection. By centralizing hospital information
+          into one platform, the application aims to improve decision-making, reduce waiting times, and create a more
+          efficient healthcare experience.</p>
+
+        <hr />
+
+        <h2 id="problem-statement">Problem Statement</h2>
+
+        <p>In many cities, hospitals are often overcrowded and patients have to deal with long waiting times. Even
+          though there are multiple hospitals available, people usually don’t have access to real-time information about
+          how busy each hospital is. Because of this, most patients just go to the closest hospital without knowing how
+          long they will have to wait.
+          This leads to some hospitals becoming overloaded while others are not fully used. It makes the system
+          inefficient and increases stress for patients, especially for people who need urgent care. On top of that, it
+          is also hard to find important information like hospital specialties, language support, or what insurance is
+          accepted, since there is no single platform that shows everything clearly.
+          Current solutions, like hospital websites or map apps, don’t really solve this problem because they don’t show
+          live conditions or accurate wait times. As a result, patients cannot make informed decisions about where to
+          go.
+          Due to this, there is a need for a smarter system that can provide real-time and predicted information to help
+          patients choose the best hospital. This could reduce waiting times, balance patient flow, and make healthcare
+          access easier and more efficient.</p>
+
+        <hr />
+
+        <h2 id="vision--goals">Vision &amp; Goals</h2>
+
+        <h3 id="vision">Vision</h3>
+
+        <p>The first and foremost vision for the project is to create an intuitive, accessible digital platform that
+          empowers patients, carers, and healthcare professionals across the United Kingdom to view, track, and
+          understand hospital waiting times — reducing uncertainty, improving patient experience, and supporting
+          informed decision-making across the healthcare journey.</p>
+
+        <p>Millions of patients across the UK are currently waiting for hospital treatment, diagnostic tests, or
+          specialist consultations. Existing mechanisms for checking waiting times are fragmented, inconsistent across
+          trusts, and often inaccessible to the general public. Since this creates anxiety for patients, inefficiencies
+          for administrators, and a lack of transparency in the healthcare system, our project can help them in ways
+          that ease their struggles.</p>
+
+        <p>We are aiming for a future where every patient can access organized, real-time waiting time information,
+          assisting them plan it out , prepare and be informed throughout their healthcare journey.</p>
+
+        <h3 id="goals">Goals</h3>
+        <p>Firstly, our goal is to be transparent with the patients to provide clear, honest and updated waiting time
+          data across UK trust hospitals, special hospitals and regions as well. By filtering the data that is currently
+          difficult to read, it will be more accessible to concerning patients.</p>
+
+        <p>Secondly, this project assists with patient empowerment since this will provide patients agency over their
+          healthcare experience by enabling them to compare waiting times across trusts, set up notifications, and
+          understand their position on waiting lists.</p>
+
+        <p>Since the source data is directly from NHS England, NHS Digital, and official trust-level reporting, this
+          ensures accuracy and maintains public confidence in the platform.</p>
+
+        <p>This project also aims to deliver a clean, jargon-free interface that works equally well for a first-time
+          user and a frequent visitor, prioritising clarity over complexity.</p>
+
+        <p>Lastly, using design for inclusivity from the ground up, meeting WCAG 2.1 AA (the international standard for
+          web accessibility, requiring digital content to be perceivable, operable, understandable, and robust for
+          users) accessibility standards, supporting screen readers, multiple languages, and varying levels of digital
+          literacy.</p>
+
+        <hr />
+
+        <h2 id="objectives--app-features-and-what-it-does">Objectives – App Features and What It Does</h2>
+
+        <h3 id="purpose-of-the-application">Purpose of the Application</h3>
+
+        <p>The objective of this project is to develop a Smart Hospital Finder Application (SmartCare Navigator) that
+          helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The
+          system focuses on mild healthcare needs and clinic-level visits, without providing medical diagnoses or
+          handling emergency cases.
+          The application uses real-time, historical, and crowdsourced data to provide waiting time estimates and simple
+          recommendations. It aims to reduce waiting times, improve patient distribution, and make hospital information
+          easier to access in one platform, while maintaining user privacy.</p>
+
+        <h3 id="core-objectives">Core Objectives</h3>
+
+        <ul>
+          <li>Provide real-time and predicted waiting times using live, historical, and crowdsourced data</li>
+          <li>Show the closest healthcare facilities based on user location</li>
+          <li>Display hospital specialties and language support</li>
+          <li>Provide a recommendation system based on wait time, distance, and user preferences</li>
+          <li>Include a crowdsourcing feature for wait times and simple user feedback</li>
+          <li>Offer general guidance notifications without giving medical diagnoses</li>
+          <li>Help reduce overcrowding by guiding users to less busy facilities</li>
+        </ul>
+
+        <h3 id="addition-system-features">Addition System Features</h3>
+
+        <ul>
+          <li>Show why a hospital is recommended (e.g., shorter wait time or closer distance)</li>
+          <li>Allow users to set preferences (faster service vs. closer distance)</li>
+          <li>Display predicted busy hours</li>
+          <li>Include a visit intent feature to improve prediction accuracy</li>
+          <li>Provide anonymous feedback summaries</li>
+          <li>Maintain a privacy-focused design with minimal data collection</li>
+        </ul>
+
+        <hr />
+
+        <h2 id="data-acquisition--finding-datasets">Data Acquisition – Finding Datasets</h2>
+
+        <p>API to access the Waiting List Minimum Data Set (WLMDS) - The national electronic databases of NHS patient
+          waiting list details such as date of birth, a patient’s care pathway and the date they began waiting.</p>
+
+        <p>We can access:</p>
+        <ul>
+          <li>Search for patients</li>
+          <li>Get patient details</li>
+          <li>View when a patient began waiting for a procedure</li>
+          <li>View the care pathway a patient is on</li>
+          <li>View the trust / organisation their care pathway is with</li>
+        </ul>
+
+        <p>We can view:</p>
+        <ul>
+          <li>Patient waiting date</li>
+          <li>Patient pathway identifier</li>
+          <li>Treatment function code</li>
+          <li>Organisation providing the care pathway</li>
+          <li>Census date
+            However, this API is for internal use only (NHS App), so currently we are asking NHS England to use the API
+            <a href="#ref-1" class="citation">[1]</a>
+          </li>
+        </ul>
+
+        <hr />
+
+        <h2 id="data-science--predicting-wait-times">Data Science – Predicting Wait Times</h2>
+
+        <h3 id="preprocessing">Preprocessing</h3>
+
+        <p>The collected hospital waiting-time data from the API will undergo preprocessing to ensure consistency,
+          reliability, and suitability for predictive modeling. Raw waiting-time data gathered from public hospital
+          queue platforms will first be cleaned by handling missing values, removing duplicate entries, and
+          standardizing inconsistent hospital naming conventions. Time-based features will then be extracted from
+          timestamps, including hour of day, day of week, weekend/weekday and holiday indicators, as these temporal
+          factors are strongly associated with hospital congestion patterns. Lag-based historical features will also be
+          generated, such as previous recorded waiting time, rolling average wait over recent intervals, and congestion
+          trends over time . Finally, categorical variables such as hospital type or department will be encoded into
+          machine-readable form for use in predictive models.</p>
+
+        <h3 id="data-techniques">Data Techniques</h3>
+
+        <p>In order to estimate future hospital waiting times, the system will implement a supervised regression-based
+          prediction model (preferably using LightGBM / XGBoost). The predictive model will leverage both temporal
+          features and historical queue-state information, including:</p>
+        <ul>
+          <li>Current waiting time</li>
+          <li>Previous waiting times</li>
+          <li>Rolling average queue duration</li>
+          <li>Time of day / Day of week</li>
+          <li>Hospital congestion level</li>
+          <li>Hospital-specific patterns
+            A baseline historical-average model will first be established to benchmark the performance of the model.
+            After which the gradient boosting model will be trained and evaluated against it. Model performance will
+            then be assessed using regression metrics such as MAE (Mean Absolute Error) and RMSE (Root Mean Squared
+            Error) to measure prediction accuracy.</li>
+        </ul>
+
+        <h3 id="data-visualization">Data Visualization</h3>
+
+        <p>The processed and predicted waiting-time data will be visualized through a real-time hospital map with
+          live/predicted waiting times and color-coded congestion indicators.</p>
+
+        <hr />
+
+        <h2 id="existing-research---applicationsprototypes">Existing Research - Applications/Prototypes</h2>
+
+        <p>To support the development of our hospital finder application, we reviewed existing apps and government data
+          from 2025 to 2026 to understand current solutions and identify gaps.</p>
+
+        <h3 id="existing-applications">Existing Applications</h3>
+
+        <p>Platforms such as Zocdoc and Google Maps are useful for finding hospitals and booking appointments. However,
+          they do not provide real-time information on hospital busyness, making it difficult for users to choose the
+          fastest option in urgent situations. In addition, many apps are too complex, which can be challenging for
+          users under stress.</p>
+
+        <h3 id="government-data">Government Data</h3>
+
+        <ul>
+          <li>The Hong Kong Hospital Authority provides real-time waiting time data, updated frequently, showing the
+            value of live data systems <a href="#ref-2" class="citation">[2]</a></li>
+          <li>NHS England reports highlight ongoing issues with long waiting times, especially in emergency care <a
+              href="#ref-3" class="citation">[3]</a></li>
+          <li>Data from the Ministry of Health, Labour and Welfare shows concerns about the efficiency of accessing
+            healthcare services <a href="#ref-4" class="citation">[4]</a></li>
+        </ul>
+
+        <hr />
+
+        <h2 id="risks-and-privacy">Risks and Privacy</h2>
+
+        <h3 id="risks">Risks</h3>
+        <p><strong>Incorrect Data</strong>
+          Waiting time predictions may be inaccurate or outdated, especially during peak hours or emergencies. This can
+          mislead patients and cause them to make poor decisions about where to go.</p>
+
+        <p><strong>Overcrowding Effect</strong>
+          If many users identify the same hospital as having the shortest wait time,
+          they may all go there at once, leading to unexpected overcrowding. As a result, the system may unintentionally
+          create longer waiting times.</p>
+
+        <p><strong>Inequality of Access</strong>
+          Hospitals with better technology or digital infrastructure may attract more patients, while smaller or
+          less-equipped hospitals may be overlooked. In addition, elderly patients or those who are not familiar with
+          digital devices may be excluded from the benefits of the system.</p>
+
+        <h3 id="privacy">Privacy</h3>
+
+        <p><strong>Personal Health Data Leakage</strong>
+          Sensitive information such as patients’ names, age, gender, ID, and medical conditions may be exposed if the
+          system is not properly secured. This could lead to serious ethical and legal issues.</p>
+
+        <p><strong>Location Tracking</strong>
+          The application may track users’ locations and hospital visits. If this data is misused or leaked, it could
+          reveal personal behavior patterns or even health conditions.</p>
+
+        <p><strong>Lack of User Control</strong>
+          Users may not fully understand what data is being collected or how it is used. Providing transparency and
+          allowing users to control their data is important.</p>
+
+        <hr />
+
+        <h2 id="sustainability">Sustainability</h2>
+
+        <p><strong>Data Sustainability</strong>
+          The web application must continuously maintain servers, APIs, and real-time data updates. This requires stable
+          infrastructure and long-term technical support.</p>
+
+        <p><strong>Hospital Integration</strong>
+          The system depends on cooperation from hospitals. However, not all hospitals are willing or able to share
+          data, and their systems may not be compatible.</p>
+
+        <hr />
+
+        <h2 id="references">References</h2>
+
+        <p><span id="ref-1">[1]</span> Hong Kong Hospital Authority. (2026). Accident and emergency waiting time data.
+          Retrieved from <a href="https://www.ha.org.hk" class="reference-link">https://www.ha.org.hk</a></p>
+
+        <p><span id="ref-2">[2]</span> NHS England. (2026). A&amp;E waiting time statistics. Retrieved from <a
+            href="https://www.england.nhs.uk" class="reference-link">https://www.england.nhs.uk</a></p>
+
+        <p><span id="ref-3">[3]</span> Ministry of Health, Labour and Welfare. (2026). Healthcare system survey.
+          Retrieved from <a href="https://www.mhlw.go.jp" class="reference-link">https://www.mhlw.go.jp</a></p>
+
+        <p><span id="ref-4">[4]</span> Limiri, D. (2025). The impact of long wait times on patient health outcomes: The
+          growing NHS crisis. Premier Journal of Public Health. <a href="https://doi.org/10.70389/PJPH.100020"
+            class="reference-link">https://doi.org/10.70389/PJPH.100020</a></p>
+
+        <p><span id="ref-5">[5]</span> Yaduvanshi, D., Sharma, A., &amp; More, P. V. (2019). Application of queuing
+          theory to optimize waiting time in hospital operations. Operations and Supply Chain Management, 12(3),
+          165–174. <a href="https://doi.org/10.31387/oscm0380240"
+            class="reference-link">https://doi.org/10.31387/oscm0380240</a></p>
+
+        <p><span id="ref-6">[6]</span> Moore, M. D. (2022). Waiting for the doctor: Managing time and emotion in the
+          British National Health Service, 1948–80. Twentieth Century British History, 33(2), 203–229. <a
+            href="https://doi.org/10.1093/tcbh/hwab040" class="reference-link">https://doi.org/10.1093/tcbh/hwab040</a>
+        </p>
+
+        <p><span id="ref-7">[7]</span> Dong, J., Yom-Tov, E., &amp; Yom-Tov, G. B. (2018). The impact of delay
+          announcements on hospital network coordination and waiting times. Management Science. <a
+            href="https://doi.org/10.1287/mnsc.2018.3048"
+            class="reference-link">https://doi.org/10.1287/mnsc.2018.3048</a></p>
+
+        <p><span id="ref-8">[8]</span> Perdana, R. H. Y., et al. (2019). Hospital queue control system using QR code as
+          verification of patient’s arrival. International Journal of Advanced Computer Science and Applications, 10(8).
+          <a href="https://doi.org/10.14569/ijacsa.2019.0100847"
+            class="reference-link">https://doi.org/10.14569/ijacsa.2019.0100847</a>
+        </p>
+
+        <p><span id="ref-9">[9]</span> Li, X., et al. (2022). Using artificial intelligence to reduce queuing time and
+          improve satisfaction in pediatric outpatient service: A randomized clinical trial. Frontiers in Pediatrics,
+          10. <a href="https://doi.org/10.3389/fped.2022.929834"
+            class="reference-link">https://doi.org/10.3389/fped.2022.929834</a></p>
+
+      </div>
+    </article>
+  </main>
 </body>
 
 </html>

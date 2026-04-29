@@ -180,20 +180,20 @@ The system depends on cooperation from hospitals. However, not all hospitals are
 
 ## References
 
-<span id="ref-1">[1]</span> Hong Kong Hospital Authority. (2026). Accident and emergency waiting time data. Retrieved from https://www.ha.org.hk
+<span id="ref-1">[1]</span> Hong Kong Hospital Authority. (2026). Accident and emergency waiting time data. Retrieved from [https://www.ha.org.hk](https://www.ha.org.hk){: .reference-link}
 
-<span id="ref-2">[2]</span> NHS England. (2026). A&E waiting time statistics. Retrieved from https://www.england.nhs.uk
+<span id="ref-2">[2]</span> NHS England. (2026). A&E waiting time statistics. Retrieved from [https://www.england.nhs.uk](https://www.england.nhs.uk){: .reference-link}
 
-<span id="ref-3">[3]</span> Ministry of Health, Labour and Welfare. (2026). Healthcare system survey. Retrieved from https://www.mhlw.go.jp
+<span id="ref-3">[3]</span> Ministry of Health, Labour and Welfare. (2026). Healthcare system survey. Retrieved from [https://www.mhlw.go.jp](https://www.mhlw.go.jp){: .reference-link}
 
-<span id="ref-4">[4]</span> Limiri, D. (2025). The impact of long wait times on patient health outcomes: The growing NHS crisis. Premier Journal of Public Health. https://doi.org/10.70389/PJPH.100020
+<span id="ref-4">[4]</span> Limiri, D. (2025). The impact of long wait times on patient health outcomes: The growing NHS crisis. Premier Journal of Public Health. [https://doi.org/10.70389/PJPH.100020](https://doi.org/10.70389/PJPH.100020){: .reference-link}
 
-<span id="ref-5">[5]</span> Yaduvanshi, D., Sharma, A., & More, P. V. (2019). Application of queuing theory to optimize waiting time in hospital operations. Operations and Supply Chain Management, 12(3), 165–174. https://doi.org/10.31387/oscm0380240
+<span id="ref-5">[5]</span> Yaduvanshi, D., Sharma, A., & More, P. V. (2019). Application of queuing theory to optimize waiting time in hospital operations. Operations and Supply Chain Management, 12(3), 165–174. [https://doi.org/10.31387/oscm0380240](https://doi.org/10.31387/oscm0380240){: .reference-link}
 
-<span id="ref-6">[6]</span> Moore, M. D. (2022). Waiting for the doctor: Managing time and emotion in the British National Health Service, 1948–80. Twentieth Century British History, 33(2), 203–229. https://doi.org/10.1093/tcbh/hwab040
+<span id="ref-6">[6]</span> Moore, M. D. (2022). Waiting for the doctor: Managing time and emotion in the British National Health Service, 1948–80. Twentieth Century British History, 33(2), 203–229. [https://doi.org/10.1093/tcbh/hwab040](https://doi.org/10.1093/tcbh/hwab040){: .reference-link}
 
-<span id="ref-7">[7]</span> Dong, J., Yom-Tov, E., & Yom-Tov, G. B. (2018). The impact of delay announcements on hospital network coordination and waiting times. Management Science. https://doi.org/10.1287/mnsc.2018.3048
+<span id="ref-7">[7]</span> Dong, J., Yom-Tov, E., & Yom-Tov, G. B. (2018). The impact of delay announcements on hospital network coordination and waiting times. Management Science. [https://doi.org/10.1287/mnsc.2018.3048](https://doi.org/10.1287/mnsc.2018.3048){: .reference-link}
 
-<span id="ref-8">[8]</span> Perdana, R. H. Y., et al. (2019). Hospital queue control system using QR code as verification of patient’s arrival. International Journal of Advanced Computer Science and Applications, 10(8). https://doi.org/10.14569/ijacsa.2019.0100847
+<span id="ref-8">[8]</span> Perdana, R. H. Y., et al. (2019). Hospital queue control system using QR code as verification of patient’s arrival. International Journal of Advanced Computer Science and Applications, 10(8). [https://doi.org/10.14569/ijacsa.2019.0100847](https://doi.org/10.14569/ijacsa.2019.0100847){: .reference-link}
 
-<span id="ref-9">[9]</span> Li, X., et al. (2022). Using artificial intelligence to reduce queuing time and improve satisfaction in pediatric outpatient service: A randomized clinical trial. Frontiers in Pediatrics, 10. https://doi.org/10.3389/fped.2022.929834
+<span id="ref-9">[9]</span> Li, X., et al. (2022). Using artificial intelligence to reduce queuing time and improve satisfaction in pediatric outpatient service: A randomized clinical trial. Frontiers in Pediatrics, 10. [https://doi.org/10.3389/fped.2022.929834](https://doi.org/10.3389/fped.2022.929834){: .reference-link}
