@@ -5,6 +5,40 @@ date: 2026-04-28
 permalink: /posts/project-proposal/
 ---
 
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 1.5em 0;">
+<details open>
+<summary style="font-weight: bold; font-size: 1.1em; cursor: pointer; margin-bottom: 0.8em;">▼ Table of Contents</summary>
+<div style="padding-left: 0.5em; line-height: 2;">
+
+<div style="margin-left: 0.5em;">
+• <strong>Project Proposal Summary</strong><br>
+• <strong>1. Problem Statement</strong><br>
+• <strong>2. Vision & Goals</strong><br>
+<span style="margin-left: 1.8em;">○ 2.1 Vision</span><br>
+<span style="margin-left: 1.8em;">○ 2.2 Goals</span><br>
+• <strong>3. Objectives – App Features and What It Does</strong><br>
+<span style="margin-left: 1.8em;">○ 3.1 Purpose of the Application</span><br>
+<span style="margin-left: 1.8em;">○ 3.2 Core Objectives</span><br>
+<span style="margin-left: 1.8em;">○ 3.3 Additional System Features</span><br>
+• <strong>4. Data Acquisition – Finding Datasets</strong><br>
+• <strong>5. Data Science – Predicting Wait Times</strong><br>
+<span style="margin-left: 1.8em;">○ 5.1 Preprocessing</span><br>
+<span style="margin-left: 1.8em;">○ 5.2 Data Techniques</span><br>
+<span style="margin-left: 1.8em;">○ 5.3 Data Visualization</span><br>
+• <strong>6. Existing Research – Applications/Prototypes</strong><br>
+<span style="margin-left: 1.8em;">○ 6.1 Existing Applications</span><br>
+<span style="margin-left: 1.8em;">○ 6.2 Government Data</span><br>
+• <strong>7. Risks and Privacy</strong><br>
+<span style="margin-left: 1.8em;">○ 7.1 Risks</span><br>
+<span style="margin-left: 1.8em;">○ 7.2 Privacy</span><br>
+• <strong>8. Sustainability</strong><br>
+• <strong>References</strong>
+</div>
+
+</div>
+</details>
+</div>
+
 # Smart Healthcare Application - Real-Time Queue Estimator and Hospital Finder
 
 ---
@@ -21,7 +55,7 @@ The system also focuses on simplicity, accessibility, and privacy. It provides c
 
 ---
 
-## Problem Statement
+## 1. Problem Statement
 
 In many cities, hospitals are often overcrowded and patients have to deal with long waiting times. Even though there are multiple hospitals available, people usually don’t have access to real-time information about how busy each hospital is. Because of this, most patients just go to the closest hospital without knowing how long they will have to wait.
 This leads to some hospitals becoming overloaded while others are not fully used. It makes the system inefficient and increases stress for patients, especially for people who need urgent care. On top of that, it is also hard to find important information like hospital specialties, language support, or what insurance is accepted, since there is no single platform that shows everything clearly.
@@ -30,9 +64,9 @@ Due to this, there is a need for a smarter system that can provide real-time and
 
 ---
 
-## Vision & Goals
+## 2. Vision & Goals
 
-### Vision
+### 2.1 Vision
 
 The first and foremost vision for the project is to create an intuitive, accessible digital platform that empowers patients, carers, and healthcare professionals across the United Kingdom to view, track, and understand hospital waiting times — reducing uncertainty, improving patient experience, and supporting informed decision-making across the healthcare journey.
 
@@ -40,7 +74,7 @@ Millions of patients across the UK are currently waiting for hospital treatment,
 
 We are aiming for a future where every patient can access organized, real-time waiting time information, assisting them plan it out , prepare and be informed throughout their healthcare journey.
 
-### Goals
+### 2.2 Goals
 Firstly, our goal is to be transparent with the patients to provide clear, honest and updated waiting time data across UK trust hospitals, special hospitals and regions as well. By filtering the data that is currently difficult to read, it will be more accessible to concerning patients.
 
 Secondly, this project assists with patient empowerment since this will provide patients agency over their healthcare experience by enabling them to compare waiting times across trusts, set up notifications, and understand their position on waiting lists.
@@ -53,14 +87,14 @@ Lastly, using design for inclusivity from the ground up, meeting WCAG 2.1 AA (th
 
 ---
 
-## Objectives – App Features and What It Does
+## 3. Objectives – App Features and What It Does
 
-### Purpose of the Application
+### 3.1 Purpose of the Application
 
 The objective of this project is to develop a Smart Hospital Finder Application (SmartCare Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system focuses on mild healthcare needs and clinic-level visits, without providing medical diagnoses or handling emergency cases.
 The application uses real-time, historical, and crowdsourced data to provide waiting time estimates and simple recommendations. It aims to reduce waiting times, improve patient distribution, and make hospital information easier to access in one platform, while maintaining user privacy.
 
-### Core Objectives
+### 3.2 Core Objectives
 
 * Provide real-time and predicted waiting times using live, historical, and crowdsourced data
 * Show the closest healthcare facilities based on user location
@@ -70,7 +104,7 @@ The application uses real-time, historical, and crowdsourced data to provide wai
 * Offer general guidance notifications without giving medical diagnoses
 * Help reduce overcrowding by guiding users to less busy facilities
 
-### Addition System Features
+### 3.3 Additional System Features
 
 * Show why a hospital is recommended (e.g., shorter wait time or closer distance)
 * Allow users to set preferences (faster service vs. closer distance)
@@ -81,7 +115,7 @@ The application uses real-time, historical, and crowdsourced data to provide wai
 
 ---
 
-## Data Acquisition – Finding Datasets
+## 4. Data Acquisition – Finding Datasets
 
 API to access the Waiting List Minimum Data Set (WLMDS) - The national electronic databases of NHS patient waiting list details such as date of birth, a patient’s care pathway and the date they began waiting.
 
@@ -102,13 +136,13 @@ However, this API is for internal use only (NHS App), so currently we are asking
 
 ---
 
-## Data Science – Predicting Wait Times
+## 5. Data Science – Predicting Wait Times
 
-### Preprocessing
+### 5.1 Preprocessing
 
 The collected hospital waiting-time data from the API will undergo preprocessing to ensure consistency, reliability, and suitability for predictive modeling. Raw waiting-time data gathered from public hospital queue platforms will first be cleaned by handling missing values, removing duplicate entries, and standardizing inconsistent hospital naming conventions. Time-based features will then be extracted from timestamps, including hour of day, day of week, weekend/weekday and holiday indicators, as these temporal factors are strongly associated with hospital congestion patterns. Lag-based historical features will also be generated, such as previous recorded waiting time, rolling average wait over recent intervals, and congestion trends over time . Finally, categorical variables such as hospital type or department will be encoded into machine-readable form for use in predictive models.
 
-### Data Techniques 
+### 5.2 Data Techniques 
 
 In order to estimate future hospital waiting times, the system will implement a supervised regression-based prediction model (preferably using LightGBM / XGBoost). The predictive model will leverage both temporal features and historical queue-state information, including:
 * Current waiting time
@@ -119,21 +153,21 @@ In order to estimate future hospital waiting times, the system will implement a 
 * Hospital-specific patterns
 A baseline historical-average model will first be established to benchmark the performance of the model. After which the gradient boosting model will be trained and evaluated against it. Model performance will then be assessed using regression metrics such as MAE (Mean Absolute Error) and RMSE (Root Mean Squared Error) to measure prediction accuracy.
 
-### Data Visualization
+### 5.3 Data Visualization
 
 The processed and predicted waiting-time data will be visualized through a real-time hospital map with live/predicted waiting times and color-coded congestion indicators.
 
 ---
 
-## Existing Research - Applications/Prototypes
+## 6. Existing Research - Applications/Prototypes
 
 To support the development of our hospital finder application, we reviewed existing apps and government data from 2025 to 2026 to understand current solutions and identify gaps.
 
-### Existing Applications
+### 6.1 Existing Applications
 
 Platforms such as Zocdoc and Google Maps are useful for finding hospitals and booking appointments. However, they do not provide real-time information on hospital busyness, making it difficult for users to choose the fastest option in urgent situations. In addition, many apps are too complex, which can be challenging for users under stress.
 
-### Government Data
+### 6.2 Government Data
 
 * The Hong Kong Hospital Authority provides real-time waiting time data, updated frequently, showing the value of live data systems <a href="#ref-2" class="citation">[2]</a>
 * NHS England reports highlight ongoing issues with long waiting times, especially in emergency care <a href="#ref-3" class="citation">[3]</a>
@@ -141,9 +175,9 @@ Platforms such as Zocdoc and Google Maps are useful for finding hospitals and bo
 
 ---
 
-## Risks and Privacy
+## 7. Risks and Privacy
 
-### Risks
+### 7.1 Risks
 **Incorrect Data**
 Waiting time predictions may be inaccurate or outdated, especially during peak hours or emergencies. This can mislead patients and cause them to make poor decisions about where to go.
 
@@ -154,9 +188,7 @@ they may all go there at once, leading to unexpected overcrowding. As a result, 
 **Inequality of Access**
 Hospitals with better technology or digital infrastructure may attract more patients, while smaller or less-equipped hospitals may be overlooked. In addition, elderly patients or those who are not familiar with digital devices may be excluded from the benefits of the system.
 
-
-### Privacy
-
+### 7.2 Privacy
 **Personal Health Data Leakage**
 Sensitive information such as patients’ names, age, gender, ID, and medical conditions may be exposed if the system is not properly secured. This could lead to serious ethical and legal issues.
 
@@ -168,7 +200,7 @@ Users may not fully understand what data is being collected or how it is used. P
 
 ---
 
-## Sustainability
+## 8. Sustainability
 
 **Data Sustainability**
 The web application must continuously maintain servers, APIs, and real-time data updates. This requires stable infrastructure and long-term technical support.
