@@ -13,6 +13,14 @@ permalink: /posts/project-proposal/
 .toc-link:hover {
   text-decoration: underline;
 }
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 2em;
+}
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
+  background: none;
+  outline: none;
+  animation: none;
+}
 </style>
 
 <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 1.5em 0; background-color: #D4D4D4; border-radius: 8px; padding: 1.2em 1.5em;">
