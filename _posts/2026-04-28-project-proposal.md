@@ -7,7 +7,6 @@ permalink: /posts/project-proposal/
 
 <style>
 .toc-link {
-  color: #333;
   text-decoration: none;
 }
 .toc-link:hover {
@@ -15,7 +14,7 @@ permalink: /posts/project-proposal/
 }
 </style>
 
-<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 1.5em 0; background-color: #C7C7C7; border-radius: 8px; padding: 1.2em 1.5em;">
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 1.5em 0; background-color: #D6D4D4; border-radius: 8px; padding: 1.2em 1.5em;">
 <details open>
 <summary style="font-weight: bold; font-size: 1.1em; cursor: pointer; margin-bottom: 0.8em;">Table of Contents</summary>
 <div style="padding-left: 0.5em; line-height: 2;">
