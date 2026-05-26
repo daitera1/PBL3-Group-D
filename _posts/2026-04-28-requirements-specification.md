@@ -169,6 +169,7 @@ The system should recommend suitable hospitals based on the user's current situa
 
 **FR-1.9** The system shall provide explanation details for recommendation decisions including waiting time, distance, specialty match, and language support availability.
 
+
 ### FR-2 Overcrowding Prevention Function
 
 The system shall reduce recommendation bias toward already crowded facilities.
@@ -182,6 +183,7 @@ The system shall reduce recommendation bias toward already crowded facilities.
 **FR-2.3** The system shall distribute recommendations across multiple nearby facilities when necessary.
 
 **FR-2.4** The system shall continue providing alternative recommendations even during high-demand periods.
+
 
 ### FR-3 Wait-Time Prediction Function
 
@@ -197,6 +199,7 @@ The system shall estimate future waiting times using historical and real-time in
 **FR-3.2** The system shall predict estimated waiting times for each hospital.
 
 **FR-3.3** The system shall periodically update predictions when new data becomes available.
+
 
 ### FR-4 Confidence and Reliability Visualization Function
 
@@ -214,6 +217,7 @@ The system shall communciate prediction uncertainty  to users
 
 **FR-4.4** The system shall visually indicate low-confidence predictions.
 
+
 ### FR-5 User Preference Management Function
 
 The system shall personalize recommendations according to user preferences.
@@ -226,6 +230,7 @@ The system shall personalize recommendations according to user preferences.
 
 **FR-5.3** The system shall apply saved preferences during recommendation generation.
 
+
 ### FR-6 Real-Time Data Update Function
 
 The system shall continuously update recommendation data.
@@ -236,6 +241,7 @@ The system shall continuously update recommendation data.
 **FR-6.2** The system shall refresh prediction results when significant queue changes occur.
 
 **FR-6.3** The system shall notify users when recommendation conditions change significantly.
+
 
 ### FR-7 Language Support Verification Function
 
@@ -253,11 +259,13 @@ The system shall assist international patients and visitors in location healcare
 
 **FR-7.5** The system shall notify administrators when language support information requires revalidation.
 
+
 ### FR-8 Emergency Guidance Function
 
 The system shall reduce inappropriate usage during medical emergencies.
 
 **System Requirements**
+
 **FR-8.1** The system shall clearly state that SmartCare Navigator is not a diagnostic tool.
 
 **FR-8.2** The system shall provide emergency contact information.
@@ -274,6 +282,10 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 ### NFR-1 Performance Requirements
 
+They system shall maintain fast, responsive, and accurate performance under normal and peak usage conditions.
+
+**System Requirements**
+
 **NFR-1.1** The system shall display search results within 3 seconds under normal network conditions.
 
 **NFR-1.2** Real-time waiting time data shall be updated at intervals no greater than 5 minutes.
@@ -282,7 +294,12 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 **NFR-1.4** The application shall maintain responsive performance with up to 10,000 concurrent users.
 
+
 ### NFR-2 Usability Requirements
+
+The system shall provide an accessible, user-friendly, and multilingual experience for all users.
+
+**System Requirements**
 
 **NFR-2.1** The application shall comply with WCAG 2.1 Level AA accessibility standards.
 
@@ -292,7 +309,12 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 **NFR-2.4** Users shall be able to filter search results by preferred language support.
 
+
 ### NFR-3 Reliability and Availability
+
+The system shall ensure consistent availability, dependable operation, and accurate healthcare information.
+
+**System Requirements**
 
 **NFR-3.1** The system shall maintain 99.5% uptime during operational hours.
 
@@ -300,7 +322,12 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 **NFR-3.3** Healthcare facility information shall be verified against official sources at least monthly.
 
+
 ### NFR-4 Security and Privacy Requirements
+
+The system shall protect user data and ensure secure handling of sensitive information.
+
+**System Requirements**
 
 **NFR-4.1** User location data shall be anonymized and shall not be stored longer than 24 hours.
 
@@ -310,7 +337,12 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 **NFR-4.4** The system shall implement rate limiting to prevent abuse and DDoS attacks.
 
+
 ### NFR-5 Safety and Liability Requirements
+
+The system shall promote safe usage and clearly communicate the limitations of the application.
+
+**System Requirements**
 
 **NFR-5.1** The application shall clearly state that it is not a diagnostic tool.
 
@@ -318,7 +350,12 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 **NFR-5.3** The system shall not provide medical diagnoses or medical advice under any circumstances.
 
+
 ### NFR-6 Compatibility and Portability
+
+The system shall operate reliably across supported devices, platforms, and network conditions.
+
+**System Requirements**
 
 **NFR-6.1** The application shall support iOS 14+ and Android 9+ devices.
 
@@ -326,13 +363,23 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 **NFR-6.3** The application shall provide limited offline functionality when network connectivity is unavailable.
 
+
 ### NFR-7 Scalability Requirements
+
+The system shall support future growth in users, data volume, and system demand.
+
+**System Requirements**
 
 **NFR-7.1** The system architecture shall support horizontal scaling for up to 100,000 daily active users.
 
 **NFR-7.2** The database shall support storage of historical wait-time data for at least 500 healthcare facilities.
 
+
 ### NFR-8 Maintainability Requirements
+
+The system shall support efficient maintenance, monitoring, and future updates.
+
+**System Requirements**
 
 **NFR-8.1** The system shall use a modular architecture to support independent component updates.
 
@@ -340,13 +387,23 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 **NFR-8.3** The system shall log errors, failures, and performance anomalies for troubleshooting.
 
+
 ### NFR-9 Compliance and Standards
+
+The sysstem shall comply with applicable legal, privacy, and healthcare information standards.
+
+**System Requirements**
 
 **NFR-9.1** The application shall comply with Japan’s Act on the Protection of Personal Information (APPI).
 
 **NFR-9.2** The system shall comply with GDPR requirements for international users where applicable.
 
+
 ### NFR-10 Trust and Transparency Requirements
+
+The system shall provide transparent, verifiable, and trustworthy healthcare information.
+
+**System Requirements**
 
 **NFR-10.1** All healthcare facility information shall be traceable to official sources.
 
@@ -354,7 +411,12 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 **NFR-10.3** Users shall be able to report incorrect information for review.
 
+
 ### NFR-11 Future Extensibilty Requirements
+
+The system shall support future enhancements and integration with additional healthcare services.
+
+**System Requirements**
 
 **NFR-11.1** The system architecture shall support future symptom-to-facility matching features.
 
