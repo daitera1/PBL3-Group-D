@@ -40,26 +40,26 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">Attribute</th>
-      <th style="text-align: left">Value</th>
+      <th>Attribute</th>
+      <th>Value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><strong>Document Title</strong></td>
-      <td style="text-align: left">Software Requirements Specification (SRS)</td>
+      <td><strong>Document Title</strong></td>
+      <td>Software Requirements Specification (SRS)</td>
     </tr>
     <tr>
-      <td style="text-align: left"><strong>Project Name</strong></td>
-      <td style="text-align: left">SmartCare Navigator</td>
+      <td><strong>Project Name</strong></td>
+      <td>SmartCare Navigator</td>
     </tr>
     <tr>
-      <td style="text-align: left"><strong>Document Version</strong></td>
-      <td style="text-align: left">1.1.0</td>
+      <td><strong>Document Version</strong></td>
+      <td>1.1.0</td>
     </tr>
     <tr>
-      <td style="text-align: left"><strong>Status</strong></td>
-      <td style="text-align: left">Final</td>
+      <td><strong>Status</strong></td>
+      <td>Final</td>
     </tr>
   </tbody>
 </table>
@@ -69,24 +69,24 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">Version</th>
-      <th style="text-align: left">Date</th>
-      <th style="text-align: left">Description</th>
-      <th style="text-align: left">Rationale</th>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Rationale</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">1.0.0</td>
-      <td style="text-align: left">2025-05-20</td>
-      <td style="text-align: left">Initial Draft</td>
-      <td style="text-align: left">Baseline requirements for platform development.</td>
+      <td>1.0.0</td>
+      <td>2025-05-20</td>
+      <td>Initial Draft</td>
+      <td>Baseline requirements for platform development.</td>
     </tr>
     <tr>
-      <td style="text-align: left">1.1.0</td>
-      <td style="text-align: left">2025-05-24</td>
-      <td style="text-align: left">Revised Final</td>
-      <td style="text-align: left">Integration of NHS WLMDS constraints and technical architectural depth.</td>
+      <td>1.1.0</td>
+      <td>2025-05-24</td>
+      <td>Revised Final</td>
+      <td>Integration of NHS WLMDS constraints and technical architectural depth.</td>
     </tr>
   </tbody>
 </table>
@@ -106,7 +106,363 @@
 
 <h2 id="2-introduction">2. Introduction</h2>
 
-<h3 id="21">2.1</h3>
+<h3 id="21-system-purpose">2.1 System Purpose</h3>
+
+<p>SmartCare Navigator is a digital platform designed to provide real-time and predicted hospital waiting times across the United Kingdom. The system centralizes fragmented healthcare data to assist patients in locating facilities efficiently.
+<strong>Scope Note</strong>: The system is exclusively for mild healthcare needs and clinic-level visits. It does not provide medical diagnoses or handle emergency cases.</p>
+
+<h3 id="22-vision-and-goals">2.2 Vision and Goals</h3>
+
+<p>The vision is to create an intuitive, accessible platform that reduces patient anxiety and support informed decision-making.</p>
+<ul>
+  <li><strong>Transparency</strong>: Provide clear, updated data from official NHS sources and regional trusts.</li>
+  <li><strong>Empowerment</strong>: Enable patients to compare waiting times and track their position on lists.</li>
+  <li><strong>Data Accuracy</strong>: Ensure public confidence by utilizing direct data from NHS England and NHS Digital.</li>
+  <li><strong>Inclusivity</strong>: Prioritize WCAG 2.1 AA compliance to support diverse digital literacy levels.</li>
+</ul>
+
+<h3 id="23-problem-statement">2.3 Problem Statement</h3>
+
+<p>UK healthcare facilities face systemic overcrowding while patients lack access to reliable and transparent information regarding waiting times, facility capabilities, specialist availability, and healthcare accessibility. Most patients choose healthcare facilities based on proximity, familiarity, or recommendations rather than selecting the facility most appropriate for their medical needs. This behavior contributes to overloaded hospitals, underutilized clinics, and inefficient patient distribution throughout the healthcare system.
+Expert interviews conducted with healthcare professionals revealed that many patients experience difficulty navigating healthcare systems, understanding expected waiting times, and identifying appropriate healthcare providers. International patients face additional challenges due to language barriers and unfamiliarity with local healthcare services. Furthermore, waiting times are influenced by multiple operational factors including staffing availability, emergency cases, registration procedures, and diagnostic bottlenecks, making transparent communication essential for maintaining patient trust and satisfaction.
+Existing map and healthcare applications provide limited visibility into these factors and often fail to deliver accurate and understandable waiting-time information. Therefore, a system is required that improves healthcare accessibility, supports informed patient decision-making, reduces uncertainty, and balances patient flow through real-time data, historical trends, and intelligent facility recommendations.</p>
+
+<hr />
+
+<h2 id="3-glossary">3. Glossary</h2>
+
+<hr />
+
+<h2 id="4-user-requirements-definition">4. User Requirements Definition</h2>
+
+<ol>
+  <li>The system shall allow users to search for healthcare facilities by medical specialty, including pediatrics and minor injuries.</li>
+  <li>The system shall provide support for multiple languages to assist international users.</li>
+  <li>The system shall display whether hospitals accept insurance providers as defined in the System Data Dictionary (sourced from the WLMDS API).</li>
+  <li>The system shall identify healthcare facilities based on the user’s location while applying differential privacy filters.</li>
+  <li>The system should allow users to toggle preferences between “fastest service” and “closest distance.”</li>
+  <li>The system shall allow for anonymous crowdsourced wait-time updates.</li>
+  <li>The system should provide visit preparation guidance, specifically required documentation checklists and clinic-specific arrival instructions.</li>
+  <li>The system shall explicitly label wait times as “A&amp;E,” “Clinic,” or “Appointment” to ensure clarity of intent.</li>
+  <li>The system shall display supported languages for each healthcare facility.</li>
+  <li>The system shall classify language support as:
+    <ul>
+      <li>Fully Bilingual Staff</li>
+      <li>Basic Communication Available</li>
+      <li>Translation Service Available</li>
+      <li>No Verified Language Support</li>
+    </ul>
+  </li>
+  <li>The system shall display the date on which language support information was last verified.</li>
+  <li>The system shall display the source and timestamp of all waiting-time estimates.</li>
+  <li>The system shall classify healthcare facilities according to capability level:
+    <ul>
+      <li>Clinic</li>
+      <li>General Hospital</li>
+      <li>Emergency Hospital</li>
+      <li>Specialty Center</li>
+    </ul>
+  </li>
+  <li>The system shall provide emergency contact information and guidance for urgent situations.</li>
+</ol>
+
+<hr />
+
+<h2 id="5-system-architecture">5. System Architecture</h2>
+
+<h3 id="51-high-level-overview--interoperability">5.1 High-Level Overview &amp; Interoperability</h3>
+
+<p>The architecture utilizes a distributed function mode. To maintain real-time accuracy, the system shall implement a 15-minute polling cycle, mirroring the Hong Kong Hospital Authority logic, to fetch updates from regional trust APIs and the nation WLMDS.</p>
+
+<h3 id="52-system-constraints">5.2 System Constraints</h3>
+
+<ul>
+  <li><strong>API Restriction</strong>: The NHS WLMDS API is cureently for internal NHS use only. Integration is contingent upon the pending approval from NHS England for academic usage.</li>
+  <li><strong>Data Integrity</strong>: Predictions are dependent on the reporting frequency of individual trusts.</li>
+</ul>
+
+<h3 id="53-data-acquisition-componenets">5.3 Data Acquisition Componenets</h3>
+
+<p>The system retrieves the following files from the WLMDS API:</p>
+<ul>
+  <li><strong>Census Date</strong>: Data snapshot timing.</li>
+  <li><strong>Treatment Function Code</strong>: Care pathway identification.</li>
+  <li><strong>Organization ID</strong>: Unique trust/provider identifier.</li>
+  <li><strong>Patient Waiting Start Date</strong>: Used for historical lag-based duration calculations.</li>
+</ul>
+
+<hr />
+
+<h2 id="6-functional-requirements">6. Functional Requirements</h2>
+
+<h3 id="fr-1-hospital-recommendation-function">FR-1 Hospital Recommendation Function</h3>
+
+<p>The system should recommend suitable hospitals based on the user’s current situation and hospital congestion.</p>
+
+<p><strong>System Requirements</strong>
+<strong>FR-1.1</strong> The system shall get the user’s approximate location through mobile GPS data.
+<strong>FR-1.2</strong> The system shall allow users to specify their visit intent and priority preference (e.g., shortest waiting time or nearest distance).
+<strong>FR-1.3</strong> The system shall rank hospitals based on:
+    * Predicted waiting time
+    * Distance from the user
+    * Current congestion level
+<strong>FR-1.4</strong> The system should display multiple alternative hospital options.
+<strong>FR-1.5</strong> The system shall provide a recommendation rationale for each hospital.
+<strong>FR-1.6</strong> The system shall prioritize specialty compatibility when generating recommendations.
+<strong>FR-1.7</strong> The system shall consider language support when ranking healthcare facilities.
+<strong>FR-1.8</strong> The system shall display facility capability classifications alongside recommendations.
+<strong>FR-1.9</strong> The system shall provide explanation details for recommendation decisions including waiting time, distance, specialty match, and language support availability.</p>
+
+<h3 id="fr-2-overcrowding-prevention-function">FR-2 Overcrowding Prevention Function</h3>
+
+<p>The system shall reduce recommendation bias toward already crowded facilities.</p>
+
+<p><strong>System Requirements</strong>
+<strong>FR-2.1</strong> The system shall monitor concurrent visit intent volume for each hospital.
+<strong>FRS-2.2</strong> The system shall dynamically adjust recommendation rankings when congestion exceeds a predefined threshold.
+<strong>FRS-2.3</strong> The system shall distribute recommendations across multiple nearby facilities when necessary.
+<strong>FRS-2.4</strong> The system shall continue providing alternative recommendations even during high-demand periods.</p>
+
+<h3 id="fr-3-wait-time-prediction-function">FR-3 Wait-Time Prediction Function</h3>
+
+<p>The system shall estimate future waiting times using historical and real-time information.</p>
+
+<p><strong>System Requirements</strong>
+<strong>FR-3.1</strong> The system shall collect:
+    * Historical queue data
+    * Temporal information
+    * Real-time crowdsourced updates
+<strong>FR-3.2</strong> The system shall predict estimated waiting times for each hospital.
+<strong>FR-3.3</strong> The system shall periodically update predictions when new data becomes available.</p>
+
+<h3 id="fr-4-confidence-and-reliability-visualization-function">FR-4 Confidence and Reliability Visualization Function</h3>
+
+<p>The system shall communciate prediction uncertainty  to users</p>
+
+<p><strong>System Requirements</strong>
+<strong>FR-4.1</strong> The system shall present predicted waiting times as a range rather than a single fixed value.
+<strong>FR-4.2</strong> The system should display a confidence score for each prediction.
+<strong>FR-4.3</strong> The system shall calculate reliability using:
+    * Model accuracy metrics
+    * Data recency
+<strong>FR-4.4</strong> The system shall visually indicate low-confidence predictions.</p>
+
+<h3 id="fr-5-user-preference-management-function">FR-5 User Preference Management Function</h3>
+
+<p>The system shall personalize recommendations according to user preferences.</p>
+
+<p><strong>System Requirements</strong>
+<strong>FR-5.1</strong> The system shall allow users to select recommendation priorities.
+<strong>FR-5.2</strong> The system shall store user preference settings locally or securely in the cloud.
+<strong>FR-5.3</strong> The system shall apply saved preferences during recommendation generation.</p>
+
+<h3 id="fr-6-real-time-data-update-function">FR-6 Real-Time Data Update Function</h3>
+
+<p>The system shall continuously update recommendation data.</p>
+
+<p><strong>System Requirements</strong>
+<strong>FR-6.1</strong> The system shall retrieve updated facility information at regular intervals.
+<strong>FR-6.2</strong> The system shall refresh prediction results when significant queue changes occur.
+<strong>FR-6.3</strong> The system shall notify users when recommendation conditions change significantly.</p>
+
+<h3 id="fr-7-language-support-verification-function">FR-7 Language Support Verification Function</h3>
+
+<p>The system shall assist international patients and visitors in location healcare facilities capable of communicating in their preferred language.</p>
+
+<p><strong>System Requirements</strong>
+<strong>FR-7.1</strong> The system shall display supported languages for each healthcare facility.
+<strong>FR-7.2</strong> The system shall classify language support according to predefined support levels.
+<strong>FR-7.3</strong> The system shall periodically verify language support information through facility updates.
+<strong>FR-7.4</strong> The system shall display the date of the most recent language support verification.
+<strong>FR-7.5</strong> The system shall notify administrators when language support information requires revalidation.</p>
+
+<h3 id="fr-8-emergency-guidance-function">FR-8 Emergency Guidance Function</h3>
+
+<p>The system shall reduce inappropriate usage during medical emergencies.</p>
+
+<p><strong>System Requirements</strong>
+<strong>FR-8.1</strong> The system shall clearly state that SmartCare Navigator is not a diagnostic tool.
+<strong>FR-8.2</strong> The system shall provide emergency contact information.
+<strong>FR-8.3</strong> The system shall display emergency guidance messages throughout the application.
+<strong>FR-8.4</strong> The system shall direct users toward emergency services when severe symptoms are reported.
+<strong>FR-8.5</strong> The system shall distinguish between emergency facilities and non-emergency facilities in recommendation results.</p>
+
+<hr />
+
+<h2 id="non-functional-requirements">Non-Functional Requirements</h2>
+
+<h3 id="nfr-1-performance-requirements">NFR-1 Performance Requirements</h3>
+
+<p><strong>NFR-1.1</strong> The system shall display search results within 3 seconds under normal network conditions.
+<strong>NFR-1.2</strong> Real-time waiting time data shall be updated at intervals no greater than 5 minutes.
+<strong>NFR-1.3</strong> Queue predictions shall be calculated and displayed within 2 seconds of user input.
+<strong>NFR-1.4</strong> The application shall maintain responsive performance with up to 10,000 concurrent users.</p>
+
+<h3 id="nfr-2-usability-requirements">NFR-2 Usability Requirements</h3>
+
+<p><strong>NFR-2.1</strong> The application shall comply with WCAG 2.1 Level AA accessibility standards.
+<strong>NFR-2.2</strong> All interactive elements shall be keyboard-navigable and screen-reader compatible.
+<strong>NFR-2.3</strong> The application shall support Japanese, English, Filipino, Chinese, and Korean languages.
+<strong>NFR-2.4</strong> Users shall be able to filter search results by preferred language support.</p>
+
+<h3 id="nfr-3-reliability-and-availability">NFR-3 Reliability and Availability</h3>
+
+<p><strong>NFR-3.1</strong> The system shall maintain 99.5% uptime during operational hours.
+<strong>NFR-3.2</strong> In case of data source failure, the system shall fall back to cached historical data.
+<strong>NFR-3.3</strong> Healthcare facility information shall be verified against official sources at least monthly.</p>
+
+<h3 id="nfr-4-security-and-privacy-requirements">NFR-4 Security and Privacy Requirements</h3>
+
+<p><strong>NFR-4.1</strong> User location data shall be anonymized and shall not be stored longer than 24 hours.
+<strong>NFR-4.2</strong> The application shall support anonymous usage without requiring user registration.
+<strong>NFR-4.3</strong> All data transmission shall use TLS 1.3 or higher encryption.
+<strong>NFR-4.4</strong> The system shall implement rate limiting to prevent abuse and DDoS attacks.</p>
+
+<h3 id="nfr-5-safety-and-liability-requirements">NFR-5 Safety and Liability Requirements</h3>
+
+<p><strong>NFR-5.1</strong> The application shall clearly state that it is not a diagnostic tool.
+<strong>NFR-5.2</strong> Emergency contact information shall be displayed prominently.
+<strong>NFR-5.3</strong> The system shall not provide medical diagnoses or medical advice under any circumstances.</p>
+
+<h3 id="nfr-6-compatibility-and-portability">NFR-6 Compatibility and Portability</h3>
+
+<p><strong>NFR-6.1</strong> The application shall support iOS 14+ and Android 9+ devices.
+<strong>NFR-6.2</strong> The web-based version shall support modern browsers including Chrome, Firefox, Safari, and Edge.
+<strong>NFR-6.3</strong> The application shall provide limited offline functionality when network connectivity is unavailable.</p>
+
+<h3 id="nfr-7-scalability-requirements">NFR-7 Scalability Requirements</h3>
+
+<p><strong>NFR-7.1</strong> The system architecture shall support horizontal scaling for up to 100,000 daily active users.
+<strong>NFR-7.2</strong> The database shall support storage of historical wait-time data for at least 500 healthcare facilities.</p>
+
+<h3 id="nfr-8-maintainability-requirements">NFR-8 Maintainability Requirements</h3>
+
+<p><strong>NFR-8.1</strong> The system shall use a modular architecture to support independent component updates.
+<strong>NFR-8.2</strong> All code shall follow project documentation standards with clear API specifications.
+<strong>NFR-8.3</strong> The system shall log errors, failures, and performance anomalies for troubleshooting.</p>
+
+<h3 id="nfr-9-compliance-and-standards">NFR-9 Compliance and Standards</h3>
+
+<p><strong>NFR-9.1</strong> The application shall comply with Japan’s Act on the Protection of Personal Information (APPI).
+<strong>NFR-9.2</strong> The system shall comply with GDPR requirements for international users where applicable.</p>
+
+<h3 id="nfr-10-trust-and-transparency-requirements">NFR-10 Trust and Transparency Requirements</h3>
+
+<p><strong>NFR-10.1</strong> All healthcare facility information shall be traceable to official sources.
+<strong>NFR-10.2</strong> The system shall clearly distinguish verified data, user-generated content, and predictive estimates.
+<strong>NFR-10.3</strong> Users shall be able to report incorrect information for review.</p>
+
+<h3 id="nfr-11-future-extensibilty-requirements">NFR-11 Future Extensibilty Requirements</h3>
+
+<p><strong>NFR-11.1</strong> The system architecture shall support future symptom-to-facility matching features.
+<strong>NFR-11.2</strong> The API design shall support future integration with third-party healthcare platforms.</p>
+
+<hr />
+
+<h2 id="8-organizational-requirements">8. Organizational Requirements</h2>
+
+<p><strong>Acadmeic &amp; Legal Compliance</strong>: The development and deployment of the platform must fully comply with NHS England’s terms and conditions for academic usage, especially regarding the pending approval for the WLMDS API.</p>
+
+<p><strong>Collaboration &amp; Version Control</strong>: The development team shall use Git and GitHub for version control to ensure smooth collaboration. All code changes must be reviewed and merged according to the team’s internal rules before major updates.</p>
+
+<p><strong>Agile Documentation</strong>: To keep track of the project direction, the project documentation - including this SRS - must be updated and reviewed weekly by the documentation lead after every team meeting.</p>
+
+<hr />
+
+<h2 id="9-system-evolution">9. System Evolution</h2>
+
+<ul>
+  <li>
+    <p><strong>API Adaptation</strong>: The system shall adapt to evolving NHS reporting standards, specifically incorporating the “4-hour waiting target” statistics from NHS England 2026 report.</p>
+  </li>
+  <li>
+    <p><strong>Regional Expansion</strong>: Future iterations will seek to integrate direct real-time telemetry from individual trust-level patient flow systems.</p>
+  </li>
+  <li>
+    <p><strong>Future Symptom Guidance</strong>: Future version may include symptom-to-facility guidance functionality that assists users in identifying the appropriate level of care. This functionality shall provide informational guidance only and shall not perform medical diagnosis.</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="10-validation-criteria">10. Validation Criteria</h2>
+
+<h3 id="101-validation-checklist">10.1 Validation Checklist</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Criteria</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Validity</strong></td>
+      <td>Does the system provide functions supporting the mild-healthcare scope?</td>
+    </tr>
+    <tr>
+      <td><strong>Consistency</strong></td>
+      <td>Do requirements for privacy conflict with location-based recommendations?</td>
+    </tr>
+    <tr>
+      <td><strong>Completeness</strong></td>
+      <td>Are all core features (Specialty search, load balancing) present?</td>
+    </tr>
+    <tr>
+      <td><strong>Realism</strong></td>
+      <td>Can it be built given the WLMDS API internal-use constraints?</td>
+    </tr>
+    <tr>
+      <td><strong>Verifiability</strong></td>
+      <td>Can these be checked through quantitative objective testing?</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="102-verification-commands-for-test-engineers">10.2 Verification Commands for Test Engineers</h3>
+
+<ul>
+  <li>
+    <p><strong>Load Balancing</strong>: “Simulate 1,000 concurrent user requests for Facility A and verify that Facility A’s recommendation rank drops by at least 30% to trigger redistribution to other facilities.”</p>
+  </li>
+  <li>
+    <p><strong>Accuracy</strong>: “Compare the system’s predicted wait times with the actual wait times reported by the 20 facilities for the past 30 days, calculating the Mean Absolute Error (MAE) and ensuring it remains within ±15% of the actual wait times.”</p>
+  </li>
+  <li>
+    <p><strong>Confidence Scores</strong>: “Simulate a data pull failure from the WLMDS API and verify that the UI widens the wait-time range by 50% and lowers the confidence score to ‘Low’.”</p>
+  </li>
+  <li>
+    <p><strong>Privacy</strong>: “Attempt to retrieve exact GPS coordinates from the application log and verify that coordinates are obfuscated to a 500-meter radius.”</p>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="11-appendices">11. Appendices</h2>
+
+<h3 id="111-data-preprocessing-steps">11.1 Data Preprocessing Steps</h3>
+
+<ul>
+  <li><strong>Cleaning</strong>: Handling null values in the Patient Waiting Start Date field.</li>
+  <li><strong>Standardization</strong>: Mapping inconsistent trust naming conventions to the Organization ID</li>
+  <li><strong>Encoding</strong>: Transforming categorical variables (hospital type/department) for model ingestion.</li>
+</ul>
+
+<h3 id="112-predictive-features-list">11.2 Predictive Features List</h3>
+
+<ul>
+  <li><strong>Temporal Features</strong>: Hour of dat, Day of week, Weekend/Weekday indicators, and Holiday indicators.</li>
+  <li><strong>Historical Features</strong>: Rolling average queue duration (1h, 3h, 6h intervals) and lag-based previous recorded wait times.</li>
+  <li><strong>Trend Features</strong>: Facility-specific congestion gradients over the last 60 minutes.</li>
+</ul>
+
+<hr />
+
+<h2 id="12-expert-interview-findings">12. Expert Interview Findings</h2>
+
+<h3 id="121-expert-profile-dr-vito-larocca-md-mph">12.1 Expert Profile: Dr. Vito LaRocca, MD, MPH</h3>
+
 
             </div>
         </article>
