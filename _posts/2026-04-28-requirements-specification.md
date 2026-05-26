@@ -4,8 +4,85 @@ title: "Requirements Specification"
 date: 2026-04-28
 permalink: /posts/requirements-specification/
 ---
+<style>
+.toc-link {
+  color: #000000;
+  text-decoration: none;
+}
+.toc-link:hover {
+  text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 2em;
+}
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
+  background: none;
+  outline: none;
+  animation: none;
+}
+</style>
 
-## Requirements Specification
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 1.5em 0; background-color: #EDEDED; border-radius: 8px; padding: 1.2em 1.5em;">
+<details>
+<summary style="font-weight: bold; font-size: 1.1em; cursor: pointer; margin-bottom: 0.8em;">Table of Contents</summary>
+<div style="padding-left: 0.5em; line-height: 2;">
+
+<div style="margin-left: 0.5em;">
+• <a href="#1-preface" class="toc-link"><strong>1. Preface</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#11-document-header" class="toc-link">1.1 Document Header</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#12-version-history" class="toc-link">1.2 Version History</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#13-intended-readership" class="toc-link">1.3 Intended Readership</a></span><br>
+• <a href="#2-introduction" class="toc-link"><strong>2. Introduction</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#21-system-purpose" class="toc-link">2.1 System Purpose</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#22-vision-and-goals" class="toc-link">2.2 Vision and Goals</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#23-problem-statement" class="toc-link">2.3 Problem Statement</a></span><br>
+• <a href="#3-glossary" class="toc-link"><strong>3. Glossary</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#31-terminology-definitions" class="toc-link">3.1 Terminology Definitions</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#32-waiting-time-categorization" class="toc-link">3.2 Waiting Time Categorization</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#33-technical-terms" class="toc-link">3.3 Technical Terms</a></span><br>
+• <a href="#4-user-requirements-definition" class="toc-link"><strong>4. User Requirements Definition</strong></a><br>
+• <a href="#5-system-architecture" class="toc-link"><strong>5. System Architecture</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#51-high-level-overview--interoperability" class="toc-link">5.1 High-Level Overview &amp; Interoperability</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#52-system-constraints" class="toc-link">5.2 System Constraints</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#53-data-acquisition-componenets" class="toc-link">5.3 Data Acquisition Componenets</a></span><br>
+• <a href="#6-functional-requirements" class="toc-link"><strong>6. Functional Requirements</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#fr-1-hospital-recommendation-function" class="toc-link">FR-1 Hospital Recommendation Function</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#fr-2-overcrowding-prevention-function" class="toc-link">FR-2 Overcrowding Prevention Function</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#fr-3-wait-time-prediction-function" class="toc-link">FR-3 Wait-Time Prediction Function</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#fr-4-confidence-and-reliability-visualization-function" class="toc-link">FR-4 Confidence and Reliability Visualization Function</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#fr-5-user-preference-management-function" class="toc-link">FR-5 User Preference Management Function</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#fr-6-real-time-data-update-function" class="toc-link">FR-6 Real-Time Data Update Function</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#fr-7-language-support-verification-function" class="toc-link">FR-7 Language Support Verification Function</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#fr-8-emergency-guidance-function" class="toc-link">FR-8 Emergency Guidance Function</a></span><br>
+• <a href="#7-non-functional-requirements" class="toc-link"><strong>7. Non-Functional Requirements</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-1-performance-requirements" class="toc-link">NFR-1 Performance Requirements</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-2-usability-requirements" class="toc-link">NFR-2 Usability Requirements</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-3-reliability-and-availability" class="toc-link">NFR-3 Reliability and Availability</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-4-security-and-privacy-requirements" class="toc-link">NFR-4 Security and Privacy Requirements</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-5-safety-and-liability-requirements" class="toc-link">NFR-5 Safety and Liability Requirements</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-6-compatibility-and-portability" class="toc-link">NFR-6 Compatibility and Portability</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-7-scalability-requirements" class="toc-link">NFR-7 Scalability Requirements</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-8-maintainability-requirements" class="toc-link">NFR-8 Maintainability Requirements</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-9-compliance-and-standards" class="toc-link">NFR-9 Compliance and Standards</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-10-trust-and-transparency-requirements" class="toc-link">NFR-10 Trust and Transparency Requirements</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#nfr-11-future-extensibilty-requirements" class="toc-link">NFR-11 Future Extensibilty Requirements</a></span><br>
+• <a href="#8-organizational-requirements" class="toc-link"><strong>8. Organizational Requirements</strong></a><br>
+• <a href="#9-system-evolution" class="toc-link"><strong>9. System Evolution</strong></a><br>
+• <a href="#10-validation-criteria" class="toc-link"><strong>10. Validation Criteria</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#101-validation-checklist" class="toc-link">10.1 Validation Checklist</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#102-verification-commands-for-test-engineers" class="toc-link">10.2 Verification Commands for Test Engineers</a></span><br>
+• <a href="#11-appendices" class="toc-link"><strong>11. Appendices</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#111-data-preprocessing-steps" class="toc-link">11.1 Data Preprocessing Steps</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#112-predictive-features-list" class="toc-link">11.2 Predictive Features List</a></span><br>
+• <a href="#12-expert-interview-findings" class="toc-link"><strong>12. Expert Interview Findings</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#121-expert-profile-dr-vito-larocca-md-mph" class="toc-link">12.1 Expert Profile: Dr. Vito LaRocca, MD, MPH</a></span>
+</div>
+
+</div>
+</details>
+</div>
+
+---
 
 ## 1. Preface
 
@@ -203,13 +280,13 @@ The system shall estimate future waiting times using historical and real-time in
 
 ### FR-4 Confidence and Reliability Visualization Function
 
-The system shall communciate prediction uncertainty  to users
+The system shall communicate prediction uncertainty to users.
 
 **System Requirements**
 
 **FR-4.1** The system shall present predicted waiting times as a range rather than a single fixed value.
 
-**FR-4.2** The system should display a confidence score for each prediction.
+**FR-4.2** The system shall display a confidence score for each prediction.
 
 **FR-4.3** The system shall calculate reliability using:
 * Model accuracy metrics
@@ -426,11 +503,11 @@ The system shall support future enhancements and integration with additional hea
 
 ## 8. Organizational Requirements
 
-**Acadmeic & Legal Compliance**: The development and deployment of the platform must fully comply with NHS England's terms and conditions for academic usage, especially regarding the pending approval for the WLMDS API.
+* **Academic & Legal Compliance**: The development and deployment of the platform must fully comply with NHS England's terms and conditions for academic usage, especially regarding the pending approval for the WLMDS API.
 
-**Collaboration & Version Control**: The development team shall use Git and GitHub for version control to ensure smooth collaboration. All code changes must be reviewed and merged according to the team's internal rules before major updates.
+* **Collaboration & Version Control**: The development team shall use Git and GitHub for version control to ensure smooth collaboration. All code changes must be reviewed and merged according to the team's internal rules before major updates.
 
-**Agile Documentation**: To keep track of the project direction, the project documentation - including this SRS - must be updated and reviewed weekly by the documentation lead after every team meeting.
+* **Agile Documentation**: To keep track of the project direction, the project documentation - including this SRS - must be updated and reviewed weekly by the documentation lead after every team meeting.
 
 ---
 
@@ -478,7 +555,7 @@ The system shall support future enhancements and integration with additional hea
 
 ### 11.2 Predictive Features List
 
-* **Temporal Features**: Hour of dat, Day of week, Weekend/Weekday indicators, and Holiday indicators.
+* **Temporal Features**: Hour of day, Day of week, Weekend/Weekday indicators, and Holiday indicators.
 * **Historical Features**: Rolling average queue duration (1h, 3h, 6h intervals) and lag-based previous recorded wait times.
 * **Trend Features**: Facility-specific congestion gradients over the last 60 minutes.
 

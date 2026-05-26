@@ -23,7 +23,7 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 }
 </style>
 
-<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 1.5em 0; background-color: #D4D4D4; border-radius: 8px; padding: 1.2em 1.5em;">
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 1.5em 0; background-color: #EDEDED; border-radius: 8px; padding: 1.2em 1.5em;">
 <details>
 <summary style="font-weight: bold; font-size: 1.1em; cursor: pointer; margin-bottom: 0.8em;">Table of Contents</summary>
 <div style="padding-left: 0.5em; line-height: 2;">
