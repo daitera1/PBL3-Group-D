@@ -565,3 +565,129 @@ The system shall support future enhancements and integration with additional hea
 
 ### 12.1 Expert Profile: Dr. Vito LaRocca, MD, MPH
 
+**Division Chief of Ophthalmology, Connecticut Children's Hospital**
+
+The project team conducted an expert interview with Dr. Vito LaRocca, MD, MPH, a board-certified ophthalmologist and healthcare leader with more than 20 years of clinical and academic experience. Dr. LaRocca currently serves as Division Chief of Ophthalmology at Connecticut Children's Hospital and previously held leadership positions at Boston Children's Hospital, Boston University, and Eye Health Services. In addition to his clinical experience, he holds a Master of Public Health (MPH) in Epidemiology and has extensive experience in healthcare research, medical device regulation, and healthcare program development.
+
+**Key Findings**
+
+* Patients often select facilities based on familiarity or convenience rather than suitability.
+* Trust and reliability are critical factors in healthcare technology adoption.
+* Inaccurate healthcare information reduces patient confidence.
+* Patients prefer simple, understandable healthcare information.
+* Many patients struggle to navigate healthcare systems.
+* International patients face significant language-related barriers.
+* Accessibility and transparency should be prioritized in healthcare applications.
+Accurate specialist and facility information supports informed decisions.
+Simplicity and usability are more valuable than unnecessary technical complexity.
+
+---
+
+### 12.2 Expert Profile: Charlene DiLoffi
+
+**Manager of Waiting Room Operations, South Shore Hospital**
+
+Charlene DiLoffi is a healthcare operations professional with over 20 years of experience in hospital administration and patient services. She currently serves as Manager of Waiting Room Operations at South Shore Hospital, where she oversees patient flow management, registration processes, scheduling coordination, and waiting room operations. Throughout her career, she has worked closely with physicians, nurses, and administrative staff to improve patient satisfaction and reduce operational bottlenecks.
+
+**Key Findings**
+
+* Waiting times are influenced by many operational factors beyond patient volume.
+* Staffing shortages can significantly increase waiting times.
+* Emergency cases frequently delay non-emergency patients.
+* Diagnostic testing and specialist consultations create workflow bottlenecks.
+* Administrative procedures contribute substantially to overall waiting times.
+* Lack of communication increases patient frustration and anxiety.
+* Mondays, mornings, holidays, and flu seasons produce higher patient demand.
+* Many hospital visits could be redirected to clinics or urgent care facilities.
+* Better pre-arrival guidance would improve patient distribution.
+* Transparency regarding waiting times improves patient satisfaction.
+
+---
+
+## 12.3 Impact on SmartCare Navigator
+
+The expert interviews directly influenced several design decisions and requirements within SmartCare Navigator.
+
+Key improvements derived from the interviews include:
+* Multilingual support for international patients.
+* Healthcare facility specialization information.
+* Transparent waiting-time estimates with confidence ranges.
+* Data source and update-time visibility.
+* Facility capability classifications.
+* Improved recommendation algorithms considering suitability as well as proximity.
+* Privacy-focused handling of healthcare-related information.
+* Emergency guidance functionality.
+* Future symptom-to-facility guidance features.
+
+---
+
+## 13. User Survey Findings
+
+To better understand user needs and validate the proposed functionality of SmartCare Navigator, the project team conducted a survey involving **89 participants** from diverse backgrounds, including Japanese, Filipino, American, and other nationalities.
+
+The survey aimed to identify common challenges experienced during hospital visits and evaluate the perceived usefulness of potential SmartCare Navigator features.
+
+### 13.1 Key Challenges Identified
+
+Participants reported several recurring frustrations when visiting healthcare facilities:
+* Long waiting times
+* Language barriers
+* Difficulty finding the correct department
+
+Notably, 83% of respondents reported experiencing long waiting times during hospital visits, indicating that waiting-time management is a significant issue affecting patient satisfaction and healthcare accessibility.
+
+The survey also highlighted the challenges faced by international patients, particularly regarding communication and navigation within healthcare facilities.
+
+### 13.2 Feature Evaluation Results
+
+Participants were asked to evaluate potential application features using a 5-point usefulness scale.
+
+**Real-Time Waiting Time Information**
+
+* 82% of respondents rated this features as useful (4 or 5 out of 5).
+
+This was the highest-rated feature in the survey, indicating strong demand for transparent and up-to-date waiting-time information.
+
+**Language Support**
+
+* 69% of respondents rated language support as useful
+
+Given the international composition of the participant group, this result highlights the importance of multilingual accessibility within healthcare systems.
+
+**Hospital Reviews**
+
+* 71% of respondents rated hospital reviews as useful.
+
+This suggests that users value community experiences and additional information when selecting healthcare facilities.
+
+### 13.3 Most Requested Features
+
+When participants were asked which features would be most useful in a hospital navigation application, the most common responses were:
+
+1. Real-time waiting times
+2. Queue prediction
+3. Language support
+
+These results align closely with findings from expert interviews and further validate the project's focus on improving transparency, accessibility, and healthcare navigation.
+
+### 13.4 Impact on SmartCare Navigator
+
+The survey findings directly infuenced the system requirements and feature prioritization of SmartCare Navigator.
+
+Based on the survey results, the project team prioritized:
+
+* Real-time waiting time monitoring
+* Waiting-time prediction functionality
+* Multilingual language support
+* Improved hospital recommendation systems
+* Clear healthcare facility information
+* Enhanced accessibility for international patients
+
+Overall, the survey demonstrates strong user demand for technologies that reduce uncertainty, improve communication, and simplify the healthcare experience.
+
+
+
+
+
+
+
