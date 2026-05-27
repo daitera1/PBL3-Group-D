@@ -555,8 +555,8 @@ The system shall support future enhancements and integration with additional hea
 
 ### 11.2 Predictive Features List
 
-* **Temporal Features**: Hour of day, Day of week, Weekend/Weekday indicators, and Holiday indicators.
-* **Historical Features**: Rolling average queue duration (1h, 3h, 6h intervals) and lag-based previous recorded wait times.
+* **Temporal Features**: Hour of day, Day of week, **Weekend/Weekday indicators**, and Holiday indicators.
+* **Historical Features**: **Rolling average queue duration** (1h, 3h, 6h intervals) and lag-based previous recorded wait times.
 * **Trend Features**: Facility-specific congestion gradients over the last 60 minutes.
 
 ---
@@ -634,7 +634,7 @@ Participants reported several recurring frustrations when visiting healthcare fa
 * Language barriers
 * Difficulty finding the correct department
 
-Notably, 83% of respondents reported experiencing long waiting times during hospital visits, indicating that waiting-time management is a significant issue affecting patient satisfaction and healthcare accessibility.
+Notably, **83% of respondents reported experiencing long waiting times during hospital visits**, indicating that waiting-time management is a significant issue affecting patient satisfaction and healthcare accessibility.
 
 The survey also highlighted the challenges faced by international patients, particularly regarding communication and navigation within healthcare facilities.
 
@@ -644,19 +644,19 @@ Participants were asked to evaluate potential application features using a 5-poi
 
 **Real-Time Waiting Time Information**
 
-* 82% of respondents rated this features as useful (4 or 5 out of 5).
+* **82% of respondents rated this features as useful (4 or 5 out of 5).**
 
 This was the highest-rated feature in the survey, indicating strong demand for transparent and up-to-date waiting-time information.
 
 **Language Support**
 
-* 69% of respondents rated language support as useful
+* **69% of respondents rated language support as useful**
 
 Given the international composition of the participant group, this result highlights the importance of multilingual accessibility within healthcare systems.
 
 **Hospital Reviews**
 
-* 71% of respondents rated hospital reviews as useful.
+* **71% of respondents rated hospital reviews as useful.**
 
 This suggests that users value community experiences and additional information when selecting healthcare facilities.
 
