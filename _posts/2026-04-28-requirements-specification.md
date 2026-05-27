@@ -41,10 +41,6 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 <span style="margin-left: 1.8em;">○ <a href="#32-waiting-time-categorization" class="toc-link">3.2 Waiting Time Categorization</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#33-technical-terms" class="toc-link">3.3 Technical Terms</a></span><br>
 • <a href="#4-user-requirements-definition" class="toc-link"><strong>4. User Requirements Definition</strong></a><br>
-• <a href="#5-system-architecture" class="toc-link"><strong>5. System Architecture</strong></a><br>
-<span style="margin-left: 1.8em;">○ <a href="#51-high-level-overview--interoperability" class="toc-link">5.1 High-Level Overview &amp; Interoperability</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#52-system-constraints" class="toc-link">5.2 System Constraints</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#53-data-acquisition-componenets" class="toc-link">5.3 Data Acquisition Componenets</a></span><br>
 • <a href="#6-functional-requirements" class="toc-link"><strong>6. Functional Requirements</strong></a><br>
 <span style="margin-left: 1.8em;">○ <a href="#fr-1-hospital-recommendation-function" class="toc-link">FR-1 Hospital Recommendation Function</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#fr-2-overcrowding-prevention-function" class="toc-link">FR-2 Overcrowding Prevention Function</a></span><br>
@@ -77,12 +73,12 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 • <a href="#12-expert-interview-findings" class="toc-link"><strong>12. Expert Interview Findings</strong></a><br>
 <span style="margin-left: 1.8em;">○ <a href="#121-expert-profile-dr-vito-larocca-md-mph" class="toc-link">12.1 Expert Profile: Dr. Vito LaRocca, MD, MPH</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#122-expert-profile-charlene-diloffi" class="toc-link">12.2 Expert Profile: Charlene DiLoffi</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#123-impact-on-smartcare-navigator" class="toc-link">12.3 Impact on SmartCare Navigator</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#123-impact-on-smartcare-navigator" class="toc-link">12.3 Impact on CarePath Navigator</a></span><br>
 • <a href="#13-user-survey-findings" class="toc-link"><strong>13. User Survey Findings</strong></a><br>
 <span style="margin-left: 1.8em;">○ <a href="#131-key-challenges-identified" class="toc-link">13.1 Key Challenges Identified</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#132-feature-evaluation-results" class="toc-link">13.2 Feature Evaluation Results</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#133-most-requested-features" class="toc-link">13.3 Most Requested Features</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#134-impact-on-smartcare-navigator" class="toc-link">13.4 Impact on SmartCare Navigator</a></span>
+<span style="margin-left: 1.8em;">○ <a href="#134-impact-on-smartcare-navigator" class="toc-link">13.4 Impact on CarePath Navigator</a></span>
 </div>
 
 </div>
@@ -98,7 +94,7 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 | Attribute | Value |
 | --------- | ----- |
 | **Document Title** | Software Requirements Specification (SRS) |
-| **Project Name** | SmartCare Navigator |
+| **Project Name** | CarePath Navigator |
 | **Document Version** | 1.1.0 |
 | **Status** | Final |
 
@@ -126,7 +122,7 @@ In accordance with standard systems engineering practices, this document is desi
 
 ### 2.1 System Purpose
 
-SmartCare Navigator is a digital platform designed to provide real-time and predicted hospital waiting times across the United Kingdom. The system centralizes fragmented healthcare data to assist patients in locating facilities efficiently.
+CarePath Navigator is a digital platform designed to provide real-time and predicted hospital waiting times across the United Kingdom. The system centralizes fragmented healthcare data to assist patients in locating facilities efficiently.
 **Scope Note**: The system is exclusively for mild healthcare needs and clinic-level visits. It does not provide medical diagnoses or handle emergency cases.
 
 ### 2.2 Vision and Goals
@@ -350,7 +346,7 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 **System Requirements**
 
-**FR-8.1** The system shall clearly state that SmartCare Navigator is not a diagnostic tool.
+**FR-8.1** The system shall clearly state that CarePath Navigator is not a diagnostic tool.
 
 **FR-8.2** The system shall provide emergency contact information.
 
@@ -611,9 +607,9 @@ Charlene DiLoffi is a healthcare operations professional with over 20 years of e
 
 ---
 
-### 12.3 Impact on SmartCare Navigator
+### 12.3 Impact on CarePath Navigator
 
-The expert interviews directly influenced several design decisions and requirements within SmartCare Navigator.
+The expert interviews directly influenced several design decisions and requirements within CarePath Navigator.
 
 Key improvements derived from the interviews include:
 * Multilingual support for international patients.
@@ -630,9 +626,9 @@ Key improvements derived from the interviews include:
 
 ## 13. User Survey Findings
 
-To better understand user needs and validate the proposed functionality of SmartCare Navigator, the project team conducted a survey involving **89 participants** from diverse backgrounds, including Japanese, Filipino, American, and other nationalities.
+To better understand user needs and validate the proposed functionality of CarePath Navigator, the project team conducted a survey involving **89 participants** from diverse backgrounds, including Japanese, Filipino, American, and other nationalities.
 
-The survey aimed to identify common challenges experienced during hospital visits and evaluate the perceived usefulness of potential SmartCare Navigator features.
+The survey aimed to identify common challenges experienced during hospital visits and evaluate the perceived usefulness of potential CarePath Navigator features.
 
 ### 13.1 Key Challenges Identified
 
@@ -677,9 +673,9 @@ When participants were asked which features would be most useful in a hospital n
 
 These results align closely with findings from expert interviews and further validate the project's focus on improving transparency, accessibility, and healthcare navigation.
 
-### 13.4 Impact on SmartCare Navigator
+### 13.4 Impact on CarePath Navigator
 
-The survey findings directly infuenced the system requirements and feature prioritization of SmartCare Navigator.
+The survey findings directly infuenced the system requirements and feature prioritization of CarePath Navigator.
 
 Based on the survey results, the project team prioritized:
 
@@ -691,10 +687,3 @@ Based on the survey results, the project team prioritized:
 * Enhanced accessibility for international patients
 
 Overall, the survey demonstrates strong user demand for technologies that reduce uncertainty, improve communication, and simplify the healthcare experience.
-
-
-
-
-
-
-

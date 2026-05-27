@@ -63,7 +63,7 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 
 ## Project Proposal Summary
 
-This project aims to develop a Smart Hospital Finder Application (SmartCare Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system is designed for mild healthcare needs and clinic-level visits, and does not provide medical diagnoses or handle emergency cases.
+This project aims to develop a Smart Hospital Finder Application (CarePath Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system is designed for mild healthcare needs and clinic-level visits, and does not provide medical diagnoses or handle emergency cases.
 
 In many cities, hospitals are often overcrowded, and patients lack access to real-time information about waiting times. As a result, most people go to the nearest hospital without knowing how long they will have to wait. This leads to inefficient patient distribution, longer waiting times, and increased stress, especially in urgent situations. Existing solutions such as map apps or hospital websites do not provide accurate or real-time information, making it difficult for users to make informed decisions.
 
@@ -110,7 +110,7 @@ Lastly, using design for inclusivity from the ground up, meeting WCAG 2.1 AA (th
 
 ### 3.1 Purpose of the Application
 
-The objective of this project is to develop a Smart Hospital Finder Application (SmartCare Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system focuses on mild healthcare needs and clinic-level visits, without providing medical diagnoses or handling emergency cases.
+The objective of this project is to develop a Smart Hospital Finder Application (CarePath Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system focuses on mild healthcare needs and clinic-level visits, without providing medical diagnoses or handling emergency cases.
 The application uses real-time, historical, and crowdsourced data to provide waiting time estimates and simple recommendations. It aims to reduce waiting times, improve patient distribution, and make hospital information easier to access in one platform, while maintaining user privacy.
 
 ### 3.2 Core Objectives
