@@ -123,6 +123,7 @@ In accordance with standard systems engineering practices, this document is desi
 ### 2.1 System Purpose
 
 CarePath Navigator is a digital platform designed to provide real-time and predicted hospital waiting times across the United Kingdom. The system centralizes fragmented healthcare data to assist patients in locating facilities efficiently.
+
 **Scope Note**: The system is exclusively for mild healthcare needs and clinic-level visits. It does not provide medical diagnoses or handle emergency cases.
 
 ### 2.2 Vision and Goals
