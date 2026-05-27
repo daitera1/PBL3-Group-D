@@ -611,7 +611,7 @@ Charlene DiLoffi is a healthcare operations professional with over 20 years of e
 
 ---
 
-## 12.3 Impact on SmartCare Navigator
+### 12.3 Impact on SmartCare Navigator
 
 The expert interviews directly influenced several design decisions and requirements within SmartCare Navigator.
 
