@@ -41,7 +41,7 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 <span style="margin-left: 1.8em;">○ <a href="#32-waiting-time-categorization" class="toc-link">3.2 Waiting Time Categorization</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#33-technical-terms" class="toc-link">3.3 Technical Terms</a></span><br>
 • <a href="#4-user-requirements-definition" class="toc-link"><strong>4. User Requirements Definition</strong></a><br>
-• <a href="#6-functional-requirements" class="toc-link"><strong>6. Functional Requirements</strong></a><br>
+• <a href="#5-functional-requirements" class="toc-link"><strong>5. Functional Requirements</strong></a><br>
 <span style="margin-left: 1.8em;">○ <a href="#fr-1-hospital-recommendation-function" class="toc-link">FR-1 Hospital Recommendation Function</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#fr-2-overcrowding-prevention-function" class="toc-link">FR-2 Overcrowding Prevention Function</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#fr-3-wait-time-prediction-function" class="toc-link">FR-3 Wait-Time Prediction Function</a></span><br>
@@ -50,7 +50,7 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 <span style="margin-left: 1.8em;">○ <a href="#fr-6-real-time-data-update-function" class="toc-link">FR-6 Real-Time Data Update Function</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#fr-7-language-support-verification-function" class="toc-link">FR-7 Language Support Verification Function</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#fr-8-emergency-guidance-function" class="toc-link">FR-8 Emergency Guidance Function</a></span><br>
-• <a href="#7-non-functional-requirements" class="toc-link"><strong>7. Non-Functional Requirements</strong></a><br>
+• <a href="#6-non-functional-requirements" class="toc-link"><strong>6. Non-Functional Requirements</strong></a><br>
 <span style="margin-left: 1.8em;">○ <a href="#nfr-1-performance-requirements" class="toc-link">NFR-1 Performance Requirements</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#nfr-2-usability-requirements" class="toc-link">NFR-2 Usability Requirements</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#nfr-3-reliability-and-availability" class="toc-link">NFR-3 Reliability and Availability</a></span><br>
@@ -62,23 +62,23 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 <span style="margin-left: 1.8em;">○ <a href="#nfr-9-compliance-and-standards" class="toc-link">NFR-9 Compliance and Standards</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#nfr-10-trust-and-transparency-requirements" class="toc-link">NFR-10 Trust and Transparency Requirements</a></span><br>
 <span style="margin-left: 1.8em;">○ <a href="#nfr-11-future-extensibilty-requirements" class="toc-link">NFR-11 Future Extensibilty Requirements</a></span><br>
-• <a href="#8-organizational-requirements" class="toc-link"><strong>8. Organizational Requirements</strong></a><br>
-• <a href="#9-system-evolution" class="toc-link"><strong>9. System Evolution</strong></a><br>
-• <a href="#10-validation-criteria" class="toc-link"><strong>10. Validation Criteria</strong></a><br>
-<span style="margin-left: 1.8em;">○ <a href="#101-validation-checklist" class="toc-link">10.1 Validation Checklist</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#102-verification-commands-for-test-engineers" class="toc-link">10.2 Verification Commands for Test Engineers</a></span><br>
-• <a href="#11-appendices" class="toc-link"><strong>11. Appendices</strong></a><br>
-<span style="margin-left: 1.8em;">○ <a href="#111-data-preprocessing-steps" class="toc-link">11.1 Data Preprocessing Steps</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#112-predictive-features-list" class="toc-link">11.2 Predictive Features List</a></span><br>
-• <a href="#12-expert-interview-findings" class="toc-link"><strong>12. Expert Interview Findings</strong></a><br>
-<span style="margin-left: 1.8em;">○ <a href="#121-expert-profile-dr-vito-larocca-md-mph" class="toc-link">12.1 Expert Profile: Dr. Vito LaRocca, MD, MPH</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#122-expert-profile-charlene-diloffi" class="toc-link">12.2 Expert Profile: Charlene DiLoffi</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#123-impact-on-smartcare-navigator" class="toc-link">12.3 Impact on CarePath Navigator</a></span><br>
-• <a href="#13-user-survey-findings" class="toc-link"><strong>13. User Survey Findings</strong></a><br>
-<span style="margin-left: 1.8em;">○ <a href="#131-key-challenges-identified" class="toc-link">13.1 Key Challenges Identified</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#132-feature-evaluation-results" class="toc-link">13.2 Feature Evaluation Results</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#133-most-requested-features" class="toc-link">13.3 Most Requested Features</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#134-impact-on-smartcare-navigator" class="toc-link">13.4 Impact on CarePath Navigator</a></span>
+• <a href="#7-organizational-requirements" class="toc-link"><strong>7. Organizational Requirements</strong></a><br>
+• <a href="#8-system-evolution" class="toc-link"><strong>8. System Evolution</strong></a><br>
+• <a href="#9-validation-criteria" class="toc-link"><strong>9. Validation Criteria</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#91-validation-checklist" class="toc-link">9.1 Validation Checklist</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#92-verification-commands-for-test-engineers" class="toc-link">9.2 Verification Commands for Test Engineers</a></span><br>
+• <a href="#10-appendices" class="toc-link"><strong>10. Appendices</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#101-data-preprocessing-steps" class="toc-link">10.1 Data Preprocessing Steps</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#102-predictive-features-list" class="toc-link">10.2 Predictive Features List</a></span><br>
+• <a href="#11-expert-interview-findings" class="toc-link"><strong>11. Expert Interview Findings</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#111-expert-profile-dr-vito-larocca-md-mph" class="toc-link">11.1 Expert Profile: Dr. Vito LaRocca, MD, MPH</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#112-expert-profile-charlene-diloffi" class="toc-link">11.2 Expert Profile: Charlene DiLoffi</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#113-impact-on-carepath-navigator" class="toc-link">11.3 Impact on CarePath Navigator</a></span><br>
+• <a href="#12-user-survey-findings" class="toc-link"><strong>12. User Survey Findings</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#121-key-challenges-identified" class="toc-link">12.1 Key Challenges Identified</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#122-feature-evaluation-results" class="toc-link">12.2 Feature Evaluation Results</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#123-most-requested-features" class="toc-link">12.3 Most Requested Features</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#124-impact-on-carepath-navigator" class="toc-link">12.4 Impact on CarePath Navigator</a></span>
 </div>
 
 </div>
@@ -200,28 +200,7 @@ Existing map and healthcare applications provide limited visibility into these f
 
 ---
 
-## 5. System Architecture
-
-### 5.1 High-Level Overview & Interoperability
-
-The architecture utilizes a distributed function mode. To maintain real-time accuracy, the system shall implement a 15-minute polling cycle, mirroring the Hong Kong Hospital Authority logic, to fetch updates from regional trust APIs and the nation WLMDS.
-
-### 5.2 System Constraints
-
-* **API Restriction**: The NHS WLMDS API is cureently for internal NHS use only. Integration is contingent upon the pending approval from NHS England for academic usage.
-* **Data Integrity**: Predictions are dependent on the reporting frequency of individual trusts.
-
-### 5.3 Data Acquisition Componenets
-
-The system retrieves the following files from the WLMDS API:
-* **Census Date**: Data snapshot timing.
-* **Treatment Function Code**: Care pathway identification.
-* **Organization ID**: Unique trust/provider identifier.
-* **Patient Waiting Start Date**: Used for historical lag-based duration calculations.
-
----
-
-## 6. Functional Requirements
+## 5. Functional Requirements
 
 ### FR-1 Hospital Recommendation Function
 
@@ -359,7 +338,7 @@ The system shall reduce inappropriate usage during medical emergencies.
 
 ---
 
-## 7. Non-Functional Requirements
+## 6. Non-Functional Requirements
 
 ### NFR-1 Performance Requirements
 
@@ -505,7 +484,7 @@ The system shall support future enhancements and integration with additional hea
 
 ---
 
-## 8. Organizational Requirements
+## 7. Organizational Requirements
 
 * **Academic & Legal Compliance**: The development and deployment of the platform must fully comply with NHS England's terms and conditions for academic usage, especially regarding the pending approval for the WLMDS API.
 
@@ -515,7 +494,7 @@ The system shall support future enhancements and integration with additional hea
 
 ---
 
-## 9. System Evolution
+## 8. System Evolution
 
 * **API Adaptation**: The system shall adapt to evolving NHS reporting standards, specifically incorporating the "4-hour waiting target" statistics from NHS England 2026 report.
 
@@ -525,9 +504,9 @@ The system shall support future enhancements and integration with additional hea
 
 ---
 
-## 10. Validation Criteria
+## 9. Validation Criteria
 
-### 10.1 Validation Checklist
+### 9.1 Validation Checklist
 
 | Criteria | Description |
 |----------|-------------|
@@ -537,7 +516,7 @@ The system shall support future enhancements and integration with additional hea
 | **Realism** | Can it be built given the WLMDS API internal-use constraints? |
 | **Verifiability** | Can these be checked through quantitative objective testing? |
 
-### 10.2 Verification Commands for Test Engineers
+### 9.2 Verification Commands for Test Engineers
 
 * **Load Balancing**: "Simulate 1,000 concurrent user requests for Facility A and verify that Facility A's recommendation rank drops by at least 30% to trigger redistribution to other facilities."
 
@@ -549,15 +528,15 @@ The system shall support future enhancements and integration with additional hea
 
 ---
 
-## 11. Appendices
+## 10. Appendices
 
-### 11.1 Data Preprocessing Steps
+### 10.1 Data Preprocessing Steps
 
 * **Cleaning**: Handling null values in the Patient Waiting Start Date field.
 * **Standardization**: Mapping inconsistent trust naming conventions to the Organization ID
 * **Encoding**: Transforming categorical variables (hospital type/department) for model ingestion.
 
-### 11.2 Predictive Features List
+### 10.2 Predictive Features List
 
 * **Temporal Features**: Hour of day, Day of week, **Weekend/Weekday indicators**, and Holiday indicators.
 * **Historical Features**: **Rolling average queue duration** (1h, 3h, 6h intervals) and lag-based previous recorded wait times.
@@ -565,9 +544,9 @@ The system shall support future enhancements and integration with additional hea
 
 ---
 
-## 12. Expert Interview Findings
+## 11. Expert Interview Findings
 
-### 12.1 Expert Profile: Dr. Vito LaRocca, MD, MPH
+### 11.1 Expert Profile: Dr. Vito LaRocca, MD, MPH
 
 **Division Chief of Ophthalmology, Connecticut Children's Hospital**
 
@@ -587,7 +566,7 @@ Simplicity and usability are more valuable than unnecessary technical complexity
 
 ---
 
-### 12.2 Expert Profile: Charlene DiLoffi
+### 11.2 Expert Profile: Charlene DiLoffi
 
 **Manager of Waiting Room Operations, South Shore Hospital**
 
@@ -608,7 +587,7 @@ Charlene DiLoffi is a healthcare operations professional with over 20 years of e
 
 ---
 
-### 12.3 Impact on CarePath Navigator
+### 11.3 Impact on CarePath Navigator
 
 The expert interviews directly influenced several design decisions and requirements within CarePath Navigator.
 
@@ -625,13 +604,13 @@ Key improvements derived from the interviews include:
 
 ---
 
-## 13. User Survey Findings
+## 12. User Survey Findings
 
 To better understand user needs and validate the proposed functionality of CarePath Navigator, the project team conducted a survey involving **89 participants** from diverse backgrounds, including Japanese, Filipino, American, and other nationalities.
 
 The survey aimed to identify common challenges experienced during hospital visits and evaluate the perceived usefulness of potential CarePath Navigator features.
 
-### 13.1 Key Challenges Identified
+### 12.1 Key Challenges Identified
 
 Participants reported several recurring frustrations when visiting healthcare facilities:
 * Long waiting times
@@ -642,7 +621,7 @@ Notably, **83% of respondents reported experiencing long waiting times during ho
 
 The survey also highlighted the challenges faced by international patients, particularly regarding communication and navigation within healthcare facilities.
 
-### 13.2 Feature Evaluation Results
+### 12.2 Feature Evaluation Results
 
 Participants were asked to evaluate potential application features using a 5-point usefulness scale.
 
@@ -664,7 +643,7 @@ Given the international composition of the participant group, this result highli
 
 This suggests that users value community experiences and additional information when selecting healthcare facilities.
 
-### 13.3 Most Requested Features
+### 12.3 Most Requested Features
 
 When participants were asked which features would be most useful in a hospital navigation application, the most common responses were:
 
@@ -674,7 +653,7 @@ When participants were asked which features would be most useful in a hospital n
 
 These results align closely with findings from expert interviews and further validate the project's focus on improving transparency, accessibility, and healthcare navigation.
 
-### 13.4 Impact on CarePath Navigator
+### 12.4 Impact on CarePath Navigator
 
 The survey findings directly infuenced the system requirements and feature prioritization of CarePath Navigator.
 
