@@ -8,6 +8,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 import pandas as pd
 import time
+import os
 
 
 URL = "https://wyvhp.nimsite.uk/"
@@ -156,9 +157,34 @@ try:
 
     print(df)
 
-    df.to_csv("nhsquicker_results_clean.csv", index=False)
+    OUTPUT_FOLDER = "/Users/meong777/Desktop/scraper_PBL"  # Change this to your target folder name
+    BASE_FILENAME = "nhsquicker_results_clean"
 
-    print("CSV saved as nhsquicker_results_clean.csv")
+
+    def get_next_filename(folder, base_name, extension="csv"):
+        os.makedirs(folder, exist_ok=True)
+
+        existing_files = os.listdir(folder)
+
+        numbers = []
+
+        for file in existing_files:
+            if file.startswith(base_name) and file.endswith(f".{extension}"):
+                number_part = file.replace(base_name + "_", "").replace(f".{extension}", "")
+
+                if number_part.isdigit():
+                    numbers.append(int(number_part))
+
+        next_number = max(numbers) + 1 if numbers else 1
+
+        filename = f"{base_name}_{next_number:03d}.{extension}"
+        return os.path.join(folder, filename)
+
+    output_file = get_next_filename(OUTPUT_FOLDER, BASE_FILENAME)
+
+    df.to_csv(output_file, index=False)
+
+    print(f"CSV saved as {output_file}")
 
 except Exception as e:
     print("Main error:", e)
