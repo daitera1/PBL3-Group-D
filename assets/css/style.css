@@ -154,8 +154,10 @@ table tbody tr:hover {
 /* Responsive Images with Premium Hover Effect */
 .article-content img,
 .article-content-proposal img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 700px; /* Hard limit on size so it never gets too large on desktop */
+    max-height: 60vh; /* Ensure it fits nicely vertically */
+    object-fit: contain;
     display: block;
     margin: 30px auto;
     border-radius: 8px;
@@ -167,4 +169,31 @@ table tbody tr:hover {
 .article-content-proposal img:hover {
     transform: scale(1.015);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Ensure global layout doesn't overflow */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Mobile Responsiveness for Layout */
+@media screen and (max-width: 768px) {
+    .main {
+        margin: 0 15px;
+    }
+    .article-content {
+        margin-left: 0;
+    }
+    .intro {
+        padding: 0 10px;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }

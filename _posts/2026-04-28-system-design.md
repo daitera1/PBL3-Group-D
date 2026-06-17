@@ -5,19 +5,22 @@ date: 2026-04-28
 permalink: /posts/system-design/
 ---
 
+
 ## Preface
 
-### 1.2 Version History
+
+### Version History
 
 | Version | Date | Description |
 | ------- | ---- | ----------- |
 | 1.0 | 2026-06-18 | Initial version |
 
-## Introduction
+
+### Introduction
 
 The CarePath Navigator project can be defined as an application that aims at providing efficient assistance in finding the best hospitals through its functionalities. This particular system design document explains the architecture and structure of the proposed system. It further describes how various inputs received from the user such as location and search options are processed in order to provide best-fit hospitals with predicted wait times. The following sections present several diagrams which include System Context, Class Diagrams, State Diagrams, Use Case Diagrams, Component Diagrams, Activity Diagrams, and Sequence Diagrams. These diagrams will assist with our project implementation in a significant way.
 
-## Overview
+
 
 ## System Context Diagram
 
@@ -25,6 +28,7 @@ The CarePath Navigator project can be defined as an application that aims at pro
 
 
 This diagram shows the system context of CarePath Navigator. Patients submit search requests, location data, and language preferences to the application, while hospitals provide department information and queue data. The system processes this information and returns hospital recommendations and estimated waiting times to patients.
+
 
 
 ## Class Diagram
@@ -44,6 +48,7 @@ The patient submits location and language information to the system. The Recomme
 | **Language Support** | Stores information about languages supported by a hospital and provides translation-related functions. |
 | **Queue Data** | Stores real-time queue information, including the number of waiting patients and timestamp data. |
 | **Wait Time Prediction** | Estimates waiting times using queue data and calculates prediction confidence levels. |
+
 
 
 ## Relationship Description
@@ -77,11 +82,13 @@ Language support information belongs to a specific hospital and is removed if th
 Queue data is maintained by a hospital and does not exist independently from it.
 
 
+
 ## State Diagram
 
 ![State Diagram]({{ "/images/State%20Diagram.jpg" | relative_url }})
 
 This diagram illustrates the complete patient journey while using CarePath Navigator, from searching for hospitals to receiving treatment and submitting a review. The system provides hospital recommendations, predicted waiting times, and navigation assistance to help users make informed decisions. If the estimated wait time is considered too long, a warning popup message stating "Estimated wait time is longer than expected. Do you still want to continue with this hospital?" is displayed. Selecting Continue allows the user to proceed with the selected hospital, while selecting Cancel terminates the current process.
+
 
 
 
@@ -91,6 +98,7 @@ This diagram illustrates the complete patient journey while using CarePath Navig
 
 
 This use case diagram shows how the patient interacts with the CarePath Navigator system to search for hospitals, view recommendations and waiting times, select a hospital, obtain navigation, and submit reviews. The Hospital System provides hospital and queue information that supports the application's functions.
+
 
 
 ## Components Diagram
@@ -111,11 +119,13 @@ This component diagram shows the software structure of CarePath Navigator. It is
 Adding to that, all communication between these components is fully encrypted to protect user privacy.
 
 
+
 ## Sequence Diagram
 
 ![Sequence Diagram]({{ "/images/Sequence%20Diagram.png" | relative_url }})
 
 
+
 ## Deployment Diagram
 
-![Deployment Diagram]({{ "/images/Deployment%20Diagram.png" | relative_url }})
+![Deployment Diagram]({{ "/images/Deployment%20Diagram.jpg" | relative_url }})
