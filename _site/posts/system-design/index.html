@@ -31,17 +31,42 @@
                 <h1>System Design</h1>
             </header>
             <div class="article-content">
-                <h2 id="overview">Overview</h2>
+                <h2 id="preface">Preface</h2>
 
-<h2 id="context-diagram">Context Diagram</h2>
+<h3 id="12-version-history">1.2 Version History</h3>
 
-<p><img src="/PBL3-Group-D/images/Context%20Diagram.png" alt="Context Diagram" /></p>
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.0</td>
+      <td>2026-06-18</td>
+      <td>Initial version</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The CarePath Navigator project can be defined as an application that aims at providing efficient assistance in finding the best hospitals through its functionalities. This particular system design document explains the architecture and structure of the proposed system. It further describes how various inputs received from the user such as location and search options are processed in order to provide best-fit hospitals with predicted wait times. The following sections present several diagrams which include System Context, Class Diagrams, State Diagrams, Use Case Diagrams, Component Diagrams, Activity Diagrams, and Sequence Diagrams. These diagrams will assist with our project implementation in a significant way.</p>
+
+<h2 id="overview">Overview</h2>
+
+<h2 id="system-context-diagram">System Context Diagram</h2>
+
+<p><img src="/PBL3-Group-D/images/system%20context.png" alt="System Context Diagram" /></p>
 
 <p>This diagram shows the system context of CarePath Navigator. Patients submit search requests, location data, and language preferences to the application, while hospitals provide department information and queue data. The system processes this information and returns hospital recommendations and estimated waiting times to patients.</p>
 
 <h2 id="class-diagram">Class Diagram</h2>
 
-<p><img src="/PBL3-Group-D/images/Class%20Diagram.png" alt="Class Diagram" /></p>
+<p><img src="/PBL3-Group-D/images/class%20diagram.png" alt="Class Diagram" /></p>
 
 <p>The patient submits location and language information to the system. The Recommendation Engine retrieves hospital information and waiting-time predictions to rank available hospitals. Wait Time Prediction uses queue data provided by hospitals, while each hospital manages its own departments, language support services, and queue information. Together, these components provide patients with suitable hospital recommendations and estimated waiting times.</p>
 
@@ -116,8 +141,46 @@
 
 <h2 id="state-diagram">State Diagram</h2>
 
-<p>This diagram illustrates the different states a patient experiences while using CarePath Navigator. The process begins when the application is opened and the patient sets their preferences before searching for hospitals. The system generates recommendations, displays hospital information, and provides predicted waiting times along with confidence scores. The patient then decides whether the waiting time is acceptable. If the waiting time is not acceptable, the patient can continue searching for alternative hospitals. If the waiting time is acceptable, the patient selects a hospital, receives navigation guidance, travels to the hospital, waits for treatment, receives medical care, and finally submits a review after the visit. This diagram demonstrates the overall user journey and decision-making process within the system.</p>
+<p><img src="/PBL3-Group-D/images/State%20Diagram.jpg" alt="State Diagram" /></p>
 
+<p>This diagram illustrates the complete patient journey while using CarePath Navigator, from searching for hospitals to receiving treatment and submitting a review. The system provides hospital recommendations, predicted waiting times, and navigation assistance to help users make informed decisions. If the estimated wait time is considered too long, a warning popup message stating “Estimated wait time is longer than expected. Do you still want to continue with this hospital?” is displayed. Selecting Continue allows the user to proceed with the selected hospital, while selecting Cancel terminates the current process.</p>
+
+<h2 id="use-case-diagram">Use Case Diagram</h2>
+
+<p><img src="/PBL3-Group-D/images/Use%20Case%20Diagram.png" alt="Use Case Diagram" /></p>
+
+<p>This use case diagram shows how the patient interacts with the CarePath Navigator system to search for hospitals, view recommendations and waiting times, select a hospital, obtain navigation, and submit reviews. The Hospital System provides hospital and queue information that supports the application’s functions.</p>
+
+<h2 id="components-diagram">Components Diagram</h2>
+
+<p><img src="/PBL3-Group-D/images/Component%20Diagram.png" alt="Components Diagram" /></p>
+
+<p>This component diagram shows the software structure of CarePath Navigator. It is divided into four main layers to show how data flows through our system:</p>
+
+<ul>
+  <li>
+    <p>User Frontend: Handles what the user sees, including the UI Module for searching hospitals, the GPS Service for location with privacy filters, and User Settings for saving preferences.</p>
+  </li>
+  <li>
+    <p>System Backend: The core brain of the app. It collects fresh data (Data Collection) , cleans it (Data Preprocessing), predicts wait times (Wait-Time Prediction), ranks hospitals (Recommendation Engine), and prevents overcrowding (Load Balancing).</p>
+  </li>
+  <li>
+    <p>Data Layer: Stores the system data, including History Storage for past wait-time information and Cache Storage as a backup.</p>
+  </li>
+  <li>
+    <p>External Systems &amp; APIs: Outside data sources that our system connects with, such as the NHS WLMDS API , Hospital APIs , and the Mobile GPS Service.</p>
+  </li>
+</ul>
+
+<p>Adding to that, all communication between these components is fully encrypted to protect user privacy.</p>
+
+<h2 id="sequence-diagram">Sequence Diagram</h2>
+
+<p><img src="/PBL3-Group-D/images/Sequence%20Diagram.png" alt="Sequence Diagram" /></p>
+
+<h2 id="deployment-diagram">Deployment Diagram</h2>
+
+<p><img src="/PBL3-Group-D/images/Deployment%20Diagram.png" alt="Deployment Diagram" /></p>
 
             </div>
         </article>
