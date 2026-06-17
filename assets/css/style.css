@@ -169,33 +169,3 @@ table tbody tr:hover {
     transform: scale(1.015);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
-
-/* Ensure global layout doesn't overflow */
-* {
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-}
-
-/* Mobile Responsiveness for Layout */
-@media screen and (max-width: 768px) {
-    .main {
-        margin: 0 15px;
-    }
-
-    .article-content {
-        margin-left: 0;
-    }
-
-    .intro {
-        padding: 0 10px;
-    }
-
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-}
