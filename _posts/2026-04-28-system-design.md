@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "System Design"
+title: "System Design Document"
 date: 2026-04-28
 permalink: /posts/system-design/
 ---

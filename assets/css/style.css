@@ -138,7 +138,8 @@ table thead tr {
     text-align: left;
 }
 
-table th, table td {
+table th,
+table td {
     padding: 15px 20px;
     border: 1px solid #e0e0e0;
 }
@@ -154,10 +155,8 @@ table tbody tr:hover {
 /* Responsive Images with Premium Hover Effect */
 .article-content img,
 .article-content-proposal img {
-    width: 100%;
-    max-width: 700px; /* Hard limit on size so it never gets too large on desktop */
-    max-height: 60vh; /* Ensure it fits nicely vertically */
-    object-fit: contain;
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: 30px auto;
     border-radius: 8px;
@@ -185,12 +184,15 @@ img {
     .main {
         margin: 0 15px;
     }
+
     .article-content {
         margin-left: 0;
     }
+
     .intro {
         padding: 0 10px;
     }
+
     table {
         display: block;
         overflow-x: auto;
