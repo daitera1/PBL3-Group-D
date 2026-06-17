@@ -64,9 +64,9 @@
 
 <h2 id="class-diagram">Class Diagram</h2>
 
-<p><img src="/PBL3-Group-D/images/class%20diagram.png" alt="Class Diagram" /></p>
+<p><img src="/PBL3-Group-D/images/Class%20Diagram.png" alt="Class Diagram" /></p>
 
-<p>The patient submits location and language information to the system. The Recommendation Engine retrieves hospital information and waiting-time predictions to rank available hospitals. Wait Time Prediction uses queue data provided by hospitals, while each hospital manages its own departments, language support services, and queue information. Together, these components provide patients with suitable hospital recommendations and estimated waiting times.</p>
+<p>This class diagram illustrates how patients submit their location and language information to the system. The Recommendation Engine retrieves hospital information and waiting-time predictions to rank available hospitals. Wait Time Prediction uses queue data provided by hospitals, while each hospital manages its own departments, language support services, and queue information. Together, these components provide patients with suitable hospital recommendations and estimated waiting times.</p>
 
 <table>
   <thead>
@@ -141,7 +141,7 @@
 
 <p><img src="/PBL3-Group-D/images/State%20Diagram.jpg" alt="State Diagram" /></p>
 
-<p>This diagram illustrates the complete patient journey while using CarePath Navigator, from searching for hospitals to receiving treatment and submitting a review. The system provides hospital recommendations, predicted waiting times, and navigation assistance to help users make informed decisions. If the estimated wait time is considered too long, a warning popup message stating “Estimated wait time is longer than expected. Do you still want to continue with this hospital?” is displayed. Selecting Continue allows the user to proceed with the selected hospital, while selecting Cancel terminates the current process.</p>
+<p>This state diagram illustrates the complete patient journey while using CarePath Navigator, from searching for hospitals to receiving treatment and submitting a review. The system provides hospital recommendations, predicted waiting times, and navigation assistance to help users make informed decisions. If the estimated wait time is considered too long, a warning popup message stating “Estimated wait time is longer than expected. Do you still want to continue with this hospital?” is displayed. Selecting Continue allows the user to proceed with the selected hospital, while selecting Cancel terminates the current process.</p>
 
 <h2 id="use-case-diagram">Use Case Diagram</h2>
 
@@ -151,22 +151,22 @@
 
 <h2 id="components-diagram">Components Diagram</h2>
 
-<p><img src="/PBL3-Group-D/images/Component%20Diagram.png" alt="Components Diagram" /></p>
+<p><img src="/PBL3-Group-D/images/Component%20Diagram.jpg" alt="Components Diagram" /></p>
 
 <p>This component diagram shows the software structure of CarePath Navigator. It is divided into four main layers to show how data flows through our system:</p>
 
 <ul>
   <li>
-    <p>User Frontend: Handles what the user sees, including the UI Module for searching hospitals, the GPS Service for location with privacy filters, and User Settings for saving preferences.</p>
+    <p><strong>User Frontend</strong>: Handles what the user sees, including the UI Module for searching hospitals, the GPS Service for location with privacy filters, and User Settings for saving preferences.</p>
   </li>
   <li>
-    <p>System Backend: The core brain of the app. It collects fresh data (Data Collection) , cleans it (Data Preprocessing), predicts wait times (Wait-Time Prediction), ranks hospitals (Recommendation Engine), and prevents overcrowding (Load Balancing).</p>
+    <p><strong>System Backend</strong>: The core brain of the app. It collects fresh data (Data Collection) , cleans it (Data Preprocessing), predicts wait times (Wait-Time Prediction), ranks hospitals (Recommendation Engine), and prevents overcrowding (Load Balancing).</p>
   </li>
   <li>
-    <p>Data Layer: Stores the system data, including History Storage for past wait-time information and Cache Storage as a backup.</p>
+    <p><strong>Data Layer</strong>: Stores the system data, including History Storage for past wait-time information and Cache Storage as a backup.</p>
   </li>
   <li>
-    <p>External Systems &amp; APIs: Outside data sources that our system connects with, such as the NHS WLMDS API , Hospital APIs , and the Mobile GPS Service.</p>
+    <p><strong>External Systems &amp; APIs</strong>: Outside data sources that our system connects with, such as the NHS WLMDS API , Hospital APIs , and the Mobile GPS Service.</p>
   </li>
 </ul>
 
