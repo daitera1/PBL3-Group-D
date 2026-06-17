@@ -5,7 +5,7 @@ date: 2026-04-28
 permalink: /posts/system-design/
 ---
 
-## System Design
+## Overview
 
 ## Context Diagram
 
@@ -16,6 +16,7 @@ This diagram shows the system context of CarePath Navigator. Patients submit sea
 
 ## Class Diagram
 
+![Class Diagram](/images/Class%20Diagram.png)
 
 The patient submits location and language information to the system. The Recommendation Engine retrieves hospital information and waiting-time predictions to rank available hospitals. Wait Time Prediction uses queue data provided by hospitals, while each hospital manages its own departments, language support services, and queue information. Together, these components provide patients with suitable hospital recommendations and estimated waiting times.
 
@@ -31,21 +32,28 @@ The patient submits location and language information to the system. The Recomme
 | **Wait Time Prediction** | Estimates waiting times using queue data and calculates prediction confidence levels. |
 
 
-### Relationship Description
+## Relationship Description
 
-* Patient → Recommendation Engine (Association): Patients provide information to the Recommendation Engine to receive hospital recommendations.
+### 1. Patient → Recommendation Engine 
+Patients provide information to the Recommendation Engine to receive hospital recommendations.
 
-* Recommendation Engine ◇ Hospital (Association): The Recommendation Engine uses information from multiple hospitals to generate recommendations.
+### 2. Recommendation Engine → Hospital 
+The Recommendation Engine uses information from multiple hospitals to generate recommendations.
 
-* Recommendation Engine ◇ Wait Time Prediction (Aggregation): The Recommendation Engine uses waiting-time predictions when ranking hospitals.
+### 3. Recommendation Engine → Wait Time Prediction
+The Recommendation Engine uses waiting-time predictions when ranking hospitals.
 
-* Wait Time Prediction ◇ Queue Data (Aggregation): Waiting-time predictions are generated using queue information collected from hospitals.
+### 4. Wait Time Prediction ◇ Queue Data 
+Waiting-time predictions are generated using queue information collected from hospitals.
 
-* Hospital ◆ Department (Composition): A hospital consists of one or more departments. Departments cannot exist without a hospital.
+### 5. Hospital ◆ Department 
+A hospital consists of one or more departments. Departments cannot exist without a hospital.
 
-* Hospital ◆ Language Support (Composition): Language support information belongs to a specific hospital and is removed if the hospital is deleted.
+### 6. Hospital ◆ Language Support 
+Language support information belongs to a specific hospital and is removed if the hospital is deleted.
 
-* Hospital ◆ Queue Data (Composition): Queue data is maintained by a hospital and does not exist independently from it.
+### 7. Hospital ◆ Queue Data 
+Queue data is maintained by a hospital and does not exist independently from it.
 
 
 ## State Diagram
