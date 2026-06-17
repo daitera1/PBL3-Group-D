@@ -204,24 +204,25 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 
 <p><img src="/PBL3-Group-D/images/Components%20Diagram.jpg" alt="Components Diagram" /></p>
 
-<p>This component diagram shows the software structure of CarePath Navigator. It is divided into four main layers to show how data flows through our system:</p>
+<p>This component diagram shows the simplified software structure of SmartCare Navigator. It is divided into five main layers to show how data flows through our system:</p>
 
 <ul>
   <li>
-    <p><strong>User Frontend</strong>: Handles what the user sees, including the UI Module for searching hospitals, the GPS Service for location with privacy filters, and User Settings for saving preferences.</p>
+    <p><strong>Client Layer</strong>: Contains the Mobile Application and Web Application, which send the user’s location and selected department to the UI Controller.</p>
   </li>
   <li>
-    <p><strong>System Backend</strong>: The core brain of the app. It collects fresh data (Data Collection) , cleans it (Data Preprocessing), predicts wait times (Wait-Time Prediction), ranks hospitals (Recommendation Engine), and prevents overcrowding (Load Balancing).</p>
+    <p><strong>Application Services Layer</strong>: Handles the main system logic. The Recommendation Service filters facilities, calculates distance, ranks hospitals, and generates recommendations. The Wait-Time Prediction Service predicts waiting times and calculates confidence using historical data.</p>
   </li>
   <li>
-    <p><strong>Data Layer</strong>: Stores the system data, including History Storage for past wait-time information and Cache Storage as a backup.</p>
+    <p><strong>Data Acquisition Layer</strong>: Collects current hospital information from the Hospital / Facility Update System through the API Integration Adapter. The Data Preprocessing Service cleans the data before storing it.</p>
   </li>
   <li>
-    <p><strong>External Systems &amp; APIs</strong>: Outside data sources that our system connects with, such as the NHS WLMDS API , Hospital APIs , and the Mobile GPS Service.</p>
+    <p><strong>Data Storage Layer</strong>: Contains the Facility Database, Historical Wait-Time Database, Cache / Fallback Store, and System Log Store.</p>
+  </li>
+  <li>
+    <p><strong>External Systems Layer</strong>: Provides GPS/map data and hospital update data used by the system.</p>
   </li>
 </ul>
-
-<p>Adding to that, all communication between these components is fully encrypted to protect user privacy.</p>
 
 <h2 id="sequence-diagram">Sequence Diagram</h2>
 

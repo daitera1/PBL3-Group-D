@@ -156,17 +156,17 @@ This use case diagram shows how the patient interacts with the CarePath Navigato
 ![Components Diagram]({{ "/images/Components%20Diagram.jpg" | relative_url }})
 
 
-This component diagram shows the software structure of CarePath Navigator. It is divided into four main layers to show how data flows through our system:
+This component diagram shows the simplified software structure of SmartCare Navigator. It is divided into five main layers to show how data flows through our system:
 
-* **User Frontend**: Handles what the user sees, including the UI Module for searching hospitals, the GPS Service for location with privacy filters, and User Settings for saving preferences.
+* **Client Layer**: Contains the Mobile Application and Web Application, which send the user’s location and selected department to the UI Controller.
 
-* **System Backend**: The core brain of the app. It collects fresh data (Data Collection) , cleans it (Data Preprocessing), predicts wait times (Wait-Time Prediction), ranks hospitals (Recommendation Engine), and prevents overcrowding (Load Balancing).
+* **Application Services Layer**: Handles the main system logic. The Recommendation Service filters facilities, calculates distance, ranks hospitals, and generates recommendations. The Wait-Time Prediction Service predicts waiting times and calculates confidence using historical data.
 
-* **Data Layer**: Stores the system data, including History Storage for past wait-time information and Cache Storage as a backup.
+* **Data Acquisition Layer**: Collects current hospital information from the Hospital / Facility Update System through the API Integration Adapter. The Data Preprocessing Service cleans the data before storing it.
 
-* **External Systems & APIs**: Outside data sources that our system connects with, such as the NHS WLMDS API , Hospital APIs , and the Mobile GPS Service.
+* **Data Storage Layer**: Contains the Facility Database, Historical Wait-Time Database, Cache / Fallback Store, and System Log Store.
 
-Adding to that, all communication between these components is fully encrypted to protect user privacy.
+* **External Systems Layer**: Provides GPS/map data and hospital update data used by the system.
 
 
 
