@@ -144,7 +144,7 @@ This state diagram illustrates the complete user journey within CarePath Tech, b
 
 ## Use Case Diagram
 
-![Use Case Diagram]({{ "/images/Use%20Case%20Diagram.png" | relative_url }})
+![Use Case Diagram]({{ "/images/Use%20Case%20Diagram.jpg" | relative_url }})
 
 
 This use case diagram shows how the patient interacts with the CarePath Navigator system to search for hospitals, view recommendations and waiting times, select a hospital, obtain navigation, and submit reviews. The Hospital System provides hospital and queue information that supports the application's functions.
@@ -153,7 +153,7 @@ This use case diagram shows how the patient interacts with the CarePath Navigato
 
 ## Components Diagram
 
-![Components Diagram]({{ "/images/Component%20Diagram.jpg" | relative_url }})
+![Components Diagram]({{ "/images/Components%20Diagram.jpg" | relative_url }})
 
 
 This component diagram shows the software structure of CarePath Navigator. It is divided into four main layers to show how data flows through our system:
