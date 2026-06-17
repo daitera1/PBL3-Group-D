@@ -9,14 +9,16 @@ permalink: /posts/system-design/
 
 ## Context Diagram
 
-![Context Diagram](/images/Context%20Diagram.png)
+![Context Diagram]({{ "/images/Context%20Diagram.png" | relative_url }})
+
 
 This diagram shows the system context of CarePath Navigator. Patients submit search requests, location data, and language preferences to the application, while hospitals provide department information and queue data. The system processes this information and returns hospital recommendations and estimated waiting times to patients.
 
 
 ## Class Diagram
 
-![Class Diagram](/images/Class%20Diagram.png)
+![Class Diagram]({{ "/images/Class%20Diagram.png" | relative_url }})
+
 
 The patient submits location and language information to the system. The Recommendation Engine retrieves hospital information and waiting-time predictions to rank available hospitals. Wait Time Prediction uses queue data provided by hospitals, while each hospital manages its own departments, language support services, and queue information. Together, these components provide patients with suitable hospital recommendations and estimated waiting times.
 
@@ -35,24 +37,31 @@ The patient submits location and language information to the system. The Recomme
 ## Relationship Description
 
 ### 1. Patient → Recommendation Engine 
+
 Patients provide information to the Recommendation Engine to receive hospital recommendations.
 
-### 2. Recommendation Engine → Hospital 
+### 2. Recommendation Engine → Hospital
+
 The Recommendation Engine uses information from multiple hospitals to generate recommendations.
 
 ### 3. Recommendation Engine → Wait Time Prediction
+
 The Recommendation Engine uses waiting-time predictions when ranking hospitals.
 
 ### 4. Wait Time Prediction ◇ Queue Data 
+
 Waiting-time predictions are generated using queue information collected from hospitals.
 
 ### 5. Hospital ◆ Department 
+
 A hospital consists of one or more departments. Departments cannot exist without a hospital.
 
 ### 6. Hospital ◆ Language Support 
+
 Language support information belongs to a specific hospital and is removed if the hospital is deleted.
 
 ### 7. Hospital ◆ Queue Data 
+
 Queue data is maintained by a hospital and does not exist independently from it.
 
 

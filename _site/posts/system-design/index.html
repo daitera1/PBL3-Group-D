@@ -35,13 +35,13 @@
 
 <h2 id="context-diagram">Context Diagram</h2>
 
-<p><img src="/images/Context%20Diagram.png" alt="Context Diagram" /></p>
+<p><img src="/PBL3-Group-D/images/Context%20Diagram.png" alt="Context Diagram" /></p>
 
 <p>This diagram shows the system context of CarePath Navigator. Patients submit search requests, location data, and language preferences to the application, while hospitals provide department information and queue data. The system processes this information and returns hospital recommendations and estimated waiting times to patients.</p>
 
 <h2 id="class-diagram">Class Diagram</h2>
 
-<p><img src="/images/Class%20Diagram.png" alt="Class Diagram" /></p>
+<p><img src="/PBL3-Group-D/images/Class%20Diagram.png" alt="Class Diagram" /></p>
 
 <p>The patient submits location and language information to the system. The Recommendation Engine retrieves hospital information and waiting-time predictions to rank available hospitals. Wait Time Prediction uses queue data provided by hospitals, while each hospital manages its own departments, language support services, and queue information. Together, these components provide patients with suitable hospital recommendations and estimated waiting times.</p>
 
@@ -87,24 +87,31 @@
 <h2 id="relationship-description">Relationship Description</h2>
 
 <h3 id="1-patient--recommendation-engine">1. Patient → Recommendation Engine</h3>
+
 <p>Patients provide information to the Recommendation Engine to receive hospital recommendations.</p>
 
 <h3 id="2-recommendation-engine--hospital">2. Recommendation Engine → Hospital</h3>
+
 <p>The Recommendation Engine uses information from multiple hospitals to generate recommendations.</p>
 
 <h3 id="3-recommendation-engine--wait-time-prediction">3. Recommendation Engine → Wait Time Prediction</h3>
+
 <p>The Recommendation Engine uses waiting-time predictions when ranking hospitals.</p>
 
 <h3 id="4-wait-time-prediction--queue-data">4. Wait Time Prediction ◇ Queue Data</h3>
+
 <p>Waiting-time predictions are generated using queue information collected from hospitals.</p>
 
 <h3 id="5-hospital--department">5. Hospital ◆ Department</h3>
+
 <p>A hospital consists of one or more departments. Departments cannot exist without a hospital.</p>
 
 <h3 id="6-hospital--language-support">6. Hospital ◆ Language Support</h3>
+
 <p>Language support information belongs to a specific hospital and is removed if the hospital is deleted.</p>
 
 <h3 id="7-hospital--queue-data">7. Hospital ◆ Queue Data</h3>
+
 <p>Queue data is maintained by a hospital and does not exist independently from it.</p>
 
 <h2 id="state-diagram">State Diagram</h2>
