@@ -155,7 +155,7 @@ table tbody tr:hover {
 /* Responsive Images with Premium Hover Effect */
 .article-content img,
 .article-content-proposal img {
-    max-width: 70%;
+    max-width: 50%;
     height: auto;
     display: block;
     margin: 30px auto;
