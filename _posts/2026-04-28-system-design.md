@@ -5,6 +5,56 @@ date: 2026-04-28
 permalink: /posts/system-design/
 ---
 
+<style>
+.toc-link {
+  color: #000000;
+  text-decoration: none;
+}
+.toc-link:hover {
+  text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 2em;
+}
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
+  background: none;
+  outline: none;
+  animation: none;
+}
+</style>
+
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 1.5em 0; background-color: #EDEDED; border-radius: 8px; padding: 1.2em 1.5em;">
+<details>
+<summary style="font-weight: bold; font-size: 1.1em; cursor: pointer; margin-bottom: 0.8em;">Table of Contents</summary>
+<div style="padding-left: 0.5em; line-height: 2;">
+
+<div style="margin-left: 0.5em;">
+• <a href="#preface" class="toc-link"><strong>Preface</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#version-history" class="toc-link">1.2 Version History</a></span><br>
+• <a href="#introduction" class="toc-link"><strong>Introduction</strong></a><br>
+• <a href="#system-context-diagram" class="toc-link"><strong>System Context Diagram</strong></a><br>
+
+• <a href="#relationship-description" class="toc-link"><strong>Relationship Description</strong></a><br>
+<span style="margin-left: 1.8em;">○ <a href="#patient->recommendation-engine" class="toc-link">Patient -> Recommendation Engine</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#recommendation-engine->hospital" class="toc-link">Recommendation Engine -> Hospital</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#recommendation-engine->wait-time-prediction" class="toc-link">Recommendation Engine -> Wait Time Prediction</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#wait-time-prediction◇queue-data" class="toc-link">Wait Time Prediction ◇ Queue Data</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#hospital◆department" class="toc-link">Hospital ◆ Department</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#hospital◆language-support" class="toc-link">Hospital ◆ Language Support</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#hospital◆queue-data" class="toc-link">Hospital ◆ Queue Data</a></span><br>
+• <a href="#state-diagram" class="toc-link"><strong>State Diagram</strong></a><br>
+• <a href="#use-case-diagram" class="toc-link"><strong>Use Case Diagram</strong></a><br>
+• <a href="#component-diagram" class="toc-link"><strong>Component Diagram</strong></a><br>
+• <a href="#sequence-diagram" class="toc-link"><strong>Sequence Diagram</strong></a><br>
+• <a href="#deployment-diagram" class="toc-link"><strong>Deployment Diagram</strong></a><br>
+
+</div>
+
+</div>
+</details>
+</div>
+
+---
 
 ## Preface
 
@@ -13,7 +63,7 @@ permalink: /posts/system-design/
 
 | Version | Date | Description |
 | ------- | ---- | ----------- |
-| 1.0 | 2026-06-18 | Initial version |
+| 1.0 | 2026-06-17 | Initial version |
 
 
 ### Introduction
