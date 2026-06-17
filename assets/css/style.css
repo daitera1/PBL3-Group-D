@@ -152,15 +152,15 @@ table tbody tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Responsive Images with Premium Hover Effect */
+/* Responsive Images */
 .article-content img,
 .article-content-proposal img {
-    max-width: 50%;
+    max-width: 80%;
     height: auto;
     display: block;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 20px auto 10px auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
