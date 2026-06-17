@@ -30,21 +30,21 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 
 <div style="margin-left: 0.5em;">
 • <a href="#preface" class="toc-link"><strong>Preface</strong></a><br>
-<span style="margin-left: 1.8em;">○ <a href="#version-history" class="toc-link">1.2 Version History</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#version-history" class="toc-link">Version History</a></span><br>
 • <a href="#introduction" class="toc-link"><strong>Introduction</strong></a><br>
 • <a href="#system-context-diagram" class="toc-link"><strong>System Context Diagram</strong></a><br>
-
+• <a href="#class-diagram" class="toc-link"><strong>Class Diagram</strong></a><br>
 • <a href="#relationship-description" class="toc-link"><strong>Relationship Description</strong></a><br>
-<span style="margin-left: 1.8em;">○ <a href="#patient->recommendation-engine" class="toc-link">1. Patient → Recommendation Engine</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#recommendation-engine->hospital" class="toc-link">2. Recommendation Engine → Hospital</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#recommendation-engine->wait-time-prediction" class="toc-link">3. Recommendation Engine → Wait Time Prediction</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#wait-time-prediction◇queue-data" class="toc-link">4. Wait Time Prediction ◇ Queue Data</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#hospital◆department" class="toc-link">5. Hospital ◆ Department</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#hospital◆language-support" class="toc-link">6. Hospital ◆ Language Support</a></span><br>
-<span style="margin-left: 1.8em;">○ <a href="#hospital◆queue-data" class="toc-link">7. Hospital ◆ Queue Data</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#1-patient--recommendation-engine" class="toc-link">1. Patient → Recommendation Engine</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#2-recommendation-engine--hospital" class="toc-link">2. Recommendation Engine → Hospital</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#3-recommendation-engine--wait-time-prediction" class="toc-link">3. Recommendation Engine → Wait Time Prediction</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#4-wait-time-prediction--queue-data" class="toc-link">4. Wait Time Prediction ◇ Queue Data</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#5-hospital--department" class="toc-link">5. Hospital ◆ Department</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#6-hospital--language-support" class="toc-link">6. Hospital ◆ Language Support</a></span><br>
+<span style="margin-left: 1.8em;">○ <a href="#7-hospital--queue-data" class="toc-link">7. Hospital ◆ Queue Data</a></span><br>
 • <a href="#state-diagram" class="toc-link"><strong>State Diagram</strong></a><br>
 • <a href="#use-case-diagram" class="toc-link"><strong>Use Case Diagram</strong></a><br>
-• <a href="#component-diagram" class="toc-link"><strong>Component Diagram</strong></a><br>
+• <a href="#components-diagram" class="toc-link"><strong>Components Diagram</strong></a><br>
 • <a href="#sequence-diagram" class="toc-link"><strong>Sequence Diagram</strong></a><br>
 • <a href="#deployment-diagram" class="toc-link"><strong>Deployment Diagram</strong></a><br>
 
