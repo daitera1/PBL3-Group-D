@@ -33,7 +33,7 @@ This diagram shows the system context of CarePath Navigator. Patients submit sea
 
 ## Class Diagram
 
-![Class Diagram]({{ "/images/Class%20Diagram.png" | relative_url }})
+![Class Diagram]({{ "/images/Class%20Diagram.jpg" | relative_url }})
 
 
 This class diagram illustrates how patients submit their location and language information to the system. The Recommendation Engine retrieves hospital information and waiting-time predictions to rank available hospitals. Wait Time Prediction uses queue data provided by hospitals, while each hospital manages its own departments, language support services, and queue information. Together, these components provide patients with suitable hospital recommendations and estimated waiting times.
@@ -85,11 +85,10 @@ Queue data is maintained by a hospital and does not exist independently from it.
 
 ## State Diagram
 
-![State Diagram]({{ "/images/State%20Diagram.jpg" | relative_url }})
+![State Diagram]({{ "/images/State%20Diagram.png" | relative_url }})
 
 
-This state diagram illustrates the complete patient journey while using CarePath Navigator, from searching for hospitals to receiving treatment and submitting a review. The system provides hospital recommendations, predicted waiting times, and navigation assistance to help users make informed decisions. If the estimated wait time is considered too long, a warning popup message stating "Estimated wait time is longer than expected. Do you still want to continue with this hospital?" is displayed. Selecting Continue allows the user to proceed with the selected hospital, while selecting Cancel terminates the current process.
-
+This state diagram illustrates the complete user journey within CarePath Tech, beginning with hospital search preferences and ending with treatment completion and review submission. The predicted wait time is generated using historical wait-time records and a machine learning model, which also produces a confidence score representing the reliability of the prediction. If the estimated wait time exceeds 60 minutes or the confidence score falls below 70%, the application displays a warning popup stating "The predicted wait time may be longer than expected or the prediction confidence is low. Would you still like to continue with this hospital?" Selecting Continue returns the user to the hospital search process to consider alternative hospitals, while selecting Cancel terminates the current session and ends the process.
 
 
 
@@ -126,8 +125,12 @@ Adding to that, all communication between these components is fully encrypted to
 ![Sequence Diagram]({{ "/images/Sequence%20Diagram.png" | relative_url }})
 
 
+This sequence diagram describes the process of searching for hospitals, generating predicted wait times, and providing navigation assistance within CarePath Tech. The prediction system retrieves historical wait-time records from the hospital database and applies a machine learning model to estimate waiting times and confidence scores. If the estimated wait time exceeds 60 minutes or the confidence score is below 70%, the mobile application displays a warning popup suggesting that the user consider another hospital. Navigation information, including route, estimated travel time, and distance, is obtained through a navigation service utilizing real-time traffic data available through the Google Maps API when available.
+
 
 
 ## Deployment Diagram
 
 ![Deployment Diagram]({{ "/images/Deployment%20Diagram.jpg" | relative_url }})
+
+
