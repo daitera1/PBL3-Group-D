@@ -89,49 +89,6 @@ This diagram shows the system context of CarePath Navigator. Patients submit sea
 The class diagram represents a CarePath Navigator application that recommends suitable hospitals and predicts waiting times. The Patient class stores the user’s current location and selected department. The patient requests hospital recommendations through the Recommendation Engine. The Recommendation Engine uses hospital information, patient location, and predicted waiting times to filter, rank, and generate recommendations. The Hospital class stores general hospital information such as name, address, and description, while the Department class represents the medical departments available within a hospital. A hospital contains one or more departments, which is represented by a composition relationship. The Hospital API and Historical Wait Time Data classes have different roles. Hospital API provides current operational data, such as the number of patients and current waiting time, whereas Historical Wait Time Data stores past waiting records collected from external datasets. Both sources provide data to the Wait Time Prediction class, which calculates predicted waiting times and confidence values. Finally, the predicted waiting time is passed to the Recommendation Engine, allowing hospitals to be ranked not only by distance but also by expected waiting time. This separation of responsibilities improves maintainability and allows prediction and recommendation functions to be updated independently.
 
 
-| Class | Description | 
-|-------|-------------|
-| **Patient** | Represents a user of the application. Stores the patient's current location and preferred language. Methods allow updating this information. |
-| **Recommendation Engine** | Generates and ranks hospital recommendations based on patient information and waiting-time predictions. |
-| **Hospital** | Represents a healthcare facility. Stores basic information such as hospital name and address. |
-| **Department** | Represents a medical department within a hospital, including its name and description. |
-| **Language Support** | Stores information about languages supported by a hospital and provides translation-related functions. |
-| **Queue Data** | Stores real-time queue information, including the number of waiting patients and timestamp data. |
-| **Wait Time Prediction** | Estimates waiting times using queue data and calculates prediction confidence levels. |
-
-
-
-## Relationship Description
-
-### 1. Patient → Recommendation Engine 
-
-Patients provide information to the Recommendation Engine to receive hospital recommendations.
-
-### 2. Recommendation Engine → Hospital
-
-The Recommendation Engine uses information from multiple hospitals to generate recommendations.
-
-### 3. Recommendation Engine → Wait Time Prediction
-
-The Recommendation Engine uses waiting-time predictions when ranking hospitals.
-
-### 4. Wait Time Prediction ◇ Queue Data 
-
-Waiting-time predictions are generated using queue information collected from hospitals.
-
-### 5. Hospital ◆ Department 
-
-A hospital consists of one or more departments. Departments cannot exist without a hospital.
-
-### 6. Hospital ◆ Language Support 
-
-Language support information belongs to a specific hospital and is removed if the hospital is deleted.
-
-### 7. Hospital ◆ Queue Data 
-
-Queue data is maintained by a hospital and does not exist independently from it.
-
-
 
 ## State Diagram
 
