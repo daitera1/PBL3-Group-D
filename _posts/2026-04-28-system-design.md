@@ -77,7 +77,7 @@ The CarePath Navigator project can be defined as an application that aims at pro
 ![System Context Diagram]({{ "/images/system%20context.png" | relative_url }})
 
 
-This diagram shows the system context of CarePath Navigator. Patients submit search requests, location data, and language preferences to the application, while hospitals provide department information and queue data. The system processes this information and returns hospital recommendations and estimated waiting times to patients.
+This diagram shows the system context of CarePath Navigator. Patients submit search requests and location data to the application, while hospitals provide department information and queue data. The system processes this information and returns hospital recommendations and estimated waiting times to patients.
 
 
 
@@ -86,7 +86,7 @@ This diagram shows the system context of CarePath Navigator. Patients submit sea
 ![Class Diagram]({{ "/images/Class%20Diagram.jpg" | relative_url }})
 
 
-This class diagram illustrates how patients submit their location and language information to the system. The Recommendation Engine retrieves hospital information and waiting-time predictions to rank available hospitals. Wait Time Prediction uses queue data provided by hospitals, while each hospital manages its own departments, language support services, and queue information. Together, these components provide patients with suitable hospital recommendations and estimated waiting times.
+The class diagram represents a CarePath Navigator application that recommends suitable hospitals and predicts waiting times. The Patient class stores the user’s current location and selected department. The patient requests hospital recommendations through the Recommendation Engine. The Recommendation Engine uses hospital information, patient location, and predicted waiting times to filter, rank, and generate recommendations. The Hospital class stores general hospital information such as name, address, and description, while the Department class represents the medical departments available within a hospital. A hospital contains one or more departments, which is represented by a composition relationship. The Hospital API and Historical Wait Time Data classes have different roles. Hospital API provides current operational data, such as the number of patients and current waiting time, whereas Historical Wait Time Data stores past waiting records collected from external datasets. Both sources provide data to the Wait Time Prediction class, which calculates predicted waiting times and confidence values. Finally, the predicted waiting time is passed to the Recommendation Engine, allowing hospitals to be ranked not only by distance but also by expected waiting time. This separation of responsibilities improves maintainability and allows prediction and recommendation functions to be updated independently.
 
 
 | Class | Description | 
