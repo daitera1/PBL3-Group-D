@@ -5,8 +5,6 @@ date: 2026-04-28
 permalink: /posts/system-architecture/
 ---
 
-## System Architecture
-
 
 ## Introduction
 
@@ -38,3 +36,8 @@ Patients access the system through the React-based frontend using HTTPS. The fro
 The Backend API Server, implemented with Python Flask, contains the core business logic of the system. It handles hospital searching, recommendation generation, request validation, and prediction requests. The Prediction Service uses an embedded XGBoost machine learning model to estimate hospital waiting times based on historical queue data and user inputs. Since the prediction model is integrated into the backend rather than deployed independently, it is treated as an internal service instead of a separate container.
 The MySQL database stores hospital information, historical queue data, prediction history, and system settings. The backend reads from and writes to the database to retrieve hospital information and store prediction-related data.
 Overall, this architecture separates the presentation layer, application logic, and data storage, making the system modular, maintainable, and scalable.
+
+
+## Pipe and Filter Diagram
+
+
