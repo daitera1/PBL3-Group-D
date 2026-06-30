@@ -27,6 +27,7 @@ This architecture allows each component to be developed, deployed, and scaled in
 
 ## Container Diagram
 
+
 The container diagram illustrates the high-level architecture of the hospital recommendation and wait-time prediction system. The system is divided into three main containers: the Web/Mobile Application, the Backend API Server, and the MySQL Database.
 
 
