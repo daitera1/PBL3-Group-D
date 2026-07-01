@@ -70,7 +70,7 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 
 The CarePath Navigator project can be defined as an application that aims at providing efficient assistance in finding the best hospitals through its functionalities. This particular system design document explains the architecture and structure of the proposed system. It further describes how various inputs received from the user such as location and search options are processed in order to provide best-fit hospitals with predicted wait times. The following sections present several diagrams which include System Context, Class Diagrams, State Diagrams, Use Case Diagrams, Component Diagrams, Activity Diagrams, and Sequence Diagrams. These diagrams will assist with our project implementation in a significant way.
 
-
+---
 
 ## System Context Diagram
 
@@ -79,7 +79,7 @@ The CarePath Navigator project can be defined as an application that aims at pro
 
 This diagram shows the system context of CarePath Navigator. Patients submit search requests and location data to the application, while hospitals provide department information and queue data. The system processes this information and returns hospital recommendations and estimated waiting times to patients.
 
-
+---
 
 ## Class Diagram
 
@@ -88,7 +88,7 @@ This diagram shows the system context of CarePath Navigator. Patients submit sea
 
 The class diagram represents a CarePath Navigator application that recommends suitable hospitals and predicts waiting times. The Patient class stores the user’s current location and selected department. The patient requests hospital recommendations through the Recommendation Engine. The Recommendation Engine uses hospital information, patient location, and predicted waiting times to filter, rank, and generate recommendations. The Hospital class stores general hospital information such as name, address, and description, while the Department class represents the medical departments available within a hospital. A hospital contains one or more departments, which is represented by a composition relationship. The Hospital API and Historical Wait Time Data classes have different roles. Hospital API provides current operational data, such as the number of patients and current waiting time, whereas Historical Wait Time Data stores past waiting records collected from external datasets. Both sources provide data to the Wait Time Prediction class, which calculates predicted waiting times and confidence values. Finally, the predicted waiting time is passed to the Recommendation Engine, allowing hospitals to be ranked not only by distance but also by expected waiting time. This separation of responsibilities improves maintainability and allows prediction and recommendation functions to be updated independently.
 
-
+---
 
 ## State Diagram
 
@@ -97,7 +97,7 @@ The class diagram represents a CarePath Navigator application that recommends su
 
 This state diagram illustrates the complete user journey within CarePath Tech, beginning with hospital search preferences and ending with treatment completion and review submission. The predicted wait time is generated using historical wait-time records and a machine learning model, which also produces a confidence score representing the reliability of the prediction. If the estimated wait time exceeds 60 minutes or the confidence score falls below 70%, the application displays a warning popup stating "The predicted wait time may be longer than expected or the prediction confidence is low. Would you still like to continue with this hospital?" Selecting Continue returns the user to the hospital search process to consider alternative hospitals, while selecting Cancel terminates the current session and ends the process.
 
-
+---
 
 ## Use Case Diagram
 
@@ -106,7 +106,7 @@ This state diagram illustrates the complete user journey within CarePath Tech, b
 
 This use case diagram shows how the patient interacts with the CarePath Navigator system to search for hospitals, view recommendations and waiting times, select a hospital, obtain navigation, and submit reviews. The Hospital System provides hospital and queue information that supports the application's functions.
 
-
+---
 
 ## Components Diagram
 
@@ -125,7 +125,7 @@ This component diagram shows the simplified software structure of SmartCare Navi
 
 * **External Systems Layer**: Provides GPS/map data and hospital update data used by the system.
 
-
+---
 
 ## Sequence Diagram
 
@@ -134,7 +134,7 @@ This component diagram shows the simplified software structure of SmartCare Navi
 
 This sequence diagram describes the process of searching for hospitals, generating predicted wait times, and providing navigation assistance within CarePath Tech. The prediction system retrieves historical wait-time records from the hospital database and applies a machine learning model to estimate waiting times and confidence scores. If the estimated wait time exceeds 60 minutes or the confidence score is below 70%, the mobile application displays a warning popup suggesting that the user consider another hospital. Navigation information, including route, estimated travel time, and distance, is obtained through a navigation service utilizing real-time traffic data available through the Google Maps API when available.
 
-
+---
 
 ## Deployment Diagram
 

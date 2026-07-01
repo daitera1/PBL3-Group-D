@@ -6,6 +6,7 @@ permalink: /posts/system-architecture/
 ---
 
 
+
 ## Introduction
 
 
@@ -22,6 +23,7 @@ The system is composed of three primary containers:
 
 This architecture allows each component to be developed, deployed, and scaled independently, ensuring a robust and efficient system.
 
+---
 
 ## Container Diagram
 
@@ -37,7 +39,15 @@ The Backend API Server, implemented with Python Flask, contains the core busines
 The MySQL database stores hospital information, historical queue data, prediction history, and system settings. The backend reads from and writes to the database to retrieve hospital information and store prediction-related data.
 Overall, this architecture separates the presentation layer, application logic, and data storage, making the system modular, maintainable, and scalable.
 
+---
 
 ## Pipe and Filter Diagram
 
 
+The pipe-and-filter diagram illustrates the data processing pipeline of the hospital recommendation and wait-time prediction system. The system is divided into a sequence of processing filters, including Data Collection, Validation & Privacy, Data Preprocessing, Wait-Time Prediction, Recommendation Engine, Localization & Formatting, and UI Display. 
+
+
+![Pipe and Filter Diagram]({{ "/images/Pipe%20and%20Filter%20Diagram.png" | relative_url }})\
+
+
+Data first enters the system from multiple sources, including Hospital API data, crowdsourced user updates, and historical wait-time data. The Data Collection filter combines these sources into a single dataset before passing the information to the Validation & Privacy filter, which removes incomplete or invalid records and anonymizes sensitive user data. The validated data is then processed by the Data Preprocessing filter, where it is cleaned, transformed, and encoded into a format suitable for machine learning. The Wait-Time Prediction filter uses an embedded XGBoost regression model to estimate hospital waiting times based on historical queue data and current user reports. These predictions are then passed to the Recommendation Engine, which ranks hospitals using predicted waiting times together with factors such as location, department availability, and user preferences. The ranked hospital list is then sent to the Localization & Formatting filter, where the results are formatted and translated into the user's selected language before being passed to the UI Display. Finally, the user is presented with ranked hospital recommendations, predicted waiting times, and relevant hospital information through the web/mobile application. Overall, this architecture separates each processing stage into independent filters that communicate through a defined pipeline, making the system modular, maintainable, and scalable while allowing each processing component to be updated independently without affecting the rest of the system.
