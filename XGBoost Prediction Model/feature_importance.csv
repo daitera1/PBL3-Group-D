@@ -1,0 +1,44 @@
+feature,importance
+t3p95_minutes_roll3,0.26707405
+t3p95_minutes,0.08286531
+hospName_Queen Elizabeth Hospital,0.0484413
+t3p95_minutes_lag1,0.04753416
+hospName_Kwong Wah Hospital,0.046541262
+hospName_St John Hospital,0.044506896
+hospName_North Lantau Hospital,0.0341357
+hospName_Ruttonjee Hospital,0.034129683
+hospName_Prince of Wales Hospital,0.03239308
+hospName_Pok Oi Hospital,0.031788077
+hospName_Tuen Mun Hospital,0.031230778
+hospName_Princess Margaret Hospital,0.030359855
+hospName_Tin Shui Wai Hospital,0.028139973
+hospName_Alice Ho Miu Ling Nethersole Hospital,0.02745561
+hospName_Tseung Kwan O Hospital,0.021702284
+hospName_Queen Mary Hospital,0.01799969
+month,0.016119072
+hour,0.015759716
+hospName_Pamela Youde Nethersole Eastern Hospital,0.015219862
+hospName_Caritas Medical Centre,0.0147179905
+hospName_United Christian Hospital,0.010408563
+t3p95_minutes_lag2,0.009200875
+hospName_North District Hospital,0.008925602
+day,0.0070827613
+minute,0.006889475
+t3p50_minutes_roll3,0.006747628
+hospName_Yan Chai Hospital,0.006664066
+t45p95_minutes_roll3,0.006280689
+t3p50_minutes,0.0050202003
+t45p50_minutes_roll3,0.0045539113
+t45p50_minutes,0.004331811
+dayofweek,0.0041767647
+t45p95_minutes,0.0039213765
+t45p95_minutes_lag1,0.003275919
+t45p95_minutes_lag2,0.0032730978
+t3p50_minutes_lag1,0.0032319524
+t45p50_minutes_lag2,0.003229844
+t45p50_minutes_lag1,0.003210909
+t3p50_minutes_lag2,0.0029853075
+manageT1case_num,0.002675439
+manageT2case_num,0.0025126857
+year,0.0020883991
+is_weekend,0.0011983344
