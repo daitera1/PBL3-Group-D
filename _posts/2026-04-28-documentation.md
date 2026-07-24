@@ -5,260 +5,271 @@ date: 2026-04-28
 permalink: /posts/documentation/
 ---
 
-## Week 1
-
-### **Summary of Discussion**
-
-For week 1, we took note of using Google Scholar to look into research ideas that could realistically be done in the next five years with the application of smart cities, since technology will likely have moved forward by then. We're also doing weekly reports to share ideas, research papers, and what everyone's been working on individually, and we finished assigning roles for weeks 1-3.
-
-
-### **Group Roles**
-
-**Project Manager**: Jake
-**Documentation Leads**: Bien, Ibuki, and Mahiro
-**Website Coordinators**: Sadia, Daisuke, and Hanz
-**Pending Coordinators (TBD)**: Presentation, Design, Developers, and Architecture Specialists will be designated as our system scope matures.
-
-
-### **Brainstormed Ideas**:
-
-### **1. Safe Heat Map (Climate & Vulnerable Group Protection)**
-
-This concept leverages live weather updates and predictive mapping to shield vulnerable populations (such as the elderly or outdoor workers) from extreme weather events.
-
-* **Core Technical Pillars**: Integration of real-time Weather APIs to track rising temperature indexes and pinpoint active urban heat islands.
-
-* **Healthcare Integration**: Mapping physical locations of municipal cooling stations and cross-referencing them with localized healthcare readiness and clinic access points.
-
-
-### **2. Hospital Navigation System (Smart Queue & Prediction Model)**
-
-To maximize the real-world precision of our prediction model, we are adding context-driven variables directly into our data pipeline:
-
-* **Visit Intent Feature**: Designing a front-end "Visit Intent" selection feature (like: general check-up, minor injury, prescription renewal). Capturing this quick input from the user before generating results significantly improves machine learning prediction accuracy, as different clinical pathways experience highly variable processing velocities.
-
-* **Predicted Hours Busy Display**: Beyond showing the immediate live estimate, facility profile views will incorporate historical trend charts displaying predicted busy hours throughout the day. This data allows users to make informed, proactive decisions on when to delay or accelerate their departures.
-
-
-### **3. EV Data Transparency & Management (Automotive Data Visibility)**: 
-
-An application addressing the lack of clear data visibility for electric vehicle (EV) owners regarding background data consumption and battery optimization.
-
-* **Transparency Layer**: Demystifying exactly how much metrics and telemetry data vehicles (such as Tesla models) run in the background.
-
-* **Smart Reminders**: Using active battery percentage tracking to push automated, highly contextual charging notifications and power-saving reminders to the user's device.
-
-### **Group goals for the next week**:
-
-* Talk to the professors to make sure our top picks are actually doable from a technical standpoint.
-* Pick the one idea our group is going to go for development.
-* Set up the project repo and get ready to start working on the Requirements Specification.
+This page records Group D's progress from project selection through final testing and presentation preparation. It is based on the team's meeting notes, weekly reports, project documents, and completed deliverables.
 
 ---
 
-## Week 2
+## Week 1 - Project Initiation
 
-### **Summary of Discussion**
+### Group Focus
 
-For week 2, the group discussed and finalized the domain focus and decided on what the main application idea should be. After the time spent on Week 1 sharing ideas, brainstorming, and sharing opinions, the group decided to do any possible healthcare applications and we finalized on building up a system to tackle hospital waiting times. Instead of showcasing statistics or any delayed check-in data, the group also decided to make a predictive machine learning model that could estimate facility loads in real time. The group also discussed the features we could use to make sure our project is unique and different from the typical navigation apps.
+The team began by researching smart-city problems that could support a realistic software prototype. Our early ideas included a heat-risk map, accessible travel routes, electric-vehicle data transparency, and a hospital navigation and queue-prediction system.
 
-### **To-Do List and Follow-Up Research**
-* **Foreigner Care Access & Insurance Integration**: Looking into how national health insurance works for international students, visitors, and expats, so we can figure out what features we need for solid English and other foreign-language support.
-* **Accessibility Assessment**: Checking what kind of support would actually help foreigners navigate local medical services they're not familiar with.
-* **Field Survey Deployments**: Planning to survey elderly people and healthcare professionals to get their input. We'll reach out through email, direct messages, and phone calls.
-* **Advanced Technology Exploration**: Digging deeper into how we can safely bring in things like AI forecasting, cybersecurity measures, and encrypted databases into our system.
+### Work Completed
 
-### **Professor's Advice**
+- Selected Jacob Smith as Project Manager.
+- Assigned the first documentation and website responsibilities.
+- Reviewed research through Google Scholar and other academic sources.
+- Compared the feasibility, available data, and likely social impact of each idea.
+- Agreed that healthcare accessibility was the strongest overall direction for the group.
 
-The project should be realistic and doable within 14 weeks. Taking note of that, the group is making sure to be careful on scoping the data requirements. Making sure the prediction models will rely on the features that are very easy to access, using the public datasets and structured synthetics, and steer clear of the overly complex dependencies that could make our delivery timeline at risk.
+### Next Step
 
----
-
-## Week 3
-
-### **Accomplished**
-
-* We have the datasets for Hong Kong, UK, Scotland
-* Project based on the hospital tracker using NHS API or Manual scrape
-* Github repository
-* Mostly gonna base on the logs and datasets of other countries(not Japan)
-* Make our own API but improve it base on the NHS
-
-### **Professor's Advice**
-
-* Could ask them that we will use it for class (email)
-* if manual logging using a machine learning mode (need a couple of weeks for it)
-* frequency would be quite frequent
-
-### **To-Do List**
-
-1. Get permission to get datasets
-2. Start scraping data
-
+Narrow the healthcare idea into a specific problem that could be developed and evaluated within the semester.
 
 ---
 
-## Week 4
+## Week 2 - CarePath Concept Selection
 
-### **To-Do List**
+### Group Focus
 
-* Project Proposal Summary with 2 paragraphs
-* Have the template ready for the slides
-* Conduct interviews and surveys
+The team selected a smart hospital finder as the main project. The proposed system would compare hospitals using waiting time, location, specialty, language support, and other practical information.
 
-### Accomplished
+### Work Completed
 
-* Using DeepL API for our language for our language support system
-* Started scraping data from website
+- Defined the initial CarePath Navigator concept.
+- Discussed historical data and crowdsourced updates as alternatives when live data is unavailable.
+- Investigated public datasets from Hong Kong and several European countries.
+- Identified the Hong Kong Hospital Authority dataset as a promising source.
+- Began planning user interviews and a survey about hospital waiting experiences.
 
-### **Professor's Advice**
+### Next Step
 
-* Incentives like rankings
-* Interviews or surveys can be external (different people from differnt industries)
-* 4-5 people can be interviewed (can be a small survey with friends or families)
-* You will know your problems better if you do survey and get information from other people using the knowledge of other people
-* 2-4 interviews sufficient
-* At least 100 data points
+Choose the main data source and determine whether an authorized live hospital API could be used.
 
 ---
 
-## Week 5
+## Week 3 - Proposal and Data Investigation
 
-### **To-Do List 
+### Group Focus
 
-* Have some progress with the midterm presentation slides
-* Start discussing about the presentation coordinator and the documentation
+The team organized the project proposal and created the shared GitHub website. During the data investigation, we found an NHS source that demonstrated the kind of live integration we wanted, but its API access was restricted.
 
-### **Accomplished**
+### Work Completed
 
-* Able to have the template ready for the slides
-* Discussed about how the slides would look like
-* Did interviews and received a good amount of  data from the survey conducted to different countries
+- Divided the project proposal into sections and assigned work based on member strengths.
+- Created the GitHub repository and coordinated contributions to the proposal.
+- Contacted the NHS to request educational access to its restricted API.
+- Considered manual collection and public historical datasets as fallback options.
+- Expanded the research scope beyond emergency rooms to include hospitals, clinics, and related healthcare services.
 
-### **Professor's Advice**
+### Decision
 
-* Don't make the slides too wordy
-* Keep the designs simple 
-
----
-
-## Week 6
-
-### **Accomplished**
-
-* Finalized the slides and discussed each slide
-* Took notes for extra information for the slides
-
-### **To-Do List**
-
-* Be ready for the midterm presentation
-* Make sure to practice
-* Be ready for the questions
-
-### **Professor's Advice**
-
-* Should focus on design and not the implementation for the presentation
+The NHS system would remain an example of the ideal future integration. The team continued evaluating public data that could support the class prototype without restricted access.
 
 ---
 
-## Week 7
+## Week 4 - Proposal Submission and Early Validation
 
-### **Accomplished**
+### Group Focus
 
-* Finished the midterm presentation
+The proposal and first project website were submitted. The team then moved into requirements research and early validation of the problem.
 
-### **To-Do List**
+### Work Completed
 
-* Start assigning members for the UML diagrams
-* Assign the implementation team and the system architecture team
+- Submitted the project proposal and published the first website version.
+- Held a group meeting during Golden Week to assign requirements roles.
+- Conducted three early user interviews about recent hospital visits and waiting times.
+- Interviewed a nurse familiar with hospital waiting-room operations.
+- Confirmed that people often do not know how busy a hospital is before arriving.
+- Began turning interview observations into questions for a larger survey.
 
-### **Professor's Advice**
+### Next Step
 
-* Should not do navigation
-* Should have briefly explained and shocased the UI
-
----
-
-## Week 8
-
-Mahiro
-* Class Diagram
-
-Bien
-* Use Case Diagram
-* Activity Diagram
-
-Jake
-* State Diagram
-* Sequence Diagram
-
-Ibuki
-* Components Diagram
+Develop the requirements specification using survey findings, expert feedback, and research.
 
 ---
 
-## Week 9
+## Week 5 - Requirements and Research Preparation
 
-### **Notes**
+### Group Focus
 
-* Just the standard
-* Eye the data
-* Implementation should be smooth if we have data and diagrams
-* Gotta do it in 2 weeks
-* All of the data should be taken (thousands)
-* Can use historical data
-* 80-20 or 70-30 from historical data
-* Only test once and do not have to touch the model again
-* If the data is the same it's fine
-* Make sure people are not maliciously doing false stuff
-* In the end it has to be the same data because it will not run
+The group organized the structure of the Software Requirements Specification and prepared the research material needed for the midterm stage.
 
----
+### Work Completed
 
-## Week 10
+- Assigned functional and non-functional requirements across the team.
+- Developed and distributed the user survey.
+- Continued outreach to healthcare professionals for expert interviews.
+- Organized early findings about waiting times, accessibility, language support, and hospital information.
+- Prepared the midterm slide template and agreed to keep the presentation design simple.
 
-### **Implementation and Dataset Finalization**
+### Next Step
 
-* Finalized the project around Hong Kong public-hospital waiting-time data.
-* Cleaned and prepared the historical data for model development.
-* Used a held-out evaluation split for the XGBoost regression model.
-* Continued connecting the hospital comparison interface with the prepared prediction results.
-* Reviewed the fastest-versus-closest recommendation logic and prediction-warning behavior.
+Complete the survey analysis, expert interviews, requirements document, and midterm presentation.
 
 ---
 
-## Week 11
+## Week 6 - Requirements Finalization and Midterm Preparation
 
-### **Model Evaluation and Prototype Testing**
+### Group Focus
 
-* Evaluated the XGBoost model using MAE, RMSE, and R².
-* Recorded final held-out results: MAE 5.93 minutes, RMSE 8.42 minutes, and R² 0.8105.
-* Tested the presentation of predicted waiting times, confidence, and uncertainty.
-* Reviewed prototype failure cases and the need to warn users when confidence is low.
-* Confirmed that the application must be presented as a decision-support prototype rather than a diagnostic tool.
+The team combined research findings with the system requirements and prepared for the midterm presentation.
 
----
+### Work Completed
 
-## Week 12
+- Reviewed responses from the 89-person survey.
+- Conducted healthcare-professional interviews and incorporated their feedback.
+- Completed major sections of the functional and non-functional requirements.
+- Organized two team meetings to combine and review each member's work.
+- Assigned presentation slides and prepared a presentation script.
+- Practiced the presentation to remain within the seven-minute limit and prepared for questions.
 
-### **Final Integration**
+### Research Outcome
 
-* Integrated the final hospital information and model outputs into the web prototype.
-* Completed the demonstration flow from hospital search to comparison and navigation.
-* Consolidated findings from the 89-person survey and healthcare-professional interviews.
-* Prepared the final slides, system explanation, model results, and recorded demonstration.
-* Reviewed the website and documents for consistent CarePath Navigator naming.
+The survey and interviews supported the need for clearer waiting-time information, understandable confidence ranges, and better access to hospital information.
 
 ---
 
-## Week 13
+## Week 7 - Midterm Presentation and Design Transition
 
-### **Final Presentation and Submission**
+### Group Focus
 
-* Delivered the final presentation and prototype demonstration.
-* Presented the problem, research, architecture, XGBoost evaluation, and user experience.
-* Clarified that the final evaluation used Hong Kong data, while NHS integration remained a possible future direction.
-* Organized the final project website, documentation, diagrams, and results for submission.
-* Recorded limitations and next steps for live-data access, testing, accessibility, and model monitoring.
+The team delivered the midterm presentation and used the professors' feedback to move from requirements into system modelling.
+
+### Work Completed
+
+- Practiced before class and delivered the midterm presentation.
+- Received feedback that the presentation should emphasize functional requirements before UI details.
+- Assigned UML diagrams and implementation preparation tasks.
+- Began the State and Sequence Diagrams.
+- Continued dataset collection and website work.
+- Confirmed that proposed architecture diagrams could show an authorized hospital API as the ideal system, even though the final prototype would use accessible data.
+
+### Next Step
+
+Complete the first UML drafts and review them against the requirements.
+
+---
+
+## Week 8 - UML Development
+
+### Group Focus
+
+All members contributed to system modelling. The team checked that each diagram described the same CarePath Navigator workflow and features.
+
+### Diagram Responsibilities
+
+- **Mahiro Ueda:** Class Diagram
+- **Bien Alolod:** Use Case and Activity Diagrams
+- **Jacob Smith:** State and Sequence Diagrams
+- **Ibuki Yasuda:** Components Diagram
+- **Other members:** implementation research, website support, and diagram review
+
+### Work Completed
+
+- Completed and peer-reviewed the State Diagram.
+- Produced the first Sequence Diagram draft.
+- Compared the UML work with software-engineering course examples.
+- Discussed how hospital recommendations, predicted waits, reviews, and confidence information should appear in the system.
+- Began connecting the diagrams to the planned system architecture.
+
+---
+
+## Week 9 - Design Review and Architecture Planning
+
+### Group Focus
+
+The team refined the diagrams and began translating the system design into an implementable architecture.
+
+### Work Completed
+
+- Finalized the Sequence Diagram and added website descriptions.
+- Reviewed the Use Case, State, Class, Component, and other diagrams for consistency.
+- Checked that recommendations, waiting-time prediction, navigation, and reviews were represented across the design.
+- Produced the first system-architecture draft.
+- Planned the use of historical data and a held-out training and evaluation split.
+- Divided the remaining work between architecture, data preparation, model development, and prototype implementation.
+
+### Next Step
+
+Finish the system-design documentation and begin model and interface implementation.
+
+---
+
+## Week 10 - Architecture and Implementation Planning
+
+### Group Focus
+
+The team completed the main design phase and began coordinating implementation.
+
+### Work Completed
+
+- Held a Sunday progress meeting and a separate architecture meeting.
+- Reviewed the relationships between the frontend, backend, database, prediction model, language support, reviews, and hospital information.
+- Continued the system-architecture and component planning.
+- Checked the implementation team's progress on data preparation and prediction modelling.
+- Confirmed Hong Kong public-hospital data as the final model-development source.
+- Kept the NHS API in the proposed architecture only as an example of a future authorized live-data connection.
+
+---
+
+## Week 11 - First Integrated Prototype
+
+### Group Focus
+
+The team moved into prototype development while continuing to update the architecture and presentation materials.
+
+### Work Completed
+
+- Completed the first frontend mock-up.
+- Refined the Components Diagram and reviewed how the frontend, backend, database, and prediction model connect.
+- Continued work on the Pipe-and-Filter Diagram and other architecture documents.
+- Updated the presentation slides to match the latest design.
+- Coordinated the next stage of backend and prediction-model integration.
+- Reviewed the interface flow for hospital search, comparison, predicted waiting time, and navigation.
+
+### Next Step
+
+Connect the prepared data and prediction outputs to the prototype and test the complete user flow.
+
+---
+
+## Week 12 - Integration and Final Preparation
+
+### Group Focus
+
+The team tested the prototype and updated the documentation when implementation decisions changed the planned architecture.
+
+### Work Completed
+
+- Coordinated frontend, backend, database, and prediction-model tasks.
+- Updated the system architecture to include a backend function identified during testing.
+- Checked that the diagrams matched the system being demonstrated.
+- Integrated hospital information and prediction outputs into the prototype flow.
+- Prepared final slides covering the problem, features, architecture, results, and demonstration.
+- Scheduled the final group review and assigned the remaining presentation and demo tasks.
+
+---
+
+## Week 13 - Final Testing and Presentation
+
+### Group Focus
+
+The final week focused on consistency, testing, and communicating the completed project clearly.
+
+### Work Completed
+
+- Reviewed the website, requirements, diagrams, architecture, and slides for consistency.
+- Finalized the presentation with contributions from multiple team members.
+- Replaced the original skit idea with a direct screen-recorded demonstration so the system features were easier to understand.
+- Investigated unexpectedly strong model results and corrected how the evaluation metrics were being read.
+- Confirmed the final XGBoost results: MAE 5.93 minutes, RMSE 8.42 minutes, and R² 0.8105.
+- Clarified that the final evaluation used Hong Kong data while NHS integration remained a future ideal direction.
+- Completed the final project demonstration and submission materials.
+
+### Final Outcome
+
+CarePath Navigator was completed as a hospital-comparison prototype supported by user research, expert interviews, system modelling, architecture documentation, and an evaluated waiting-time prediction model.
 
 ---

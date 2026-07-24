@@ -5,7 +5,7 @@ date: 2026-04-28
 permalink: /posts/project-proposal/
 ---
 
-> **Project scope note:** This document records the team's original proposal and early UK/NHS research direction. During implementation, the team changed the evaluated scope to Hong Kong public-hospital data. The NHS integration described below remains a proposed future direction and was not used for the final model results. See the [final Results page]({{ '/posts/results/' | relative_url }}).
+> **Development path:** The team initially studied NHS reporting systems as an example of an ideal live-data service. Because the relevant NHS API requires authorization, the final prototype and model evaluation used public Hong Kong hospital waiting-time data. The NHS work remains part of the proposed future architecture. See the [Results page]({{ '/posts/results/' | relative_url }}) for the final evaluation.
 
 <style>
 .toc-link {
@@ -63,13 +63,13 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 
 ---
 
-## Project Proposal Summary (Original Direction)
+## Project Proposal Summary
 
 This project aims to develop a Smart Hospital Finder Application (CarePath Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system is designed for mild healthcare needs and clinic-level visits, and does not provide medical diagnoses or handle emergency cases.
 
 In many cities, hospitals are often overcrowded, and patients lack access to real-time information about waiting times. As a result, most people go to the nearest hospital without knowing how long they will have to wait. This leads to inefficient patient distribution, longer waiting times, and increased stress, especially in urgent situations. Existing solutions such as map apps or hospital websites do not provide accurate or real-time information, making it difficult for users to make informed decisions.
 
-To address this, our application combines live data, historical trends, and crowdsourced input to provide real-time and predicted waiting times. It also displays key information such as hospital specialties, language support, and distance. A recommendation system suggests suitable hospitals based on user preferences, helping guide patients toward less crowded facilities and reducing overall congestion.
+To address this, CarePath Navigator combines historical waiting-time patterns with hospital and location information to produce predicted waiting times and recommendations. It also displays information such as hospital specialties, language support, and distance. The final class prototype uses public Hong Kong data, while authorized live hospital APIs and verified crowdsourced updates are part of the ideal future system.
 
 The system also focuses on simplicity, accessibility, and privacy. It provides clear and easy-to-understand information, supports international users, and minimizes data collection. By centralizing hospital information into one platform, the application aims to improve decision-making, reduce waiting times, and create a more efficient healthcare experience.
 
@@ -86,25 +86,22 @@ Due to this, there is a need for a smarter system that can provide real-time and
 
 ## 2. Vision & Goals
 
-### 2.1 Vision (Original UK/NHS Research Direction)
+### 2.1 Vision
 
-The first and foremost vision for the project is to create an intuitive, accessible digital platform that empowers patients, carers, and healthcare professionals across the United Kingdom to view, track, and understand hospital waiting times — reducing uncertainty, improving patient experience, and supporting informed decision-making across the healthcare journey.
+Our vision is to create an intuitive and accessible platform that helps patients understand hospital waiting times before they travel. CarePath Navigator brings predicted waits, distance, and practical hospital information into one place so users can make a more informed choice.
 
-Millions of patients across the UK are currently waiting for hospital treatment, diagnostic tests, or specialist consultations. Existing mechanisms for checking waiting times are fragmented, inconsistent across trusts, and often inaccessible to the general public. Since this creates anxiety for patients, inefficiencies for administrators, and a lack of transparency in the healthcare system, our project can help them in ways that ease their struggles.
-
-We are aiming for a future where every patient can access organized, real-time waiting time information, assisting them plan it out , prepare and be informed throughout their healthcare journey.
+The final prototype demonstrates this idea using public Hong Kong hospital data. In a future real-world version, the same architecture could connect to authorized live sources such as hospital systems or NHS reporting services. This distinction allows the prototype to remain realistic about its current data while showing how the system could grow.
 
 ### 2.2 Goals
 
-Firstly, our goal is to be transparent with the patients to provide clear, honest and updated waiting time data across UK trust hospitals, special hospitals and regions as well. By filtering the data that is currently difficult to read, it will be more accessible to concerning patients.
+The project goals are to:
 
-Secondly, this project assists with patient empowerment since this will provide patients agency over their healthcare experience by enabling them to compare waiting times across trusts, set up notifications, and understand their position on waiting lists.
-
-Since the source data is directly from NHS England, NHS Digital, and official trust-level reporting, this ensures accuracy and maintains public confidence in the platform.
-
-This project also aims to deliver a clean, jargon-free interface that works equally well for a first-time user and a frequent visitor, prioritising clarity over complexity.
-
-Lastly, using design for inclusivity from the ground up, meeting WCAG 2.1 AA (the international standard for web accessibility, requiring digital content to be perceivable, operable, understandable, and robust for users) accessibility standards, supporting screen readers, multiple languages, and varying levels of digital literacy.
+* Present predicted waiting times with clear source, timestamp, and confidence information.
+* Allow users to compare the fastest and closest suitable hospitals.
+* Make hospital, department, language-support, and accessibility information easier to find.
+* Keep the interface understandable for first-time users and people under stress.
+* Minimize the collection of personal information and treat location data carefully.
+* Design an architecture that could later accept authorized live data from hospital systems, including services similar to those investigated through the NHS.
 
 ---
 
@@ -113,15 +110,15 @@ Lastly, using design for inclusivity from the ground up, meeting WCAG 2.1 AA (th
 ### 3.1 Purpose of the Application
 
 The objective of this project is to develop a Smart Hospital Finder Application (CarePath Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system focuses on mild healthcare needs and clinic-level visits, without providing medical diagnoses or handling emergency cases.
-The application uses real-time, historical, and crowdsourced data to provide waiting time estimates and simple recommendations. It aims to reduce waiting times, improve patient distribution, and make hospital information easier to access in one platform, while maintaining user privacy.
+The final prototype uses historical Hong Kong hospital data to provide waiting-time estimates and simple recommendations. The proposed full system would extend this with authorized live data and verified crowdsourced updates. It aims to reduce uncertainty, improve patient distribution, and make hospital information easier to access while maintaining user privacy.
 
 ### 3.2 Core Objectives
 
-* Provide real-time and predicted waiting times using live, historical, and crowdsourced data
+* Provide predicted waiting times using historical data
 * Show the closest healthcare facilities based on user location
 * Display hospital specialties and language support
 * Provide a recommendation system based on wait time, distance, and user preferences
-* Include a crowdsourcing feature for wait times and simple user feedback
+* Design future support for live data, crowdsourced updates, and simple user feedback
 * Offer general guidance notifications without giving medical diagnoses
 * Help reduce overcrowding by guiding users to less busy facilities
 
@@ -138,22 +135,15 @@ The application uses real-time, historical, and crowdsourced data to provide wai
 
 ## 4. Data Acquisition – Finding Datasets
 
-API to access the Waiting List Minimum Data Set (WLMDS) - The national electronic databases of NHS patient waiting list details such as date of birth, a patient’s care pathway and the date they began waiting.
+### Final Prototype Data
 
-We can access:
-* Search for patients
-* Get patient details
-* View when a patient began waiting for a procedure
-* View the care pathway a patient is on
-* View the trust / organisation their care pathway is with
+The final implementation uses public waiting-time information from the Hong Kong Hospital Authority <a href="#ref-1" class="citation">[1]</a>. The team selected this source because it could support a working academic prototype without requiring access to private patient records. Historical records were cleaned and prepared for the XGBoost waiting-time model.
 
-We can view:
-* Patient waiting date
-* Patient pathway identifier
-* Treatment function code
-* Organisation providing the care pathway
-* Census date
-However, this API is for internal use only (NHS App), so currently we are asking NHS England to use the API <a href="#ref-1" class="citation">[1]</a>
+### NHS Research and Ideal Future Integration
+
+During the proposal stage, the team investigated NHS England and the Waiting List Minimum Data Set (WLMDS). This research was valuable because it showed how an established healthcare system organizes waiting-list information and how CarePath Navigator could eventually connect to an authorized live source <a href="#ref-2" class="citation">[2]</a>.
+
+The relevant NHS API is restricted and was not used in the final model. For this reason, the project diagrams treat an NHS-style hospital API as part of the ideal future architecture rather than a completed integration.
 
 ---
 
@@ -161,22 +151,22 @@ However, this API is for internal use only (NHS App), so currently we are asking
 
 ### 5.1 Preprocessing
 
-The collected hospital waiting-time data from the API will undergo preprocessing to ensure consistency, reliability, and suitability for predictive modeling. Raw waiting-time data gathered from public hospital queue platforms will first be cleaned by handling missing values, removing duplicate entries, and standardizing inconsistent hospital naming conventions. Time-based features will then be extracted from timestamps, including hour of day, day of week, weekend/weekday and holiday indicators, as these temporal factors are strongly associated with hospital congestion patterns. Lag-based historical features will also be generated, such as previous recorded waiting time, rolling average wait over recent intervals, and congestion trends over time . Finally, categorical variables such as hospital type or department will be encoded into machine-readable form for use in predictive models.
+The Hong Kong waiting-time data was prepared for predictive modelling by handling missing values, removing duplicate entries, and standardizing hospital names. Time-based features included hour of day, day of week, weekday or weekend status, and other indicators associated with hospital congestion. Historical features such as previous waiting time and rolling averages were also considered. Categorical variables such as hospital or department were encoded into a machine-readable format.
 
 ### 5.2 Data Techniques 
 
-In order to estimate future hospital waiting times, the system will implement a supervised regression-based prediction model (preferably using LightGBM / XGBoost). The predictive model will leverage both temporal features and historical queue-state information, including:
+The final system used an XGBoost supervised regression model. The model used temporal and historical queue information, including:
 * Current waiting time
 * Previous waiting times
 * Rolling average queue duration
 * Time of day / Day of week
 * Hospital congestion level
 * Hospital-specific patterns
-A baseline historical-average model will first be established to benchmark the performance of the model. After which the gradient boosting model will be trained and evaluated against it. Model performance will then be assessed using regression metrics such as MAE (Mean Absolute Error) and RMSE (Root Mean Squared Error) to measure prediction accuracy.
+The model was evaluated on held-out data using MAE, RMSE, and R². The final results were an MAE of 5.93 minutes, an RMSE of 8.42 minutes, and an R² of 0.8105. Full context and limitations are provided on the [Results page]({{ '/posts/results/' | relative_url }}).
 
 ### 5.3 Data Visualization
 
-The processed and predicted waiting-time data will be visualized through a real-time hospital map with live/predicted waiting times and color-coded congestion indicators.
+The processed and predicted waiting-time data is presented through the hospital-comparison interface. Users can compare the fastest and closest options, view predicted waits and confidence information, and continue to navigation. A continuously updating live map remains part of the future system.
 
 ---
 
@@ -190,9 +180,9 @@ Platforms such as Zocdoc and Google Maps are useful for finding hospitals and bo
 
 ### 6.2 Government Data
 
-* The Hong Kong Hospital Authority provides real-time waiting time data, updated frequently, showing the value of live data systems <a href="#ref-2" class="citation">[2]</a>
-* NHS England reports highlight ongoing issues with long waiting times, especially in emergency care <a href="#ref-3" class="citation">[3]</a>
-* Data from the Ministry of Health, Labour and Welfare shows concerns about the efficiency of accessing healthcare services <a href="#ref-4" class="citation">[4]</a>
+* The Hong Kong Hospital Authority provides public waiting-time information and supplied the basis for the final prototype dataset <a href="#ref-1" class="citation">[1]</a>.
+* NHS England reporting was studied as a reference for a possible future authorized live-data integration <a href="#ref-2" class="citation">[2]</a>.
+* Data from Japan's Ministry of Health, Labour and Welfare helped the team consider local healthcare access and future regional expansion <a href="#ref-3" class="citation">[3]</a>.
 
 ---
 

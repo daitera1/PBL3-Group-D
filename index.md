@@ -1,80 +1,39 @@
 ---
 layout: default
-title: "CarePath Navigator"
+title: "PBL3 Group D Project"
 date: 2026-07-24
 ---
 
-<section class="hero">
-  <p class="eyebrow">Ritsumeikan University · PBL3 Group D</p>
-  <h2>Making hospital choices clearer before patients arrive.</h2>
-  <p class="hero-copy">CarePath Navigator is a smart-healthcare prototype that combines predicted waiting times, hospital information, and location-based comparison to help users consider the fastest and closest care options.</p>
-  <div class="hero-actions">
-    <a class="button primary" href="https://route-to-care-ai.lovable.app" target="_blank" rel="noopener">Open Live Prototype</a>
-    <a class="button secondary" href="{{ '/posts/results/' | relative_url }}">View Results</a>
-  </div>
-</section>
+Welcome to the **PBL3 Group D** project website. Our team developed **CarePath Navigator**, a smart healthcare prototype that helps users compare hospitals using predicted waiting times, distance, and hospital information.
 
-## Final Project Scope
+## Project Overview
 
-The final implementation and model evaluation use **Hong Kong public-hospital data**. During the early research stage, the team also investigated NHS and UK data sources because their reporting systems offered a useful reference for a future ideal integration. Those early references remain in parts of the proposal and diagrams as design history; they are not the source of the final reported model results.
+Patients often travel to a hospital without knowing how long they may have to wait or whether another suitable facility is available nearby. CarePath Navigator was designed to make this decision clearer by presenting hospital information in one place and allowing users to compare the **fastest** and **closest** options.
 
-<div class="notice">
-  <strong>Prototype status:</strong> This is an academic decision-support prototype. It does not diagnose conditions, replace medical professionals, or provide emergency guidance.
-</div>
+The final prototype includes hospital comparison, predicted waiting times, confidence information, recommendation preferences, and a navigation flow. The system is an academic decision-support prototype and does not provide medical diagnoses or emergency guidance.
 
-## Problem
+## Data Scope
 
-Patients often choose a hospital using only distance or familiarity because waiting-time and accessibility information is fragmented. Our survey of 89 participants found strong demand for clearer information before travelling to a facility.
+Our early proposal investigated the United Kingdom's NHS reporting systems as an example of an ideal future live-data integration. Because the relevant NHS API requires authorization, the final implementation and XGBoost evaluation used public **Hong Kong hospital waiting-time data**. The NHS work remains part of our research and future-system design, but it was not used to calculate the final model results.
 
-<div class="stat-grid">
-  <div class="stat-card"><strong>89</strong><span>survey participants</span></div>
-  <div class="stat-card"><strong>83%</strong><span>experienced long waits</span></div>
-  <div class="stat-card"><strong>82%</strong><span>wanted wait-time information</span></div>
-  <div class="stat-card"><strong>71%</strong><span>valued hospital reviews</span></div>
-</div>
+## Key Results
 
-## Our Solution
-
-- Compare hospitals using predicted waiting time and distance.
-- Switch between the **fastest** and **closest** recommendation priorities.
-- Display prediction confidence and warnings when uncertainty is high.
-- Review hospital, department, accessibility, and language-support information.
-- Continue to navigation after selecting a facility.
-
-## Model Evaluation
-
-The team trained and evaluated an **XGBoost regression model** using historical Hong Kong hospital waiting-time data.
-
-| Metric | Held-out Result |
+| Project Result | Outcome |
 |---|---:|
-| Mean Absolute Error (MAE) | **5.93 minutes** |
-| Root Mean Squared Error (RMSE) | **8.42 minutes** |
-| R² | **0.8105** |
+| Survey participants | **89** |
+| Participants who experienced long hospital waits | **83%** |
+| Interest in waiting-time information | **82%** |
+| XGBoost Mean Absolute Error | **5.93 minutes** |
+| XGBoost Root Mean Squared Error | **8.42 minutes** |
+| XGBoost R² | **0.8105** |
 
-One demonstration output predicted a wait of **35.3 minutes**, with **83.1% confidence** and an uncertainty interval of **±6.0 minutes**. See the [Results page]({{ '/posts/results/' | relative_url }}) for the evaluation context and limitations.
+For the full evaluation, limitations, and delivered features, see the [Results page]({{ '/posts/results/' | relative_url }}).
 
-## Research and Validation
+You can also open the [CarePath Navigator prototype](https://route-to-care-ai.lovable.app).
 
-The project combined technical development with user research:
+## Project Members
 
-- **89-person survey** covering waiting-time experiences and desired features.
-- Interviews with healthcare professionals, including **Dr. Vito LaRocca, MD, MPH**, and **Charlene DiLoffi**.
-- Review of public hospital-reporting systems and historical waiting-time datasets.
-- Iterative requirements, architecture, UML modelling, prototype testing, and presentation feedback.
-
-## Implemented Prototype vs. Future System
-
-| Implemented in the prototype | Proposed future integration |
-|---|---|
-| Hospital comparison interface | Direct live hospital APIs |
-| Precomputed XGBoost prediction outputs | Continuously refreshed predictions |
-| Fastest/closest ranking | Crowdsourced verified queue updates |
-| Confidence display and warnings | Production monitoring and retraining |
-| Hong Kong hospital information | Expansion to additional regions |
-
-## Project Team
-
-- **Jacob Smith — Project Manager**
+- **Jacob Smith - Project Manager**
 - **Bien Alolod**
 - **Sadia Islam**
 - **Hanz Ranen**
@@ -82,4 +41,4 @@ The project combined technical development with user research:
 - **Mahiro Ueda**
 - **Ibuki Yasuda**
 
-Every result on this site represents the work of PBL3 Group D.
+---
