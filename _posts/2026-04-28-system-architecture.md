@@ -9,6 +9,7 @@ permalink: /posts/system-architecture/
 
 ## Introduction
 
+> **Architecture status:** This page documents the proposed full system architecture. The final deployed prototype demonstrates the user interface and prepared XGBoost prediction results. Live hospital APIs, a continuously running Flask prediction service, and production MySQL storage are future implementation work.
 
 The system architecture of the hospital recommendation and wait-time prediction system follows a client-server model, separating the user interface, application logic, and data storage into distinct layers. This separation ensures modularity, maintainability, and scalability of the system.
 

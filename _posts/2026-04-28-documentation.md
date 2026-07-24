@@ -214,3 +214,51 @@ Ibuki
 * In the end it has to be the same data because it will not run
 
 ---
+
+## Week 10
+
+### **Implementation and Dataset Finalization**
+
+* Finalized the project around Hong Kong public-hospital waiting-time data.
+* Cleaned and prepared the historical data for model development.
+* Used a held-out evaluation split for the XGBoost regression model.
+* Continued connecting the hospital comparison interface with the prepared prediction results.
+* Reviewed the fastest-versus-closest recommendation logic and prediction-warning behavior.
+
+---
+
+## Week 11
+
+### **Model Evaluation and Prototype Testing**
+
+* Evaluated the XGBoost model using MAE, RMSE, and R².
+* Recorded final held-out results: MAE 5.93 minutes, RMSE 8.42 minutes, and R² 0.8105.
+* Tested the presentation of predicted waiting times, confidence, and uncertainty.
+* Reviewed prototype failure cases and the need to warn users when confidence is low.
+* Confirmed that the application must be presented as a decision-support prototype rather than a diagnostic tool.
+
+---
+
+## Week 12
+
+### **Final Integration**
+
+* Integrated the final hospital information and model outputs into the web prototype.
+* Completed the demonstration flow from hospital search to comparison and navigation.
+* Consolidated findings from the 89-person survey and healthcare-professional interviews.
+* Prepared the final slides, system explanation, model results, and recorded demonstration.
+* Reviewed the website and documents for consistent CarePath Navigator naming.
+
+---
+
+## Week 13
+
+### **Final Presentation and Submission**
+
+* Delivered the final presentation and prototype demonstration.
+* Presented the problem, research, architecture, XGBoost evaluation, and user experience.
+* Clarified that the final evaluation used Hong Kong data, while NHS integration remained a possible future direction.
+* Organized the final project website, documentation, diagrams, and results for submission.
+* Recorded limitations and next steps for live-data access, testing, accessibility, and model monitoring.
+
+---

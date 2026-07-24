@@ -5,6 +5,8 @@ date: 2026-04-28
 permalink: /posts/project-proposal/
 ---
 
+> **Project scope note:** This document records the team's original proposal and early UK/NHS research direction. During implementation, the team changed the evaluated scope to Hong Kong public-hospital data. The NHS integration described below remains a proposed future direction and was not used for the final model results. See the [final Results page]({{ '/posts/results/' | relative_url }}).
+
 <style>
 .toc-link {
   color: #000000;
@@ -61,7 +63,7 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 
 ---
 
-## Project Proposal Summary
+## Project Proposal Summary (Original Direction)
 
 This project aims to develop a Smart Hospital Finder Application (CarePath Navigator) that helps users choose appropriate healthcare facilities based on location, waiting time, and accessibility. The system is designed for mild healthcare needs and clinic-level visits, and does not provide medical diagnoses or handle emergency cases.
 
@@ -84,7 +86,7 @@ Due to this, there is a need for a smarter system that can provide real-time and
 
 ## 2. Vision & Goals
 
-### 2.1 Vision
+### 2.1 Vision (Original UK/NHS Research Direction)
 
 The first and foremost vision for the project is to create an intuitive, accessible digital platform that empowers patients, carers, and healthcare professionals across the United Kingdom to view, track, and understand hospital waiting times — reducing uncertainty, improving patient experience, and supporting informed decision-making across the healthcare journey.
 

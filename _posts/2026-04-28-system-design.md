@@ -70,6 +70,8 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 
 The CarePath Navigator project can be defined as an application that aims at providing efficient assistance in finding the best hospitals through its functionalities. This particular system design document explains the architecture and structure of the proposed system. It further describes how various inputs received from the user such as location and search options are processed in order to provide best-fit hospitals with predicted wait times. The following sections present several diagrams which include System Context, Class Diagrams, State Diagrams, Use Case Diagrams, Component Diagrams, Activity Diagrams, and Sequence Diagrams. These diagrams will assist with our project implementation in a significant way.
 
+The diagrams describe the team's proposed complete architecture. The final web prototype demonstrates the recommendation experience with Hong Kong hospital information and prepared model outputs. Live hospital APIs, continuous updates, and production data storage remain future integrations.
+
 ---
 
 ## System Context Diagram
@@ -95,7 +97,7 @@ The class diagram represents a CarePath Navigator application that recommends su
 ![State Diagram]({{ "/images/State%20Diagram.png" | relative_url }})
 
 
-This state diagram illustrates the complete user journey within CarePath Tech, beginning with hospital search preferences and ending with treatment completion and review submission. The predicted wait time is generated using historical wait-time records and a machine learning model, which also produces a confidence score representing the reliability of the prediction. If the estimated wait time exceeds 60 minutes or the confidence score falls below 70%, the application displays a warning popup stating "The predicted wait time may be longer than expected or the prediction confidence is low. Would you still like to continue with this hospital?" Selecting Continue returns the user to the hospital search process to consider alternative hospitals, while selecting Cancel terminates the current session and ends the process.
+This state diagram illustrates the complete user journey within CarePath Navigator, beginning with hospital search preferences and ending with treatment completion and review submission. The predicted wait time is generated using historical wait-time records and a machine learning model, which also produces a confidence score representing the reliability of the prediction. If the estimated wait time exceeds 60 minutes or the confidence score falls below 70%, the application displays a warning popup stating "The predicted wait time may be longer than expected or the prediction confidence is low. Would you still like to continue with this hospital?" Selecting Continue returns the user to the hospital search process to consider alternative hospitals, while selecting Cancel terminates the current session and ends the process.
 
 ---
 
@@ -113,7 +115,7 @@ This use case diagram shows how the patient interacts with the CarePath Navigato
 ![Components Diagram]({{ "/images/Components%20Diagram.jpg" | relative_url }})
 
 
-This component diagram shows the simplified software structure of SmartCare Navigator. It is divided into five main layers to show how data flows through our system:
+This component diagram shows the simplified software structure of CarePath Navigator. It is divided into five main layers to show how data flows through our system:
 
 * **Client Layer**: Contains the Mobile Application and Web Application, which send the user’s location and selected department to the UI Controller.
 
@@ -132,12 +134,11 @@ This component diagram shows the simplified software structure of SmartCare Navi
 ![Sequence Diagram]({{ "/images/Sequence%20Diagram.png" | relative_url }})
 
 
-This sequence diagram describes the process of searching for hospitals, generating predicted wait times, and providing navigation assistance within CarePath Tech. The prediction system retrieves historical wait-time records from the hospital database and applies a machine learning model to estimate waiting times and confidence scores. If the estimated wait time exceeds 60 minutes or the confidence score is below 70%, the mobile application displays a warning popup suggesting that the user consider another hospital. Navigation information, including route, estimated travel time, and distance, is obtained through a navigation service utilizing real-time traffic data available through the Google Maps API when available.
+This sequence diagram describes the process of searching for hospitals, generating predicted wait times, and providing navigation assistance within CarePath Navigator. The prediction system retrieves historical wait-time records from the hospital database and applies a machine learning model to estimate waiting times and confidence scores. If the estimated wait time exceeds 60 minutes or the confidence score is below 70%, the mobile application displays a warning popup suggesting that the user consider another hospital. Navigation information, including route, estimated travel time, and distance, is obtained through a navigation service utilizing real-time traffic data available through the Google Maps API when available.
 
 ---
 
 ## Deployment Diagram
 
 ![Deployment Diagram]({{ "/images/Deployment%20Diagram.jpg" | relative_url }})
-
 

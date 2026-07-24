@@ -4,6 +4,9 @@ title: "Requirements Specification"
 date: 2026-04-28
 permalink: /posts/requirements-specification/
 ---
+
+> **Final implementation note:** The evaluated prototype uses Hong Kong public-hospital data. References to NHS England, WLMDS, live APIs, and crowdsourced updates describe early requirements or proposed future integrations, not the final deployed data source. See the [Results page]({{ '/posts/results/' | relative_url }}) for delivered features and model performance.
+
 <style>
 .toc-link {
   color: #000000;
@@ -105,6 +108,7 @@ h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
 | ------- | ---- | ----------- | --------- |
 | 1.0.0 | 2025-05-20 | Initial Draft | Baseline requirements for platform development. |
 | 1.1.0 | 2025-05-24 | Revised Final | Integration of NHS WLMDS constraints and technical architectural depth. |
+| 1.2.0 | 2026-07-24 | Final Scope Clarification | Records Hong Kong as the final evaluated data scope and NHS integration as future work. |
 
 
 ### 1.3 Intended Readership
@@ -122,21 +126,21 @@ In accordance with standard systems engineering practices, this document is desi
 
 ### 2.1 System Purpose
 
-CarePath Navigator is a digital platform designed to provide real-time and predicted hospital waiting times across the United Kingdom. The system centralizes fragmented healthcare data to assist patients in locating facilities efficiently.
+CarePath Navigator is a digital platform designed to provide predicted hospital waiting times and location-based comparisons. The final evaluated prototype uses Hong Kong public-hospital data and centralizes relevant information to help users compare facilities.
 
 **Scope Note**: The system is exclusively for mild healthcare needs and clinic-level visits. It does not provide medical diagnoses or handle emergency cases.
 
 ### 2.2 Vision and Goals
 
 The vision is to create an intuitive, accessible platform that reduces patient anxiety and support informed decision-making.
-* **Transparency**: Provide clear, updated data from official NHS sources and regional trusts.
-* **Empowerment**: Enable patients to compare waiting times and track their position on lists.
-* **Data Accuracy**: Ensure public confidence by utilizing direct data from NHS England and NHS Digital.
+* **Transparency**: Clearly label source dates, predicted values, and uncertainty.
+* **Empowerment**: Enable users to compare expected waiting times, distance, and hospital information.
+* **Data Accuracy**: Evaluate predictions using historical Hong Kong public-hospital data and established regression metrics.
 * **Inclusivity**: Prioritize WCAG 2.1 AA compliance to support diverse digital literacy levels.
 
 ### 2.3 Problem Statement
 
-UK healthcare facilities face systemic overcrowding while patients lack access to reliable and transparent information regarding waiting times, facility capabilities, specialist availability, and healthcare accessibility. Most patients choose healthcare facilities based on proximity, familiarity, or recommendations rather than selecting the facility most appropriate for their medical needs. This behavior contributes to overloaded hospitals, underutilized clinics, and inefficient patient distribution throughout the healthcare system.
+Healthcare facilities can face overcrowding while patients lack access to reliable and understandable information regarding waiting times, facility capabilities, specialist availability, and healthcare accessibility. Most patients choose healthcare facilities based on proximity, familiarity, or recommendations rather than comparing the available information. This behavior can contribute to overloaded hospitals, underused alternatives, and inefficient patient distribution.
 
 Expert interviews conducted with healthcare professionals revealed that many patients experience difficulty navigating healthcare systems, understanding expected waiting times, and identifying appropriate healthcare providers. International patients face additional challenges due to language barriers and unfamiliarity with local healthcare services. Furthermore, waiting times are influenced by multiple operational factors including staffing availability, emergency cases, registration procedures, and diagnostic bottlenecks, making transparent communication essential for maintaining patient trust and satisfaction.
 
@@ -152,7 +156,7 @@ Existing map and healthcare applications provide limited visibility into these f
 |------|------------|
 | **Visit Intent** | User-indicated care type (e.g., minor injury, specialty) used to refine recommendations and balance loads. |
 | **Overcrowding Effect** | A surge in wait times caused when a recommendation system directs excessive traffic to a single "least busy" facility. |
-| **WLMDS** | Waiting List Minimum Data Set; a national database of NHS patient waiting list details. |
+| **WLMDS** | Waiting List Minimum Data Set; an NHS dataset investigated during early research but not used in the final evaluation. |
 | **Wait-Time Categorization** | The system must distinguish between the three wait-time types below in the UI to prevent user confusion. |
 
 ### 3.2 Waiting Time Categorization
@@ -175,7 +179,7 @@ Existing map and healthcare applications provide limited visibility into these f
 
 1. The system shall allow users to search for healthcare facilities by medical specialty, including pediatrics and minor injuries.
 2. The system shall provide support for multiple languages to assist international users.
-3. The system shall display whether hospitals accept insurance providers as defined in the System Data Dictionary (sourced from the WLMDS API).
+3. The system should display insurance information only when it can be verified through an authorized official source.
 4. The system shall identify healthcare facilities based on the user's location while applying differential privacy filters.
 5. The system should allow users to toggle preferences between "fastest service" and "closest distance."
 6. The system shall allow for anonymous crowdsourced wait-time updates.
@@ -486,7 +490,7 @@ The system shall support future enhancements and integration with additional hea
 
 ## 7. Organizational Requirements
 
-* **Academic & Legal Compliance**: The development and deployment of the platform must fully comply with NHS England's terms and conditions for academic usage, especially regarding the pending approval for the WLMDS API.
+* **Academic & Legal Compliance**: Any future use of external hospital APIs must comply with the provider's terms, privacy requirements, and authorization process. The final evaluated prototype uses historical Hong Kong public-hospital data rather than the restricted WLMDS API.
 
 * **Collaboration & Version Control**: The development team shall use Git and GitHub for version control to ensure smooth collaboration. All code changes must be reviewed and merged according to the team's internal rules before major updates.
 
@@ -496,7 +500,7 @@ The system shall support future enhancements and integration with additional hea
 
 ## 8. System Evolution
 
-* **API Adaptation**: The system shall adapt to evolving NHS reporting standards, specifically incorporating the "4-hour waiting target" statistics from NHS England 2026 report.
+* **API Adaptation**: The system should support future authorized hospital-data integrations. NHS reporting standards were investigated during the proposal stage as one possible expansion path.
 
 * **Regional Expansion**: Future iterations will seek to integrate direct real-time telemetry from individual trust-level patient flow systems.
 
@@ -513,7 +517,7 @@ The system shall support future enhancements and integration with additional hea
 | **Validity** | Does the system provide functions supporting the mild-healthcare scope? |
 | **Consistency** | Do requirements for privacy conflict with location-based recommendations? |
 | **Completeness** | Are all core features (Specialty search, load balancing) present? |
-| **Realism** | Can it be built given the WLMDS API internal-use constraints? |
+| **Realism** | Can it be demonstrated with historical Hong Kong data while keeping live APIs as future work? |
 | **Verifiability** | Can these be checked through quantitative objective testing? |
 
 ### 9.2 Verification Commands for Test Engineers
@@ -522,7 +526,7 @@ The system shall support future enhancements and integration with additional hea
 
 * **Accuracy**: "Compare the system's predicted wait times with the actual wait times reported by the 20 facilities for the past 30 days, calculating the Mean Absolute Error (MAE) and ensuring it remains within ±15% of the actual wait times."
 
-* **Confidence Scores**: "Simulate a data pull failure from the WLMDS API and verify that the UI widens the wait-time range by 50% and lowers the confidence score to 'Low'."
+* **Confidence Scores**: "Simulate a hospital-data update failure and verify that the UI widens the wait-time range by 50% and lowers the confidence score to 'Low'."
 
 * **Privacy**: "Attempt to retrieve exact GPS coordinates from the application log and verify that coordinates are obfuscated to a 500-meter radius."
 
